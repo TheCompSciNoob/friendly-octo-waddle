@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct StoryState {
+struct StoryManager {
     var promptsAndResponses: [PromptAndResponse]
     private var soundManager: SoundManager? = nil
     private var index = -1
@@ -17,7 +17,7 @@ struct StoryState {
     mutating func next() -> PromptAndResponse {
         index+=1
         let current = promptsAndResponses[index]
-        var fileNames = [current.correctResponse.audioPath]
+        var fileNames = [current.question.audioPath, current.correctResponse.audioPath]
         for wrongResponse in current.wrongResponses {
             fileNames.append(wrongResponse.audioPath)
         }
@@ -30,13 +30,18 @@ struct StoryState {
         return index + 1 < promptsAndResponses.count
     }
     
-    //plays the correct answer of the current conversation
-    func playCorrectAnswer() {
+    //index 0: question
+    func playQuestion() {
         soundManager?.play(index: 0)
     }
     
-    //plays the wrong answer of the current conversation with index
+    //index 1: correct answer
+    func playCorrectAnswer() {
+        soundManager?.play(index: 1)
+    }
+    
+    //index >=2: wrong answers
     func playIncorrectAnswer(index: Int) {
-        soundManager?.play(index: index + 1)
+        soundManager?.play(index: index + 2)
     }
 }
