@@ -11,6 +11,7 @@ import MetaWear
 
 class MainTableViewController: UITableViewController, ScanTableViewControllerDelegate {
     var devices: [MBLMetaWear]?
+    var deviceConnectedDelegate: DeviceConnectedDelegate? = nil
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated);
@@ -104,6 +105,7 @@ class MainTableViewController: UITableViewController, ScanTableViewControllerDel
             scanController.delegate = self
         } else if let deviceController = segue.destination as? DeviceViewController {
             deviceController.device = sender as! MBLMetaWear
+            deviceController.deviceConnectedDelegate = self.deviceConnectedDelegate
         }
     }
 }

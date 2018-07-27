@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES" initialViewController="Mar-3Z-Bv2">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES" initialViewController="Mar-3Z-Bv2">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -15,17 +16,17 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Mar-3Z-Bv2" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Dug-M8-x7x">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="D2l-i7-3Pw" kind="relationship" relationship="rootViewController" id="UAG-Ab-j3Z"/>
+                        <segue destination="wfd-uH-OpO" kind="relationship" relationship="rootViewController" id="SU0-zE-9w0"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SpI-3S-gY3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-60" y="406"/>
+            <point key="canvasLocation" x="-632" y="406"/>
         </scene>
         <!--Devices-->
         <scene sceneID="BE4-Jw-tS7">
@@ -59,7 +60,7 @@
                                 <rect key="frame" x="0.0" y="117.5" width="375" height="75"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Icw-lx-dc2" id="x8e-2x-Wd9">
-                                    <rect key="frame" x="0.0" y="0.0" width="342" height="74.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="341" height="74.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="326A9000-85CB-9195-D9DD-464CFBBAE75A" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sMd-Wg-5KD">
@@ -107,6 +108,39 @@
             </objects>
             <point key="canvasLocation" x="842" y="65"/>
         </scene>
+        <!--Main Test Controller-->
+        <scene sceneID="m0B-Yf-myo">
+            <objects>
+                <viewController id="wfd-uH-OpO" customClass="MainTestController" customModule="StarterProject" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="TAi-dO-mLk"/>
+                        <viewControllerLayoutGuide type="bottom" id="W1i-CY-03T"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Dtk-tf-F2m">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mm8-rt-a9H">
+                                <rect key="frame" x="102.5" y="291" width="169" height="84"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="60"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <segue destination="D2l-i7-3Pw" kind="push" id="A7K-jt-nhv"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Mm8-rt-a9H" firstAttribute="centerY" secondItem="Dtk-tf-F2m" secondAttribute="centerY" id="bTa-6N-yA8"/>
+                            <constraint firstItem="Mm8-rt-a9H" firstAttribute="centerX" secondItem="Dtk-tf-F2m" secondAttribute="centerX" id="fLj-5M-JH5"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="vI0-bF-Ipg"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uqd-pZ-d7X" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-112" y="406"/>
+        </scene>
         <!--Saved Devices-->
         <scene sceneID="46G-AP-mNH">
             <objects>
@@ -125,24 +159,24 @@
                                 <rect key="frame" x="0.0" y="24" width="375" height="85"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ZEW-wz-LCx" id="hRw-ER-YXT">
-                                    <rect key="frame" x="0.0" y="0.0" width="342" height="84.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="341" height="84.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MetaWear" translatesAutoresizingMaskIntoConstraints="NO" id="nSe-fd-aTp">
-                                            <rect key="frame" x="15" y="8" width="50" height="50"/>
+                                            <rect key="frame" x="23" y="11" width="50" height="50"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="50" id="bkQ-Ga-xpm"/>
                                                 <constraint firstAttribute="width" constant="50" id="y7l-dQ-epe"/>
                                             </constraints>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="326A9000-85CB-9195-D9DD-464CFBBAE75A" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hMm-bB-tOW">
-                                            <rect key="frame" x="15" y="62" width="221.5" height="13"/>
+                                            <rect key="frame" x="23" y="65" width="221.5" height="13"/>
                                             <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="11"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MetaWear" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Mh-zT-Ajo">
-                                            <rect key="frame" x="73" y="22.5" width="82" height="21"/>
+                                            <rect key="frame" x="81" y="25.5" width="82" height="21"/>
                                             <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
@@ -163,7 +197,7 @@
                                 <rect key="frame" x="0.0" y="109" width="375" height="85"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Nbx-hf-jjn" id="Cji-TJ-CG1">
-                                    <rect key="frame" x="0.0" y="0.0" width="342" height="84.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="341" height="84.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Add a MetaWear device to get started!" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PlG-en-AkV">
@@ -237,9 +271,4 @@
         <image name="MetaWear" width="157" height="157"/>
         <image name="wifi_d1" width="64" height="64"/>
     </resources>
-    <simulatedMetricsContainer key="defaultSimulatedMetrics">
-        <simulatedStatusBarMetrics key="statusBar"/>
-        <simulatedOrientationMetrics key="orientation"/>
-        <simulatedScreenMetrics key="destination" type="retina4_7.fullscreen"/>
-    </simulatedMetricsContainer>
 </document>

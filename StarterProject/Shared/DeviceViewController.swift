@@ -13,6 +13,7 @@ class DeviceViewController: UIViewController {
     @IBOutlet weak var deviceStatus: UILabel!
     
     var device: MBLMetaWear!
+    var deviceConnectedDelegate: DeviceConnectedDelegate? = nil
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated);
@@ -21,6 +22,7 @@ class DeviceViewController: UIViewController {
         device.connectAsync().success { _ in
             self.device.led?.flashColorAsync(UIColor.green, withIntensity: 1.0, numberOfFlashes: 3)
             NSLog("We are connected")
+            self.deviceConnectedDelegate?.onDeviceConnected(device: self.device)
         }
     }
 
@@ -48,4 +50,8 @@ class DeviceViewController: UIViewController {
             }
         }
     }
+}
+
+protocol DeviceConnectedDelegate {
+    func onDeviceConnected(device: MBLMetaWear)
 }
