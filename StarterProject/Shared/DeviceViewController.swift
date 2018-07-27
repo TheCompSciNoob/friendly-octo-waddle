@@ -31,7 +31,7 @@ class DeviceViewController: UIViewController {
         
         device.removeObserver(self, forKeyPath: "state")
         device.led?.flashColorAsync(UIColor.red, withIntensity: 1.0, numberOfFlashes: 3)
-        device.disconnectAsync()
+        //device.disconnectAsync()
     }
     
     override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
@@ -39,6 +39,7 @@ class DeviceViewController: UIViewController {
             switch (self.device.state) {
             case .connected:
                 self.deviceStatus.text = "Connected";
+                self.device.sensorFusion?.mode = .imuPlus
             case .connecting:
                 self.deviceStatus.text = "Connecting";
             case .disconnected:

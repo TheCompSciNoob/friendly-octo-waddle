@@ -13,6 +13,7 @@ import MetaWear
 class MainTestController: UIViewController, DeviceConnectedDelegate {
     
     private var device: MBLMetaWear? = nil
+    private var storyManager: StoryManager? = nil
     
     override func viewWillAppear(_ animated: Bool) {
         if device != nil {
@@ -23,5 +24,17 @@ class MainTestController: UIViewController, DeviceConnectedDelegate {
     func onDeviceConnected(device: MBLMetaWear) {
         print("Device connected: \(device.identifier)")
         self.device = device
+        self.storyManager = StoryManager(promptsAndResponses: [PromptAndResponse](), device: device)
+        self.storyManager?.subscribeToDeviceUpdates()
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let mainTableViewController = segue.destination as? MainTableViewController {
+            mainTableViewController.deviceConnectedDelegate = self
+        }
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        device?.disconnectAsync()
     }
 }

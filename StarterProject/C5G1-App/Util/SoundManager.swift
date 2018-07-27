@@ -103,8 +103,10 @@ struct SoundManager {
         players[index].position = position
     }
     
-    func updateAngularOrientation( degreesYaw: Float) {
+    func updateAngularOrientation(degreesYaw: Float, degreesPitch: Float, degreesRoll: Float) {
         mixer3d.listenerAngularOrientation.yaw = degreesYaw
+        mixer3d.listenerAngularOrientation.pitch = degreesYaw
+        mixer3d.listenerAngularOrientation.roll = degreesRoll
     }
     
     func updateListenerPosition(x: Float, y: Float, z: Float) {
