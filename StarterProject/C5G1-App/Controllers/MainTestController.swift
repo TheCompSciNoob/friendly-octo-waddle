@@ -16,7 +16,7 @@ class MainTestController: UIViewController, DeviceConnectedDelegate {
     
     override func viewWillAppear(_ animated: Bool) {
         if device != nil {
-            print("Devoce ready.")
+            print("Device ready.")
         }
     }
     

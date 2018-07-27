@@ -54,7 +54,7 @@ struct SoundManager {
             do {
                 let url = Bundle.main.url(forResource: String(res), withExtension: String(ext))!
                 file = try AVAudioFile(forReading: url)
-                buffer = AVAudioPCMBuffer(pcmFormat: file.processingFormat, frameCapacity: AVAudioFrameCount(file.length))!
+                buffer = AVAudioPCMBuffer(pcmFormat: file.processingFormat, frameCapacity: AVAudioFrameCount(file.length))
                 try file.read(into: buffer)
                 print("File loaded, buffer frame length: \(buffer.frameLength)")
             } catch {

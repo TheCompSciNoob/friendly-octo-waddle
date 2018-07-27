@@ -8,6 +8,7 @@
 
 import Foundation
 
+//loads json form StoryData
 func loadJSON(fileName: String) -> [PromptAndResponse]? {
     if let url = Bundle.main.url(forResource: fileName, withExtension: "json") {
         let data = try! Data(contentsOf: url)
