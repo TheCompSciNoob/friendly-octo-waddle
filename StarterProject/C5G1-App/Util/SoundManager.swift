@@ -99,7 +99,7 @@ struct SoundManager {
         players[index].scheduleBuffer(buffer, completionHandler: nil)
     }
     
-    func updaetPosition(index: Int, position: AVAudio3DPoint) {
+    func updatePosition(index: Int, position: AVAudio3DPoint) {
         players[index].position = position
     }
     
