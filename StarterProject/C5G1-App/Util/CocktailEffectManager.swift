@@ -34,7 +34,7 @@ class CocktailEffectManager {
     
     //place all sounds at default locations
     func placeSoundsDefault() {
-        let defaultDistance = 5.0
+        let defaultDistance = 10.0
         for index in 0..<(soundManager?.fileNames.count)! {
             placeSound(index: index, distance: defaultDistance)
         }
