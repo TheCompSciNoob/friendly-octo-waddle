@@ -20,7 +20,11 @@ class MainTestController: UIViewController, ScanTableViewControllerDelegate {
             print("Device ready.")
         }
     }
-    
+  
+    override func viewDidLoad() {
+        print(DataUtil.loadJSON(fileName: "english"))
+    }
+  
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let scanTableViewController = segue.destination as? ScanTableViewController {
             scanTableViewController.delegate = self
