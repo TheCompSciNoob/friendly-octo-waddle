@@ -21,6 +21,10 @@ class MainTestController: UIViewController, ScanTableViewControllerDelegate {
         }
     }
     
+    override func viewDidLoad() {
+        print(DataUtil.loadJSON(fileName: "english"))
+    }
+    
     func scanTableViewController(_ controller: ScanTableViewController, didSelectDevice device: MBLMetaWear) {
         print("Device received from ScanTableViewController.")
         self.device = device
