@@ -29,6 +29,7 @@ class MainTestController: UIViewController, ScanTableViewControllerDelegate {
     
     override func viewWillDisappear(_ animated: Bool) {
         device?.disconnectAsync()
+        device = nil
     }
     
     func scanTableViewController(_ controller: ScanTableViewController, didSelectDevice device: MBLMetaWear) {
