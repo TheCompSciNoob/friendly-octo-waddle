@@ -11,14 +11,16 @@ import AVFoundation
 
 struct SoundManager {
     var fileNames: [String]
+    private var options: AVAudioPlayerNodeBufferOptions?
     private var file = AVAudioFile()
     private var buffer = AVAudioPCMBuffer()
     private let engine = AVAudioEngine()
     private var players: [AVAudioPlayerNode] = []
     private let mixer3d = AVAudioEnvironmentNode()
     
-    init(fileNames: [String]) {
+    init(fileNames: [String], options: AVAudioPlayerNodeBufferOptions?) {
         self.fileNames = fileNames
+        self.options = options
         loadFilesIntoBuffer()
         initEngine()
     }
@@ -66,7 +68,11 @@ struct SoundManager {
             engine.attach(players[index])
             engine.connect(players[index], to: mixer3d, format: file.processingFormat)
             players[index].renderingAlgorithm = AVAudio3DMixingRenderingAlgorithm(rawValue: 1)!
-            players[index].scheduleBuffer(buffer, completionHandler: nil)
+            if let optionsUnwrapped = options {
+                players[index].scheduleBuffer(buffer, at: nil, options: optionsUnwrapped, completionHandler: nil)
+            } else {
+                players[index].scheduleBuffer(buffer, completionHandler: nil)
+            }
             print("Player at index \(index) ready.")
         }
         print("All players ready.")

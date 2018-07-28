@@ -120,10 +120,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1gI-XS-f4j">
+                                <rect key="frame" x="16" y="345" width="343" height="72"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                <state key="normal" title="Cocktail Effect"/>
+                                <connections>
+                                    <action selector="startManager:" destination="wfd-uH-OpO" eventType="touchUpInside" id="OUM-9X-7KY"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mm8-rt-a9H">
-                                <rect key="frame" x="102.5" y="291" width="169" height="84"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="60"/>
-                                <state key="normal" title="Button"/>
+                                <rect key="frame" x="16" y="265" width="343" height="72"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                <state key="normal" title="Devices"/>
                                 <connections>
                                     <segue destination="D2l-i7-3Pw" kind="push" id="A7K-jt-nhv"/>
                                 </connections>
@@ -131,15 +139,19 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="Mm8-rt-a9H" firstAttribute="centerY" secondItem="Dtk-tf-F2m" secondAttribute="centerY" id="bTa-6N-yA8"/>
-                            <constraint firstItem="Mm8-rt-a9H" firstAttribute="centerX" secondItem="Dtk-tf-F2m" secondAttribute="centerX" id="fLj-5M-JH5"/>
+                            <constraint firstItem="Mm8-rt-a9H" firstAttribute="leading" secondItem="1gI-XS-f4j" secondAttribute="leading" id="U8D-1p-kgl"/>
+                            <constraint firstItem="Mm8-rt-a9H" firstAttribute="top" secondItem="TAi-dO-mLk" secondAttribute="bottom" constant="201" id="VMh-dQ-heI"/>
+                            <constraint firstItem="Mm8-rt-a9H" firstAttribute="trailing" secondItem="1gI-XS-f4j" secondAttribute="trailing" id="YVr-DS-GBD"/>
+                            <constraint firstItem="Mm8-rt-a9H" firstAttribute="leading" secondItem="Dtk-tf-F2m" secondAttribute="leadingMargin" id="a62-BZ-8ux"/>
+                            <constraint firstItem="Mm8-rt-a9H" firstAttribute="trailing" secondItem="Dtk-tf-F2m" secondAttribute="trailingMargin" id="k2V-HM-7jd"/>
+                            <constraint firstItem="1gI-XS-f4j" firstAttribute="top" secondItem="Mm8-rt-a9H" secondAttribute="bottom" constant="8" symbolic="YES" id="mFw-E1-Ees"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="vI0-bF-Ipg"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uqd-pZ-d7X" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-112" y="406"/>
+            <point key="canvasLocation" x="-112.5" y="405.5"/>
         </scene>
         <!--Saved Devices-->
         <scene sceneID="46G-AP-mNH">

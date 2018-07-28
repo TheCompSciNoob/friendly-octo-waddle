@@ -26,7 +26,7 @@ struct StoryManager {
         device.sensorFusion?.eulerAngle.startNotificationsAsync { (obj, error) in
             
             print("h: \(obj?.h), p: \(obj?.p), r: \(obj?.r)")
-            self.soundManager?.updateAngularOrientation(degreesYaw: abs(Float(365 - (obj?.y)!)), degreesPitch: Float((obj?.p)!), degreesRoll: Float((obj?.r)!))
+            self.soundManager?.updateAngularOrientation(degreesYaw: abs(Float(360 - (obj?.y)!)), degreesPitch: Float((obj?.p)!), degreesRoll: Float((obj?.r)!))
             }.success { result in
                 print("Successfully subscribed")
             }.failure { error in
@@ -42,11 +42,11 @@ struct StoryManager {
         for wrongResponse in current.wrongResponses {
             fileNames.append(wrongResponse.audioPath)
         }
-        self.soundManager = SoundManager(fileNames: fileNames)
+        self.soundManager = SoundManager(fileNames: fileNames, options: nil)
         self.soundManager?.updatePosition(index: 0, position: AVAudio3DPoint(x: current.question.x, y: current.question.y, z: current.question.z))
         self.soundManager?.updatePosition(index: 1, position: AVAudio3DPoint(x: current.correctResponse.x, y: current.correctResponse.y, z: current.correctResponse.z))
         for wrongIndex in 0..<current.wrongResponses.count {
-            //self.soundManager?.updatePosition(index: wrongIndex + 2, position: AVAudio3DPoint())
+            self.soundManager?.updatePosition(index: wrongIndex + 2, position: AVAudio3DPoint(x: current.wrongResponses[wrongIndex].x, y: current.wrongResponses[wrongIndex].y, z: current.wrongResponses[wrongIndex].z))
         }
         return current
     }

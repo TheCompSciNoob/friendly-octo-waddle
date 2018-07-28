@@ -13,7 +13,7 @@ import MetaWear
 class MainTestController: UIViewController, DeviceConnectedDelegate {
     
     private var device: MBLMetaWear? = nil
-    private var storyManager: StoryManager? = nil
+    private var cocktailEffectManager: CocktailEffectManager? = nil
     
     override func viewWillAppear(_ animated: Bool) {
         if device != nil {
@@ -24,8 +24,6 @@ class MainTestController: UIViewController, DeviceConnectedDelegate {
     func onDeviceConnected(device: MBLMetaWear) {
         print("Device connected: \(device.identifier)")
         self.device = device
-        self.storyManager = StoryManager(promptsAndResponses: [PromptAndResponse](), device: device)
-        self.storyManager?.subscribeToDeviceUpdates()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -36,5 +34,12 @@ class MainTestController: UIViewController, DeviceConnectedDelegate {
     
     override func viewWillDisappear(_ animated: Bool) {
         device?.disconnectAsync()
+    }
+    
+    @IBAction func startManager(_ sender: UIButton) {
+        cocktailEffectManager = CocktailEffectManager(fileNames: ["ZOOM0050_Tr1.WAV", "ZOOM0059_Tr1.WAV"], device: device!)
+        cocktailEffectManager?.placeSounds()
+        cocktailEffectManager?.subscribeToDeviceUpdates()
+        cocktailEffectManager?.start()
     }
 }

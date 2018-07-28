@@ -33,6 +33,9 @@
 		97CAC231210B059600675F48 /* ChineseIntroController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97CAC230210B059600675F48 /* ChineseIntroController.swift */; };
 		97CAC233210B05A900675F48 /* EnglishIntroController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97CAC232210B05A900675F48 /* EnglishIntroController.swift */; };
 		97CAC235210B735E00675F48 /* AudioInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97CAC234210B735E00675F48 /* AudioInfo.swift */; };
+		97CAC237210B963300675F48 /* CocktailEffectManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97CAC236210B963300675F48 /* CocktailEffectManager.swift */; };
+		97CAC23A210BDF7F00675F48 /* ZOOM0059_Tr1.WAV in Resources */ = {isa = PBXBuildFile; fileRef = 97CAC238210BDF7F00675F48 /* ZOOM0059_Tr1.WAV */; };
+		97CAC23B210BDF7F00675F48 /* ZOOM0050_Tr1.WAV in Resources */ = {isa = PBXBuildFile; fileRef = 97CAC239210BDF7F00675F48 /* ZOOM0050_Tr1.WAV */; };
 		97EF9596210AF32700C6B3CB /* MainTestController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97EF9595210AF32700C6B3CB /* MainTestController.swift */; };
 		97EF959C210AF6B700C6B3CB /* SoundManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97EF959B210AF6B700C6B3CB /* SoundManager.swift */; };
 		A74CC4E904D4261827DB3639 /* Pods_Starter_macOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3CC4717E50B1C51696459B4 /* Pods_Starter_macOS.framework */; };
@@ -75,6 +78,9 @@
 		97CAC230210B059600675F48 /* ChineseIntroController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChineseIntroController.swift; sourceTree = "<group>"; };
 		97CAC232210B05A900675F48 /* EnglishIntroController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnglishIntroController.swift; sourceTree = "<group>"; };
 		97CAC234210B735E00675F48 /* AudioInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioInfo.swift; sourceTree = "<group>"; };
+		97CAC236210B963300675F48 /* CocktailEffectManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CocktailEffectManager.swift; sourceTree = "<group>"; };
+		97CAC238210BDF7F00675F48 /* ZOOM0059_Tr1.WAV */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = ZOOM0059_Tr1.WAV; path = ../../../../FOLDER01/ZOOM0059/ZOOM0059_Tr1.WAV; sourceTree = "<group>"; };
+		97CAC239210BDF7F00675F48 /* ZOOM0050_Tr1.WAV */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = ZOOM0050_Tr1.WAV; path = ../../../../FOLDER01/ZOOM0050/ZOOM0050_Tr1.WAV; sourceTree = "<group>"; };
 		97EF9595210AF32700C6B3CB /* MainTestController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTestController.swift; sourceTree = "<group>"; };
 		97EF959B210AF6B700C6B3CB /* SoundManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundManager.swift; sourceTree = "<group>"; };
 		BC9E019C266AD9823B5E877D /* Pods-Starter-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Starter-tvOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-Starter-tvOS/Pods-Starter-tvOS.release.xcconfig"; sourceTree = "<group>"; };
@@ -210,6 +216,8 @@
 		97EF9597210AF55B00C6B3CB /* Sounds */ = {
 			isa = PBXGroup;
 			children = (
+				97CAC239210BDF7F00675F48 /* ZOOM0050_Tr1.WAV */,
+				97CAC238210BDF7F00675F48 /* ZOOM0059_Tr1.WAV */,
 			);
 			path = Sounds;
 			sourceTree = "<group>";
@@ -240,6 +248,7 @@
 				97CAC228210AFB3F00675F48 /* StoryManager.swift */,
 				97EF959B210AF6B700C6B3CB /* SoundManager.swift */,
 				97CAC22C210AFB7B00675F48 /* DataUtil.swift */,
+				97CAC236210B963300675F48 /* CocktailEffectManager.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -373,6 +382,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				402973791DB8260000EC8C32 /* Main.storyboard in Resources */,
+				97CAC23B210BDF7F00675F48 /* ZOOM0050_Tr1.WAV in Resources */,
+				97CAC23A210BDF7F00675F48 /* ZOOM0059_Tr1.WAV in Resources */,
 				402973391DB81F5B00EC8C32 /* LaunchScreen.storyboard in Resources */,
 				97CAC227210AFA9000675F48 /* chinese.json in Resources */,
 				97CAC225210AFA8200675F48 /* english.json in Resources */,
@@ -545,6 +556,7 @@
 			files = (
 				402973851DB839EA00EC8C32 /* MainTableViewController.swift in Sources */,
 				97CAC233210B05A900675F48 /* EnglishIntroController.swift in Sources */,
+				97CAC237210B963300675F48 /* CocktailEffectManager.swift in Sources */,
 				97CAC22F210B057D00675F48 /* HomePageController.swift in Sources */,
 				97CAC231210B059600675F48 /* ChineseIntroController.swift in Sources */,
 				402973831DB839EA00EC8C32 /* AppDelegate.swift in Sources */,
