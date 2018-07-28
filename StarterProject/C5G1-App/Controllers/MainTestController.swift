@@ -38,7 +38,7 @@ class MainTestController: UIViewController, DeviceConnectedDelegate {
     
     @IBAction func startManager(_ sender: UIButton) {
         cocktailEffectManager = CocktailEffectManager(fileNames: ["ZOOM0050_Tr1.WAV", "ZOOM0059_Tr1.WAV"], device: device!)
-        cocktailEffectManager?.placeSounds()
+        cocktailEffectManager?.placeSoundsDefault()
         cocktailEffectManager?.subscribeToDeviceUpdates()
         cocktailEffectManager?.start()
     }

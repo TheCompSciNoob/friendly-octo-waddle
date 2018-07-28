@@ -23,7 +23,7 @@ class CocktailEffectManager {
     func subscribeToDeviceUpdates() {
         device.sensorFusion?.eulerAngle.startNotificationsAsync { (obj, error) in
             print((obj?.h)!)
-            self.updateAllVolumes(newAngle: (obj?.h)!)
+            self.updateAllDistances(newAngle: (obj?.h)!)
         }
     }
     
@@ -32,22 +32,25 @@ class CocktailEffectManager {
         return Int(angle) / sectorSize
     }
     
-    //place sounds at appropriate location
-    func placeSounds() {
-        let distance = 5.0
-        let sector = 360.0 / Double((soundManager?.fileNames.count)!) //angle between each consecutive sound
+    //place all sounds at default locations
+    func placeSoundsDefault() {
+        let defaultDistance = 5.0
         for index in 0..<(soundManager?.fileNames.count)! {
-            soundManager?.updatePosition(index: index, position: AVAudio3DPoint(x: Float(distance * cos(sector * Double(index) * Double.pi / 180)), y: Float(distance * sin(sector * Double(index) * Double.pi / 180)), z: 0.0))
+            placeSound(index: index, distance: defaultDistance)
         }
     }
     
-    func updateAllVolumes(newAngle: Double) {
+    //place individual sound at one location
+    private func placeSound(index: Int, distance: Double) {
+        let sector = 360.0 / Double((soundManager?.fileNames.count)!) //angle between each consecutive sound
+        soundManager?.updatePosition(index: index, position: AVAudio3DPoint(x: Float(distance * cos(sector * Double(index) * Double.pi / 180)), y: Float(distance * sin(sector * Double(index) * Double.pi / 180)), z: 0.0))
+    }
+    
+    func updateAllDistances(newAngle: Double) {
         if getFocusedSoundIndex(angle: currentAngle) != getFocusedSoundIndex(angle: newAngle) {
             currentAngle = newAngle
-            for index in 0..<(soundManager?.fileNames.count)! {
-                soundManager?.changeVolume(index: index, vol: 0.1)
-            }
-            soundManager?.changeVolume(index: getFocusedSoundIndex(angle: currentAngle), vol: 1)
+            placeSoundsDefault()
+            placeSound(index: getFocusedSoundIndex(angle: currentAngle), distance: 1.0)
         }
     }
     

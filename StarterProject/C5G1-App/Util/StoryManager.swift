@@ -25,7 +25,7 @@ struct StoryManager {
     func subscribeToDeviceUpdates() {
         device.sensorFusion?.eulerAngle.startNotificationsAsync { (obj, error) in
             
-            print("h: \(obj?.h), p: \(obj?.p), r: \(obj?.r)")
+            print("h: \(String(describing: obj?.h)), p: \(String(describing: obj?.p)), r: \(String(describing: obj?.r))")
             self.soundManager?.updateAngularOrientation(degreesYaw: abs(Float(360 - (obj?.y)!)), degreesPitch: Float((obj?.p)!), degreesRoll: Float((obj?.r)!))
             }.success { result in
                 print("Successfully subscribed")
