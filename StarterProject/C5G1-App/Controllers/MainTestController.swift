@@ -20,16 +20,11 @@ class MainTestController: UIViewController, ScanTableViewControllerDelegate {
             print("Device ready.")
         }
     }
-    
+  
     override func viewDidLoad() {
         print(DataUtil.loadJSON(fileName: "english"))
     }
-    
-    func scanTableViewController(_ controller: ScanTableViewController, didSelectDevice device: MBLMetaWear) {
-        print("Device received from ScanTableViewController.")
-        self.device = device
-    }
-    
+  
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let scanTableViewController = segue.destination as? ScanTableViewController {
             scanTableViewController.delegate = self
@@ -39,6 +34,11 @@ class MainTestController: UIViewController, ScanTableViewControllerDelegate {
     override func viewWillDisappear(_ animated: Bool) {
         device?.disconnectAsync()
         device = nil
+    }
+    
+    func scanTableViewController(_ controller: ScanTableViewController, didSelectDevice device: MBLMetaWear) {
+        print("Device received from ScanTableViewController.")
+        self.device = device
     }
     
     @IBAction func startManager(_ sender: UIButton) {

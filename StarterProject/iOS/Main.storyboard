@@ -106,7 +106,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nc4-6U-9jW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="495" y="406"/>
+            <point key="canvasLocation" x="414" y="406"/>
         </scene>
         <!--Main Test Controller-->
         <scene sceneID="m0B-Yf-myo">
@@ -149,7 +149,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="50"/>
                                 <state key="normal" title="Devices"/>
                                 <connections>
-                                    <segue destination="kW6-X9-BFY" kind="push" id="1Yg-Tk-WqY"/>
+                                    <segue destination="kW6-X9-BFY" kind="push" id="dWR-C4-A3u"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -164,7 +164,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uqd-pZ-d7X" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-70" y="406"/>
+            <point key="canvasLocation" x="-112.5" y="405.5"/>
         </scene>
     </scenes>
     <resources>

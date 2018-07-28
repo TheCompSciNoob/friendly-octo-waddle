@@ -87,11 +87,24 @@ class ScanTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         if let selected = devices?[(indexPath as NSIndexPath).row] {
-            let hud = MBProgressHUD.showAdded(to: UIApplication.shared.keyWindow!, animated: true)
-            hud.label.text = "Connecting..."
+            //let hud = MBProgressHUD.showAdded(to: UIApplication.shared.keyWindow!, animated: true)
+            //hud.label.text = "Connecting..."
             
             self.selected = selected
-            selected.connect(withTimeoutAsync: 15).success { _ in
+            
+            //copied from DeviceViewController
+            print("Added observer.")
+            self.selected?.addObserver(self, forKeyPath: "state", options: NSKeyValueObservingOptions.new, context: nil)
+            self.selected?.connectAsync().success { _ in
+                self.selected?.led?.flashColorAsync(UIColor.green, withIntensity: 1.0, numberOfFlashes: 3)
+                NSLog("We are connected")
+                self.delegate?.scanTableViewController(self, didSelectDevice: selected)
+                }.failure { _ in
+                    self.selected?.removeObserver(self, forKeyPath: "state")
+            }
+            
+            
+            /*selected.connect(withTimeoutAsync: 15).success { _ in
                 hud.hide(animated: true)
                 selected.led?.flashColorAsync(UIColor.green, withIntensity: 1.0)
                 
@@ -111,6 +124,26 @@ class ScanTableViewController: UITableViewController {
             }.failure { error in
                 hud.label.text = error.localizedDescription
                 hud.hide(animated: true, afterDelay: 2.0)
+            }*/
+        }
+    }
+    
+    override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
+        OperationQueue.main.addOperation {
+            switch (self.selected?.state) {
+            case .connected?:
+                print("Device connected.")
+                self.selected?.sensorFusion?.mode = .imuPlus
+            case .connecting?:
+                print("Device connecting.")
+            case .disconnected?:
+                print("Device disconnected.")
+            case .disconnecting?:
+                print("Device disconnecting.")
+            case .discovery?:
+                print("Device discovery.")
+            case .none:
+                print("Device state unavailable.")
             }
         }
     }
