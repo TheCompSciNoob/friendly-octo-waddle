@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 import MetaWear
 
-class MainTestController: UIViewController, DeviceConnectedDelegate {
+class MainTestController: UIViewController, ScanTableViewControllerDelegate {
     
     private var device: MBLMetaWear? = nil
     private var cocktailEffectManager: CocktailEffectManager? = nil
@@ -21,19 +21,19 @@ class MainTestController: UIViewController, DeviceConnectedDelegate {
         }
     }
     
-    func onDeviceConnected(device: MBLMetaWear) {
-        print("Device connected: \(device.identifier)")
-        self.device = device
-    }
-    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let mainTableViewController = segue.destination as? MainTableViewController {
-            mainTableViewController.deviceConnectedDelegate = self
+        if let scanTableViewController = segue.destination as? ScanTableViewController {
+            scanTableViewController.delegate = self
         }
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         device?.disconnectAsync()
+    }
+    
+    func scanTableViewController(_ controller: ScanTableViewController, didSelectDevice device: MBLMetaWear) {
+        print("Device received from ScanTableViewController.")
+        self.device = device
     }
     
     @IBAction func startManager(_ sender: UIButton) {
