@@ -120,14 +120,30 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1gI-XS-f4j">
-                                <rect key="frame" x="16" y="345" width="343" height="72"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
-                                <state key="normal" title="Cocktail Effect"/>
-                                <connections>
-                                    <action selector="startManager:" destination="wfd-uH-OpO" eventType="touchUpInside" id="OUM-9X-7KY"/>
-                                </connections>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="8ak-Gc-c2X">
+                                <rect key="frame" x="16" y="345" width="309" height="72"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="IpM-fY-pC4">
+                                        <rect key="frame" x="0.0" y="0.0" width="309" height="72"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="wBX-2j-yhF">
+                                                <rect key="frame" x="0.0" y="0.0" width="309" height="72"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1gI-XS-f4j">
+                                                        <rect key="frame" x="0.0" y="0.0" width="309" height="72"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                                        <state key="normal" title="Cocktail Effect"/>
+                                                        <connections>
+                                                            <action selector="startManager:" destination="wfd-uH-OpO" eventType="touchUpInside" id="OUM-9X-7KY"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mm8-rt-a9H">
                                 <rect key="frame" x="16" y="265" width="343" height="72"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="50"/>
@@ -139,12 +155,9 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="Mm8-rt-a9H" firstAttribute="leading" secondItem="1gI-XS-f4j" secondAttribute="leading" id="U8D-1p-kgl"/>
                             <constraint firstItem="Mm8-rt-a9H" firstAttribute="top" secondItem="TAi-dO-mLk" secondAttribute="bottom" constant="201" id="VMh-dQ-heI"/>
-                            <constraint firstItem="Mm8-rt-a9H" firstAttribute="trailing" secondItem="1gI-XS-f4j" secondAttribute="trailing" id="YVr-DS-GBD"/>
                             <constraint firstItem="Mm8-rt-a9H" firstAttribute="leading" secondItem="Dtk-tf-F2m" secondAttribute="leadingMargin" id="a62-BZ-8ux"/>
                             <constraint firstItem="Mm8-rt-a9H" firstAttribute="trailing" secondItem="Dtk-tf-F2m" secondAttribute="trailingMargin" id="k2V-HM-7jd"/>
-                            <constraint firstItem="1gI-XS-f4j" firstAttribute="top" secondItem="Mm8-rt-a9H" secondAttribute="bottom" constant="8" symbolic="YES" id="mFw-E1-Ees"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="vI0-bF-Ipg"/>
