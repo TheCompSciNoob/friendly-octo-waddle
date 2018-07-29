@@ -24,6 +24,8 @@
 		402973861DB839ED00EC8C32 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 402973801DB839EA00EC8C32 /* AppDelegate.swift */; };
 		402973871DB839ED00EC8C32 /* DeviceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 402973811DB839EA00EC8C32 /* DeviceViewController.swift */; };
 		402973881DB839ED00EC8C32 /* MainTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 402973821DB839EA00EC8C32 /* MainTableViewController.swift */; };
+		971A1E9C210D0CF3007CB8C9 /* StoryBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 971A1E9B210D0CF3007CB8C9 /* StoryBuilder.swift */; };
+		971A1E9E210D173F007CB8C9 /* Stories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 971A1E9D210D173E007CB8C9 /* Stories.swift */; };
 		97CAC225210AFA8200675F48 /* english.json in Resources */ = {isa = PBXBuildFile; fileRef = 97CAC224210AFA8200675F48 /* english.json */; };
 		97CAC227210AFA9000675F48 /* chinese.json in Resources */ = {isa = PBXBuildFile; fileRef = 97CAC226210AFA9000675F48 /* chinese.json */; };
 		97CAC229210AFB3F00675F48 /* StoryManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97CAC228210AFB3F00675F48 /* StoryManager.swift */; };
@@ -69,6 +71,8 @@
 		402973821DB839EA00EC8C32 /* MainTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTableViewController.swift; sourceTree = "<group>"; };
 		4B810285FECA2430C1FAEF3F /* Pods_Starter_tvOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Starter_tvOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5831B849867AF94CA117AB75 /* Pods-Starter-macOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Starter-macOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-Starter-macOS/Pods-Starter-macOS.release.xcconfig"; sourceTree = "<group>"; };
+		971A1E9B210D0CF3007CB8C9 /* StoryBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryBuilder.swift; sourceTree = "<group>"; };
+		971A1E9D210D173E007CB8C9 /* Stories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stories.swift; sourceTree = "<group>"; };
 		97CAC224210AFA8200675F48 /* english.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = english.json; sourceTree = "<group>"; };
 		97CAC226210AFA9000675F48 /* chinese.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = chinese.json; sourceTree = "<group>"; };
 		97CAC228210AFB3F00675F48 /* StoryManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryManager.swift; sourceTree = "<group>"; };
@@ -197,6 +201,7 @@
 			children = (
 				97CAC224210AFA8200675F48 /* english.json */,
 				97CAC226210AFA9000675F48 /* chinese.json */,
+				971A1E9D210D173E007CB8C9 /* Stories.swift */,
 			);
 			path = StoryData;
 			sourceTree = "<group>";
@@ -238,6 +243,7 @@
 			children = (
 				97CAC22A210AFB4D00675F48 /* PromptAndResponse.swift */,
 				97CAC234210B735E00675F48 /* AudioInfo.swift */,
+				971A1E9B210D0CF3007CB8C9 /* StoryBuilder.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -554,10 +560,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				971A1E9C210D0CF3007CB8C9 /* StoryBuilder.swift in Sources */,
 				402973851DB839EA00EC8C32 /* MainTableViewController.swift in Sources */,
 				97CAC233210B05A900675F48 /* EnglishIntroController.swift in Sources */,
 				97CAC237210B963300675F48 /* CocktailEffectManager.swift in Sources */,
 				97CAC22F210B057D00675F48 /* HomePageController.swift in Sources */,
+				971A1E9E210D173F007CB8C9 /* Stories.swift in Sources */,
 				97CAC231210B059600675F48 /* ChineseIntroController.swift in Sources */,
 				402973831DB839EA00EC8C32 /* AppDelegate.swift in Sources */,
 				4029737E1DB839AF00EC8C32 /* ScanTableViewController.swift in Sources */,

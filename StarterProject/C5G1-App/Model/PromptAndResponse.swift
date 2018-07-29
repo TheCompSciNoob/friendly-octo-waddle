@@ -9,7 +9,7 @@
 import Foundation
 
 struct PromptAndResponse: Codable {
-    let question: AudioInfo
-    let correctResponse: AudioInfo
-    let wrongResponses: [AudioInfo]
+    var prompt: AudioInfo?
+    var correctResponse: AudioInfo?
+    var wrongResponses: [AudioInfo?]
 }

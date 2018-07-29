@@ -38,15 +38,21 @@ struct StoryManager {
     mutating func next() -> PromptAndResponse {
         index+=1
         let current = promptsAndResponses[index]
-        var fileNames = [current.question.audioPath, current.correctResponse.audioPath]
+        var fileNames: [String?] = [current.prompt?.audioPath ?? nil, current.correctResponse?.audioPath ?? nil]
         for wrongResponse in current.wrongResponses {
-            fileNames.append(wrongResponse.audioPath)
+            fileNames.append(wrongResponse?.audioPath)
         }
         self.soundManager = SoundManager(fileNames: fileNames, options: nil)
-        self.soundManager?.updatePosition(index: 0, position: AVAudio3DPoint(x: current.question.x, y: current.question.y, z: current.question.z))
-        self.soundManager?.updatePosition(index: 1, position: AVAudio3DPoint(x: current.correctResponse.x, y: current.correctResponse.y, z: current.correctResponse.z))
+        if let prompt = current.prompt {
+            self.soundManager?.updatePosition(index: 0, position: AVAudio3DPoint(x: prompt.x, y: prompt.y, z: prompt.z))
+        }
+        if let correct = current.correctResponse {
+            self.soundManager?.updatePosition(index: 1, position: AVAudio3DPoint(x: correct.x, y: correct.y, z: correct.z))
+        }
         for wrongIndex in 0..<current.wrongResponses.count {
-            self.soundManager?.updatePosition(index: wrongIndex + 2, position: AVAudio3DPoint(x: current.wrongResponses[wrongIndex].x, y: current.wrongResponses[wrongIndex].y, z: current.wrongResponses[wrongIndex].z))
+            if let wrong = current.wrongResponses[wrongIndex] {
+                self.soundManager?.updatePosition(index: wrongIndex + 2, position: AVAudio3DPoint(x: wrong.x, y: wrong.y, z: wrong.z))
+            }
         }
         return current
     }
@@ -56,18 +62,18 @@ struct StoryManager {
         return index + 1 < promptsAndResponses.count
     }
     
-    //index 0: question
-    func playQuestion() {
-        soundManager?.play(index: 0)
+    //index 0: prompt
+    func playPrompt() -> Bool {
+        return soundManager?.play(index: 0) ?? false
     }
     
     //index 1: correct answer
-    func playCorrectAnswer() {
-        soundManager?.play(index: 1)
+    func playCorrectAnswer() -> Bool {
+        return soundManager?.play(index: 1) ?? false
     }
     
     //index >=2: wrong answers
-    func playIncorrectAnswer(index: Int) {
-        soundManager?.play(index: index + 2)
+    func playIncorrectAnswer(index: Int) -> Bool{
+        return soundManager?.play(index: index + 2) ?? false
     }
 }

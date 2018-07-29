@@ -31,7 +31,7 @@ struct DataUtil {
         let wrongResponse2_1 = AudioInfo(text: "WrongResponse2_1", audioPath: "path", x: 1, y: 1, z: 1)
         let wrongResponse2_2 = AudioInfo(text: "WrongResponse2", audioPath: "path", x: 1, y: 1, z: 1)
         
-        let arr = [PromptAndResponse(question: question1, correctResponse: correctResponse1, wrongResponses: [wrongResponse1_1, wrongResponse1_2]), PromptAndResponse(question: question2, correctResponse: correctResponse2, wrongResponses: [wrongResponse2_1, wrongResponse2_2])]
+        let arr = [PromptAndResponse(prompt: question1, correctResponse: correctResponse1, wrongResponses: [wrongResponse1_1, wrongResponse1_2]), PromptAndResponse(prompt: question2, correctResponse: correctResponse2, wrongResponses: [wrongResponse2_1, wrongResponse2_2])]
         
         let encoder = JSONEncoder()
         encoder.outputFormatting = .prettyPrinted

@@ -9,8 +9,8 @@
 import Foundation
 
 struct AudioInfo: Codable {
-    let text: String
-    let audioPath: String
+    var text: String
+    var audioPath: String
     var x: Float
     var y: Float
     var z: Float
