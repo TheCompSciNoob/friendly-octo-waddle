@@ -22,7 +22,7 @@ class MainTestController: UIViewController, ScanTableViewControllerDelegate {
     }
   
     override func viewDidLoad() {
-        print(DataUtil.loadJSON(fileName: "english"))
+        
     }
   
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -42,7 +42,7 @@ class MainTestController: UIViewController, ScanTableViewControllerDelegate {
     }
     
     @IBAction func startManager(_ sender: UIButton) {
-        cocktailEffectManager = CocktailEffectManager(fileNames: ["ZOOM0050_Tr1.WAV", "ZOOM0059_Tr1.WAV"], device: device!)
+        cocktailEffectManager = CocktailEffectManager(fileNames: ["water.WAV", "carson.WAV"], device: device!)
         cocktailEffectManager?.placeSoundsDefault()
         cocktailEffectManager?.subscribeToDeviceUpdates()
         cocktailEffectManager?.start()
