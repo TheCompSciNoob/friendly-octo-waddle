@@ -76,14 +76,14 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="4" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="MetaWear" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uN2-jJ-anJ">
-                                            <rect key="frame" x="20" y="8" width="176" height="21"/>
+                                            <rect key="frame" x="20" y="8" width="145" height="21"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" tag="3" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Connected!" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j0o-5Q-UH1">
-                                            <rect key="frame" x="204" y="7" width="86" height="21"/>
+                                            <rect key="frame" x="173" y="7" width="117" height="21"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                             <color key="textColor" red="0.0" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -106,7 +106,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nc4-6U-9jW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="414" y="406"/>
+            <point key="canvasLocation" x="413.5" y="405.5"/>
         </scene>
         <!--Main Test Controller-->
         <scene sceneID="m0B-Yf-myo">
@@ -120,25 +120,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="8ak-Gc-c2X">
-                                <rect key="frame" x="16" y="345" width="309" height="72"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="8ak-Gc-c2X">
+                                <rect key="frame" x="50" y="345" width="309" height="72"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="IpM-fY-pC4">
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="IpM-fY-pC4">
                                         <rect key="frame" x="0.0" y="0.0" width="309" height="72"/>
                                         <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="wBX-2j-yhF">
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="wBX-2j-yhF">
                                                 <rect key="frame" x="0.0" y="0.0" width="309" height="72"/>
-                                                <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1gI-XS-f4j">
-                                                        <rect key="frame" x="0.0" y="0.0" width="309" height="72"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="50"/>
-                                                        <state key="normal" title="Cocktail Effect"/>
-                                                        <connections>
-                                                            <action selector="startManager:" destination="wfd-uH-OpO" eventType="touchUpInside" id="OUM-9X-7KY"/>
-                                                        </connections>
-                                                    </button>
-                                                </subviews>
                                             </stackView>
                                         </subviews>
                                     </stackView>
@@ -152,15 +141,33 @@
                                     <segue destination="kW6-X9-BFY" kind="push" id="dWR-C4-A3u"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1gI-XS-f4j">
+                                <rect key="frame" x="16" y="339" width="343" height="72"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                <state key="normal" title="Cocktail Effect"/>
+                                <connections>
+                                    <action selector="startManager:" destination="wfd-uH-OpO" eventType="touchUpInside" id="OUM-9X-7KY"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="Mm8-rt-a9H" firstAttribute="top" secondItem="TAi-dO-mLk" secondAttribute="bottom" constant="201" id="VMh-dQ-heI"/>
-                            <constraint firstItem="Mm8-rt-a9H" firstAttribute="leading" secondItem="Dtk-tf-F2m" secondAttribute="leadingMargin" id="a62-BZ-8ux"/>
-                            <constraint firstItem="Mm8-rt-a9H" firstAttribute="trailing" secondItem="Dtk-tf-F2m" secondAttribute="trailingMargin" id="k2V-HM-7jd"/>
+                            <constraint firstItem="Mm8-rt-a9H" firstAttribute="trailing" secondItem="Dtk-tf-F2m" secondAttribute="trailingMargin" id="1gw-nH-wM6"/>
+                            <constraint firstItem="W1i-CY-03T" firstAttribute="top" secondItem="8ak-Gc-c2X" secondAttribute="bottom" constant="250" id="JCK-Qy-TWw"/>
+                            <constraint firstItem="1gI-XS-f4j" firstAttribute="top" secondItem="Mm8-rt-a9H" secondAttribute="bottom" constant="2" id="JVA-sn-SD6"/>
+                            <constraint firstItem="Mm8-rt-a9H" firstAttribute="top" secondItem="TAi-dO-mLk" secondAttribute="bottom" constant="201" id="eFg-jV-YHa"/>
+                            <constraint firstItem="8ak-Gc-c2X" firstAttribute="top" secondItem="Mm8-rt-a9H" secondAttribute="bottom" constant="8" symbolic="YES" id="ear-iV-n3H"/>
+                            <constraint firstItem="Mm8-rt-a9H" firstAttribute="trailing" secondItem="1gI-XS-f4j" secondAttribute="trailing" id="fyX-tk-n5m"/>
+                            <constraint firstItem="1gI-XS-f4j" firstAttribute="trailing" secondItem="8ak-Gc-c2X" secondAttribute="trailing" id="lem-3J-5jH"/>
+                            <constraint firstItem="8ak-Gc-c2X" firstAttribute="leading" secondItem="Dtk-tf-F2m" secondAttribute="leadingMargin" constant="34" id="pBQ-Sf-rAW"/>
+                            <constraint firstItem="Mm8-rt-a9H" firstAttribute="leading" secondItem="1gI-XS-f4j" secondAttribute="leading" id="tCS-Y4-fpn"/>
+                            <constraint firstItem="Mm8-rt-a9H" firstAttribute="leading" secondItem="Dtk-tf-F2m" secondAttribute="leadingMargin" id="v9b-Z4-E6M"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="vI0-bF-Ipg"/>
+                    <connections>
+                        <outlet property="cocktailButton" destination="1gI-XS-f4j" id="s3A-b4-G0D"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uqd-pZ-d7X" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

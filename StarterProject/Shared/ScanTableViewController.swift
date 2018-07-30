@@ -48,10 +48,23 @@ class ScanTableViewController: UITableViewController {
             uuid.text = cur.identifier.uuidString
             
             let connected = cell.viewWithTag(3) as! UILabel
-            if cur.state == .connected {
-                connected.isHidden = false
-            } else {
-                connected.isHidden = true
+            switch (cur.state) {
+            case .connected:
+                connected.textColor = UIColor(red: 0, green: 100, blue: 0, alpha: 1)
+                connected.text = "Connected"
+                cur.sensorFusion?.mode = .imuPlus
+            case .connecting:
+                connected.textColor = UIColor(red: 249, green: 166, blue: 2, alpha: 1.0)
+                connected.text = "Connecting"
+            case .disconnected:
+                connected.textColor = .red
+                connected.text = "Disconnected"
+            case .disconnecting:
+                connected.textColor = .red
+                connected.text = "Disconnecting"
+            case .discovery:
+                connected.textColor = UIColor(red: 249, green: 166, blue: 2, alpha: 1.0)
+                connected.text = "Discovery";
             }
             
             let name = cell.viewWithTag(4) as! UILabel
@@ -90,17 +103,19 @@ class ScanTableViewController: UITableViewController {
             //let hud = MBProgressHUD.showAdded(to: UIApplication.shared.keyWindow!, animated: true)
             //hud.label.text = "Connecting..."
             
-            self.selected = selected
-            
-            //copied from DeviceViewController
-            print("Added observer.")
-            self.selected?.addObserver(self, forKeyPath: "state", options: NSKeyValueObservingOptions.new, context: nil)
-            self.selected?.connectAsync().success { _ in
-                self.selected?.led?.flashColorAsync(UIColor.green, withIntensity: 1.0, numberOfFlashes: 3)
-                NSLog("We are connected")
-                self.delegate?.scanTableViewController(self, didSelectDevice: selected)
-                }.failure { _ in
-                    self.selected?.removeObserver(self, forKeyPath: "state")
+            if (self.selected?.identifier.uuidString != selected.identifier.uuidString) {
+                self.selected?.disconnectAsync()
+                self.selected = selected
+                
+                //copied from DeviceViewController
+                self.selected?.connectAsync().success { _ in
+                    self.selected?.led?.flashColorAsync(UIColor.green, withIntensity: 1.0, numberOfFlashes: 3)
+                    NSLog("We are connected")
+                    self.delegate?.scanTableViewController(self, didSelectDevice: selected)
+                    self.tableView.reloadData()
+                    }.failure { _ in
+                        NSLog("Cannot connect to device")
+                }
             }
             
             
@@ -125,26 +140,6 @@ class ScanTableViewController: UITableViewController {
                 hud.label.text = error.localizedDescription
                 hud.hide(animated: true, afterDelay: 2.0)
             }*/
-        }
-    }
-    
-    override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
-        OperationQueue.main.addOperation {
-            switch (self.selected?.state) {
-            case .connected?:
-                print("Device connected.")
-                self.selected?.sensorFusion?.mode = .imuPlus
-            case .connecting?:
-                print("Device connecting.")
-            case .disconnected?:
-                print("Device disconnected.")
-            case .disconnecting?:
-                print("Device disconnecting.")
-            case .discovery?:
-                print("Device discovery.")
-            case .none:
-                print("Device state unavailable.")
-            }
         }
     }
 }

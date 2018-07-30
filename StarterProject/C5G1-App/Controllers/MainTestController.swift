@@ -11,6 +11,7 @@ import UIKit
 import MetaWear
 
 class MainTestController: UIViewController, ScanTableViewControllerDelegate {
+    @IBOutlet weak var cocktailButton: UIButton!
     
     private var device: MBLMetaWear? = nil
     private var cocktailEffectManager: CocktailEffectManager? = nil
@@ -18,6 +19,9 @@ class MainTestController: UIViewController, ScanTableViewControllerDelegate {
     override func viewWillAppear(_ animated: Bool) {
         if device != nil {
             print("Device ready.")
+            cocktailButton.isEnabled = true
+        } else {
+            cocktailButton.isEnabled = false
         }
     }
   
