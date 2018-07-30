@@ -27,13 +27,13 @@ class StoryBuilder {
         return self
     }
     
-    func q(_ question: String, _ audioPath: String, _ x: Float, _ y: Float, _ z: Float) -> StoryBuilder {
-        storyLine.append(PromptAndResponse(prompt: AudioInfo(text: question, audioPath: audioPath, x: x, y: y, z: z), correctResponse: AudioInfo(text: "", audioPath: "", x: x, y: y, z: z), wrongResponses: []))
+    func p(_ prompt: String, _ audioPath: String, _ x: Float, _ y: Float, _ z: Float) -> StoryBuilder {
+        storyLine.append(PromptAndResponse(prompt: AudioInfo(text: prompt, audioPath: audioPath, x: x, y: y, z: z), correctResponse: AudioInfo(text: "", audioPath: "", x: x, y: y, z: z), wrongResponses: []))
         return self
     }
     
-    func q(_ question: String, _ audioPath: String) -> StoryBuilder {
-        return self.q(question, audioPath, defaultX, defaultY, defaultZ)
+    func p(_ prompt: String, _ audioPath: String) -> StoryBuilder {
+        return self.p(prompt, audioPath, defaultX, defaultY, defaultZ)
     }
     
     func cr(_ correct: String, _ audioPath: String, _ x: Float, _ y: Float, _ z: Float) -> StoryBuilder {
