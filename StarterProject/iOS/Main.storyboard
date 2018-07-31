@@ -295,7 +295,7 @@
                                 </constraints>
                                 <attributedString key="attributedText">
                                     <fragment>
-                                        <string key="content">The following experience is a simulation of a mall in China. Through your headphones and IMU sensor, you will be fully immersed in this environment. Turning your head towards either of the conversations present will allow you to interact with the speakers using your device. Choose the correct response to the speaker to proceed.</string>
+                                        <string key="content">The following experience is a simulation of a mall in China. Through your headphones and IMU sensor, you will be fully immersed in this environment. Turning your head towards either of the conversations present will allow you to interact with the speakers using your device. Choose the correct response for the speaker to proceed.</string>
                                         <attributes>
                                             <font key="NSFont" size="17" name="AvenirNext-Regular"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
