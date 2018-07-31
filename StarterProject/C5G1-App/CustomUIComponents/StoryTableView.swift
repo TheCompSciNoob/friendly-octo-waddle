@@ -9,5 +9,9 @@
 import UIKit
 
 class StoryTableView: UITableView {
-    
+    var numElements = 0 {
+        didSet {
+            
+        }
+    }
 }
