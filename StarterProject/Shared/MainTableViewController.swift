@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import MetaWear
+import MetaWear 
 
 class MainTableViewController: UITableViewController, ScanTableViewControllerDelegate {
     var devices: [MBLMetaWear]?
