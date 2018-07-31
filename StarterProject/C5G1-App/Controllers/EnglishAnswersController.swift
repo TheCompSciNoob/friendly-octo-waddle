@@ -16,7 +16,7 @@ class EnglishAnswersController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         //TODO: return the number of answers possible, i.e. 3 but that's not good design
-        return 0
+        return 3
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
