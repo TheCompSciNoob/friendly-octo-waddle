@@ -97,8 +97,7 @@
 		972EC1292110088800FDE319 /* line38a.wav in Resources */ = {isa = PBXBuildFile; fileRef = 972EC1272110088800FDE319 /* line38a.wav */; };
 		972EC12A2110088800FDE319 /* line37.wav in Resources */ = {isa = PBXBuildFile; fileRef = 972EC1282110088800FDE319 /* line37.wav */; };
 		972EC12E211038AC00FDE319 /* CustomUIComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 972EC12D211038AC00FDE319 /* CustomUIComponents.swift */; };
-		97CAC225210AFA8200675F48 /* english.json in Resources */ = {isa = PBXBuildFile; fileRef = 97CAC224210AFA8200675F48 /* english.json */; };
-		97CAC227210AFA9000675F48 /* chinese.json in Resources */ = {isa = PBXBuildFile; fileRef = 97CAC226210AFA9000675F48 /* chinese.json */; };
+		972EC1302110B96900FDE319 /* ChineseScript.swift in Sources */ = {isa = PBXBuildFile; fileRef = 972EC12F2110B96900FDE319 /* ChineseScript.swift */; };
 		97CAC229210AFB3F00675F48 /* StoryManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97CAC228210AFB3F00675F48 /* StoryManager.swift */; };
 		97CAC22B210AFB4D00675F48 /* PromptAndResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97CAC22A210AFB4D00675F48 /* PromptAndResponse.swift */; };
 		97CAC22D210AFB7B00675F48 /* DataUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97CAC22C210AFB7B00675F48 /* DataUtil.swift */; };
@@ -213,8 +212,7 @@
 		972EC1272110088800FDE319 /* line38a.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = line38a.wav; sourceTree = "<group>"; };
 		972EC1282110088800FDE319 /* line37.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = line37.wav; sourceTree = "<group>"; };
 		972EC12D211038AC00FDE319 /* CustomUIComponents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomUIComponents.swift; sourceTree = "<group>"; };
-		97CAC224210AFA8200675F48 /* english.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = english.json; sourceTree = "<group>"; };
-		97CAC226210AFA9000675F48 /* chinese.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = chinese.json; sourceTree = "<group>"; };
+		972EC12F2110B96900FDE319 /* ChineseScript.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChineseScript.swift; sourceTree = "<group>"; };
 		97CAC228210AFB3F00675F48 /* StoryManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryManager.swift; sourceTree = "<group>"; };
 		97CAC22A210AFB4D00675F48 /* PromptAndResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromptAndResponse.swift; sourceTree = "<group>"; };
 		97CAC22C210AFB7B00675F48 /* DataUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataUtil.swift; sourceTree = "<group>"; };
@@ -337,9 +335,8 @@
 		97CAC221210AF7C700675F48 /* StoryData */ = {
 			isa = PBXGroup;
 			children = (
-				97CAC224210AFA8200675F48 /* english.json */,
-				97CAC226210AFA9000675F48 /* chinese.json */,
 				971A1E9D210D173E007CB8C9 /* Stories.swift */,
+				972EC12F2110B96900FDE319 /* ChineseScript.swift */,
 			);
 			path = StoryData;
 			sourceTree = "<group>";
@@ -638,7 +635,6 @@
 				972EC121210FFE3300FDE319 /* line33a.wav in Resources */,
 				972EC0F9210FFE3300FDE319 /* line32.wav in Resources */,
 				972EC11D210FFE3300FDE319 /* line36a.wav in Resources */,
-				97CAC227210AFA9000675F48 /* chinese.json in Resources */,
 				972EC120210FFE3300FDE319 /* line26c.wav in Resources */,
 				972EC0E8210FFE3300FDE319 /* line14.wav in Resources */,
 				972EC0FF210FFE3300FDE319 /* line28a.wav in Resources */,
@@ -649,7 +645,6 @@
 				972EC0ED210FFE3300FDE319 /* line13c.wav in Resources */,
 				972EC109210FFE3300FDE319 /* line12.wav in Resources */,
 				972EC0FB210FFE3300FDE319 /* line10c.wav in Resources */,
-				97CAC225210AFA8200675F48 /* english.json in Resources */,
 				972EC101210FFE3300FDE319 /* line17.wav in Resources */,
 				972EC113210FFE3300FDE319 /* line21a.wav in Resources */,
 				972EC0E4210FFE3300FDE319 /* line11.wav in Resources */,
@@ -837,6 +832,7 @@
 			files = (
 				971A1E9C210D0CF3007CB8C9 /* StoryBuilder.swift in Sources */,
 				402973851DB839EA00EC8C32 /* MainTableViewController.swift in Sources */,
+				972EC1302110B96900FDE319 /* ChineseScript.swift in Sources */,
 				97CAC233210B05A900675F48 /* EnglishIntroController.swift in Sources */,
 				97CAC237210B963300675F48 /* CocktailEffectManager.swift in Sources */,
 				97CAC22F210B057D00675F48 /* HomePageController.swift in Sources */,
