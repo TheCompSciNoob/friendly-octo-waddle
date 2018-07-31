@@ -11,4 +11,7 @@ import UIKit
 
 class HomePageController: UIViewController {
     
+    override func viewDidLoad() {
+        //TODO: copy functionality from MainTestController
+    }
 }
