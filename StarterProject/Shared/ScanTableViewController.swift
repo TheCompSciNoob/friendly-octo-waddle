@@ -50,11 +50,11 @@ class ScanTableViewController: UITableViewController {
             let connected = cell.viewWithTag(3) as! UILabel
             switch (cur.state) {
             case .connected:
-                connected.textColor = UIColor(red: 0, green: 100, blue: 0, alpha: 1)
+                connected.textColor = .green
                 connected.text = "Connected"
                 cur.sensorFusion?.mode = .imuPlus
             case .connecting:
-                connected.textColor = .yellow //UIColor(red: 249, green: 166, blue: 2, alpha: 1.0)
+                connected.textColor = .yellow
                 connected.text = "Connecting"
             case .disconnected:
                 connected.textColor = .red
@@ -63,8 +63,8 @@ class ScanTableViewController: UITableViewController {
                 connected.textColor = .red
                 connected.text = "Disconnecting"
             case .discovery:
-                connected.textColor = .yellow //UIColor(red: 249, green: 166, blue: 2, alpha: 1.0)
-                connected.text = "Discovery";
+                connected.textColor = .yellow
+                connected.text = "Discovery"
             }
             
             let name = cell.viewWithTag(4) as! UILabel

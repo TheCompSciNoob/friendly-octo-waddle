@@ -265,6 +265,10 @@
                         <viewLayoutGuide key="safeArea" id="XS7-EN-rbG"/>
                     </view>
                     <navigationItem key="navigationItem" id="a1I-m3-ru7"/>
+                    <connections>
+                        <outlet property="englishButton" destination="oM7-1o-L3g" id="VXV-0z-tw2"/>
+                        <outlet property="mandarinButton" destination="GCc-hV-4l4" id="kMf-Hh-fnN"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x54-ug-Mys" sceneMemberID="firstResponder"/>
             </objects>

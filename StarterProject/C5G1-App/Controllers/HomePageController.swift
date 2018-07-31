@@ -8,10 +8,41 @@
 
 import Foundation
 import UIKit
+import MetaWear
 
-class HomePageController: UIViewController {
+class HomePageController: UIViewController, ScanTableViewControllerDelegate {
     
-    override func viewDidLoad() {
-        //TODO: copy functionality from MainTestController
+    @IBOutlet weak var mandarinButton: UIButton!
+    @IBOutlet weak var englishButton: UIButton!
+    
+    private var device: MBLMetaWear? = nil
+    
+    override func viewWillAppear(_ animated: Bool) {
+        if device != nil && device?.state ==
+            .connected{
+            print("Device ready.")
+            mandarinButton.isEnabled = true
+            englishButton.isEnabled = true
+        } else {
+            print("Device not connected.")
+            mandarinButton.isEnabled = false
+            englishButton.isEnabled = false
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let scanTableViewController = segue.destination as? ScanTableViewController {
+            scanTableViewController.delegate = self
+        }
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        device?.disconnectAsync()
+        device = nil
+    }
+    
+    func scanTableViewController(_ controller: ScanTableViewController, didSelectDevice device: MBLMetaWear) {
+        print("Device received from ScanTableViewController.")
+        self.device = device
     }
 }
