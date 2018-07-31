@@ -11,13 +11,17 @@ import MetaWear
 import AVFoundation
 
 class CocktailEffectManager {
-    private var device: MBLMetaWear
-    private var soundManager: SoundManager? = nil
+    private let device: MBLMetaWear
+    private let soundManager: SoundManager
+    private let sector: Double //angle between each consecutive sound
     private var currentAngle = -1.0
+    private let defaultDistance = 30.0
+    private let closestDistance = 2.0
     
     init(fileNames: [String], device: MBLMetaWear) {
         self.device = device
         self.soundManager = SoundManager(fileNames: fileNames, options: .loops)
+        self.sector = 360.0 / Double((soundManager.fileNames.count))
     }
     
     func subscribeToDeviceUpdates() {
@@ -28,35 +32,38 @@ class CocktailEffectManager {
     }
     
     func getFocusedSoundIndex(angle: Double) -> Int {
-        let sectorSize = 360 / (soundManager?.fileNames.count)!
+        let sectorSize = 360 / (soundManager.fileNames.count)
         return Int(angle) / sectorSize
     }
     
     //place all sounds at default locations
     func placeSoundsDefault() {
-        let defaultDistance = 10.0
-        for index in 0..<(soundManager?.fileNames.count)! {
-            placeSound(index: index, distance: defaultDistance)
+        for index in 0..<(soundManager.fileNames.count) {
+            placeSound(index: index, distance: self.defaultDistance)
         }
     }
     
     //place individual sound at one location
     private func placeSound(index: Int, distance: Double) {
-        let sector = 360.0 / Double((soundManager?.fileNames.count)!) //angle between each consecutive sound
-        soundManager?.updatePosition(index: index, position: AVAudio3DPoint(x: Float(distance * cos(sector * Double(index) * Double.pi / 180)), y: Float(distance * sin(sector * Double(index) * Double.pi / 180)), z: 0.0))
+        soundManager.updatePosition(index: index, position: AVAudio3DPoint(x: Float(distance * cos(sector * Double(index) * Double.pi / 180)), y: Float(distance * sin(sector * Double(index) * Double.pi / 180)), z: 0.0))
     }
     
     func updateAllDistances(newAngle: Double) {
-        if getFocusedSoundIndex(angle: currentAngle) != getFocusedSoundIndex(angle: newAngle) {
-            currentAngle = newAngle
+        currentAngle = newAngle
+        let focusedIndex = getFocusedSoundIndex(angle: currentAngle)
+        if focusedIndex != getFocusedSoundIndex(angle: newAngle) {
             placeSoundsDefault()
-            placeSound(index: getFocusedSoundIndex(angle: currentAngle), distance: 1.0)
         }
+        
+        //fades in/out focused sound based on angle
+        let offsetAngle = abs(sector * (Double(focusedIndex) + 0.5) - currentAngle)
+        let resultDistance = (defaultDistance - closestDistance) * (2 * offsetAngle / sector) + 2.0
+        placeSound(index: focusedIndex, distance: resultDistance)
     }
     
     func start() {
-        for index in 0..<(soundManager?.fileNames.count)! {
-            soundManager?.play(index: index)
+        for index in 0..<soundManager.fileNames.count {
+            soundManager.play(index: index)
         }
     }
 }
