@@ -46,7 +46,7 @@ class MainTestController: UIViewController, ScanTableViewControllerDelegate {
     }
     
     @IBAction func startManager(_ sender: UIButton) {
-        cocktailEffectManager = CocktailEffectManager(fileNames: ["water.WAV", "carson.WAV"], device: device!)
+        cocktailEffectManager = CocktailEffectManager(fileNames: ["line1.wav", "line3.wav", "line5.wav"], device: device!)
         cocktailEffectManager?.placeSoundsDefault()
         cocktailEffectManager?.subscribeToDeviceUpdates()
         cocktailEffectManager?.start()

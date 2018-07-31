@@ -15,7 +15,7 @@ class CocktailEffectManager {
     private let soundManager: SoundManager
     private let sector: Double //angle between each consecutive sound
     private var currentAngle = -1.0
-    private let defaultDistance = 10.0
+    private let defaultDistance = 30.0
     private let closestDistance = 2.0
     
     init(fileNames: [String], device: MBLMetaWear) {
