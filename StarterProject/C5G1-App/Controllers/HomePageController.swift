@@ -42,3 +42,4 @@ class HomePageController: UIViewController, ScanTableViewControllerDelegate {
         self.device = device
     }
 }
+
