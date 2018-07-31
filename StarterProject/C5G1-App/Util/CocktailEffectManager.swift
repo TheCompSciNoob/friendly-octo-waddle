@@ -15,6 +15,8 @@ class CocktailEffectManager {
     private let soundManager: SoundManager
     private let sector: Double //angle between each consecutive sound
     private var currentAngle = -1.0
+    private let defaultDistance = 10.0
+    private let closestDistance = 2.0
     
     init(fileNames: [String], device: MBLMetaWear) {
         self.device = device
@@ -36,9 +38,8 @@ class CocktailEffectManager {
     
     //place all sounds at default locations
     func placeSoundsDefault() {
-        let defaultDistance = 10.0
         for index in 0..<(soundManager.fileNames.count) {
-            placeSound(index: index, distance: defaultDistance)
+            placeSound(index: index, distance: self.defaultDistance)
         }
     }
     
@@ -49,13 +50,15 @@ class CocktailEffectManager {
     
     func updateAllDistances(newAngle: Double) {
         currentAngle = newAngle
-        if getFocusedSoundIndex(angle: currentAngle) != getFocusedSoundIndex(angle: newAngle) {
+        let focusedIndex = getFocusedSoundIndex(angle: currentAngle)
+        if focusedIndex != getFocusedSoundIndex(angle: newAngle) {
             placeSoundsDefault()
         }
-        let focusedIndex = getFocusedSoundIndex(angle: currentAngle)
-        //TODO: use % to calculate remainder
         
-        placeSound(index: focusedIndex, distance: 2.0)
+        //fades in/out focused sound based on angle
+        let offsetAngle = abs(sector * (Double(focusedIndex) + 0.5) - currentAngle)
+        let resultDistance = (defaultDistance - closestDistance) * (2 * offsetAngle / sector) + 2.0
+        placeSound(index: focusedIndex, distance: resultDistance)
     }
     
     func start() {
