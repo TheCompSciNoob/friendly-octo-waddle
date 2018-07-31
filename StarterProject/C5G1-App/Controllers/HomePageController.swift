@@ -12,6 +12,7 @@ import MetaWear
 
 class HomePageController: UIViewController, ScanTableViewControllerDelegate {
     
+    @IBOutlet weak var configureSensorsButton: UIButton!
     @IBOutlet weak var mandarinButton: UIButton!
     @IBOutlet weak var englishButton: UIButton!
     
@@ -34,11 +35,6 @@ class HomePageController: UIViewController, ScanTableViewControllerDelegate {
         if let scanTableViewController = segue.destination as? ScanTableViewController {
             scanTableViewController.delegate = self
         }
-    }
-    
-    override func viewWillDisappear(_ animated: Bool) {
-        device?.disconnectAsync()
-        device = nil
     }
     
     func scanTableViewController(_ controller: ScanTableViewController, didSelectDevice device: MBLMetaWear) {
