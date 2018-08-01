@@ -8,7 +8,7 @@
 
 import UIKit
 
-class EnglishAnswersController: UITableViewController {
+class ChineseAnswersController: UITableViewController {
     
     override func viewDidLoad() {
         //TODO: load data from StoryData
@@ -30,6 +30,8 @@ class EnglishAnswersController: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         //TODO: action triggered when a row is selected
     }
-    
+}
+
+class AnswerCell: UITableViewCell {
     
 }
