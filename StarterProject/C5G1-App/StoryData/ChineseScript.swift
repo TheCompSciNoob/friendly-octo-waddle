@@ -8,7 +8,7 @@
 
 import Foundation
 
-func chinese_mall() -> [PromptAndResponse] {
+func chineseMall1() -> [PromptAndResponse] {
     return StoryBuilder()
         
         .createNew()
@@ -57,10 +57,13 @@ func chinese_mall() -> [PromptAndResponse] {
         .wr("我觉得我不需要为我买的衣服付钱", "line15c.wav")
         
         .createNew()
-        .p("好的 总共180元", "line16.wav")
+        .p("好的 总共180元 都好了 祝您度过愉快的一天", "line16.wav") //TODO: merge line 16 and 17
         
-        .createNew()
-        .p("都好了 祝您度过愉快的一天", "line17.wav")
+        .build()
+}
+
+func chineseMall2() -> [PromptAndResponse] {
+    return StoryBuilder()
         
         .createNew()
         .p("好了 我们去苹果店吧 你喜欢哪些产品", "line18.wav")
@@ -80,8 +83,8 @@ func chinese_mall() -> [PromptAndResponse] {
         .wr("它坏了因为我的狗吃了它", "line23b.wav")
         .wr("它还挺好的所以我不需要一个新电脑", "line23c.wav")
         
-        .createNew()
-        .p("好 我们应该问问工作人员 你就可以选个新电脑了 打扰一下", "line24.wav")
+        //.createNew()
+        //.p("好 我们应该问问工作人员 你就可以选个新电脑了 打扰一下", "line24.wav")
         
         .createNew()
         .p("您好 有什么可以帮助你的", "line25.wav")
@@ -124,6 +127,6 @@ func chinese_mall() -> [PromptAndResponse] {
         .cr("谢谢您再见", "line38a.wav")
         .wr("不用了 谢谢你", "line38b.wav")
         .wr("请给我好吗", "line38c.wav")
-        
+    
         .build()
 }

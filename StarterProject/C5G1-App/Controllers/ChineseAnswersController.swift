@@ -24,7 +24,7 @@ class ChineseAnswersController: UITableViewController {
         self.answersTableView.backgroundView = background
         
         //StoryManager as data source
-        self.storyManager = StoryManager(promptsAndResponses: Stories.CHINESE_MALL, device: device!)
+        self.storyManager = StoryManager(promptsAndResponses: Stories.CHINESE_MALL_2, device: device!)
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

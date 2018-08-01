@@ -10,5 +10,7 @@ import Foundation
 
 class Stories {
     
-    static let CHINESE_MALL = chinese_mall()
+    static let CHINESE_MALL_1 = chineseMall1()
+    
+    static let CHINESE_MALL_2 = chineseMall2()
 }
