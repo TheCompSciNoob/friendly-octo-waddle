@@ -9,9 +9,12 @@
 import UIKit
 
 class ChineseAnswersController: UITableViewController {
+    @IBOutlet var answersTableView: UITableView!
     
     override func viewDidLoad() {
-        //TODO: load data from StoryData
+        let background = UIImageView(frame: self.answersTableView.bounds)
+        background.image = #imageLiteral(resourceName: "map2")
+        self.answersTableView.backgroundView = background
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

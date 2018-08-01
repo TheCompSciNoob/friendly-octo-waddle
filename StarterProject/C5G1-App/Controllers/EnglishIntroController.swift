@@ -11,4 +11,7 @@ import UIKit
 
 class EnglishIntroController: UIViewController {
     
+    override func viewDidLoad() {
+        loadMapBackground(root: self.view)
+    }
 }

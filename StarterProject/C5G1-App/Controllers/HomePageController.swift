@@ -18,6 +18,10 @@ class HomePageController: UIViewController, ScanTableViewControllerDelegate {
     
     private var device: MBLMetaWear? = nil
     
+    override func viewDidLoad() {
+        loadMapBackground(root: self.view)
+    }
+    
     override func viewWillAppear(_ animated: Bool) {
         if device != nil && device?.state ==
             .connected{
