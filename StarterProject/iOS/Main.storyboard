@@ -479,6 +479,8 @@
                     <navigationItem key="navigationItem" title="Shopping Mall" id="kDP-Xf-k1L"/>
                     <connections>
                         <outlet property="answersTableView" destination="GHB-p8-NVn" id="ilI-JM-Wxy"/>
+                        <outlet property="prompt" destination="Jw1-dw-8wv" id="i2S-x2-yJH"/>
+                        <outlet property="submitButton" destination="4Pe-Fm-Djj" id="N3a-uN-Oyo"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h9x-Yt-Sxz" userLabel="First Responder" sceneMemberID="firstResponder"/>

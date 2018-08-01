@@ -41,7 +41,7 @@ class HomePageController: UIViewController, ScanTableViewControllerDelegate {
         } else if let chineseIntroController = segue.destination as? ChineseIntroController {
             chineseIntroController.device = self.device
         } else if let englishIntroController = segue.destination as? EnglishIntroController {
-            
+            englishIntroController.device = self.device
         }
     }
     

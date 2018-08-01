@@ -11,11 +11,18 @@ import MetaWear
 
 class ChineseAnswersController: UITableViewController {
     @IBOutlet var answersTableView: UITableView!
+    @IBOutlet weak var prompt: UILabel!
+    @IBOutlet weak var submitButton: UIButton!
     
     private var storyManager: StoryManager!
     private var currentPR: PromptAndResponse? = nil
     private var answers: [AudioInfo] = []
     var device: MBLMetaWear? = nil
+    private var answerSelected = -1 {
+        didSet {
+            submitButton.isEnabled = answerSelected >= 0
+        }
+    }
     
     override func viewDidLoad() {
         //background
@@ -24,7 +31,7 @@ class ChineseAnswersController: UITableViewController {
         self.answersTableView.backgroundView = background
         
         //StoryManager as data source
-        self.storyManager = StoryManager(promptsAndResponses: Stories.CHINESE_MALL_2, device: device!)
+        self.storyManager = StoryManager(promptsAndResponses: Stories.CHINESE_MALL_1, device: device!)
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -54,12 +61,17 @@ class ChineseAnswersController: UITableViewController {
         //TODO: action triggered when a row is selected
     }
     
-    @IBAction func onSubmitClicked(_ sender: UIButton) {
-        self.answers.removeAll()
+    private func loadNext() {
+        self.answerSelected = -1
         if storyManager.hasNext() {
-            self.currentPR = storyManager?.next()
+            self.currentPR = storyManager.next()
+            self.prompt.text = currentPR?.prompt?.text
             self.answersTableView.reloadData()
         }
+    }
+    
+    @IBAction func onSubmitClicked(_ sender: UIButton) {
+        
     }
 }
 
