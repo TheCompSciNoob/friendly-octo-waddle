@@ -38,6 +38,10 @@ class HomePageController: UIViewController, ScanTableViewControllerDelegate {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let scanTableViewController = segue.destination as? ScanTableViewController {
             scanTableViewController.delegate = self
+        } else if let chineseIntroController = segue.destination as? ChineseIntroController {
+            chineseIntroController.device = self.device
+        } else if let englishIntroController = segue.destination as? EnglishIntroController {
+            
         }
     }
     

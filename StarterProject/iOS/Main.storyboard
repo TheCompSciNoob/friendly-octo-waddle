@@ -371,7 +371,7 @@
             </objects>
             <point key="canvasLocation" x="405" y="406"/>
         </scene>
-        <!--Campfire Story-->
+        <!--Shopping Mall-->
         <scene sceneID="Zl1-Uh-6Cv">
             <objects>
                 <tableViewController id="k2w-ng-Vqg" customClass="ChineseAnswersController" customModule="StarterProject" customModuleProvider="target" sceneMemberID="viewController">
@@ -417,21 +417,24 @@
                             <state key="normal" title="Submit">
                                 <color key="titleColor" red="0.99607843139999996" green="0.92549019610000005" blue="0.58039215690000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </state>
+                            <connections>
+                                <action selector="onSubmitClicked:" destination="k2w-ng-Vqg" eventType="touchUpInside" id="vbI-ha-341"/>
+                            </connections>
                         </button>
                         <prototypes>
-                            <tableViewCell opaque="NO" contentMode="scaleToFill" selectionStyle="blue" accessoryType="checkmark" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="AnswerCell" rowHeight="126" id="mdy-Ug-12x" customClass="AnswerCell" customModule="StarterProject" customModuleProvider="target">
+                            <tableViewCell opaque="NO" contentMode="scaleToFill" selectionStyle="blue" accessoryType="checkmark" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ChineseAnswerCell" rowHeight="126" id="mdy-Ug-12x" customClass="ChineseAnswerCell" customModule="StarterProject" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="275.5" width="375" height="126"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="mdy-Ug-12x" id="f8a-cD-rZi">
                                     <rect key="frame" x="0.0" y="0.0" width="335" height="125.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Text in Chinese + Translation in English" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Wv-6h-1ts" userLabel="responseText">
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="-1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Text in Chinese + Translation in English" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Wv-6h-1ts" userLabel="responseText">
                                             <rect key="frame" x="20" y="56" width="179" height="61"/>
                                             <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="20"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Response " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gOz-37-TPt" userLabel="responseTitle">
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="-1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Response " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gOz-37-TPt" userLabel="responseTitle">
                                             <rect key="frame" x="20" y="8" width="179" height="40"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="40" id="GNJ-82-C1A"/>
@@ -440,7 +443,7 @@
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="replay_black" translatesAutoresizingMaskIntoConstraints="NO" id="eAN-AR-Je4">
+                                        <imageView userInteractionEnabled="NO" tag="-1" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="replay_black" translatesAutoresizingMaskIntoConstraints="NO" id="eAN-AR-Je4">
                                             <rect key="frame" x="207" y="0.0" width="128" height="128"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="128" id="3xt-J2-6gY"/>
@@ -460,6 +463,10 @@
                                         <constraint firstItem="eAN-AR-Je4" firstAttribute="leading" secondItem="4Wv-6h-1ts" secondAttribute="trailing" constant="8" symbolic="YES" id="zyU-aj-Oto"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="responseText" destination="4Wv-6h-1ts" id="xCa-Ec-VSc"/>
+                                    <outlet property="responseTitle" destination="gOz-37-TPt" id="657-Xv-Wu1"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -467,7 +474,7 @@
                             <outlet property="delegate" destination="k2w-ng-Vqg" id="YAF-OS-Hbb"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Campfire Story" id="kDP-Xf-k1L"/>
+                    <navigationItem key="navigationItem" title="Shopping Mall" id="kDP-Xf-k1L"/>
                     <connections>
                         <outlet property="answersTableView" destination="GHB-p8-NVn" id="ilI-JM-Wxy"/>
                     </connections>

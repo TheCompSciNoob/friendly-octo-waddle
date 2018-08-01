@@ -6,10 +6,12 @@
 //  Copyright © 2018 MBIENTLAB, INC. All rights reserved.
 //
 
-import Foundation
 import UIKit
+import MetaWear
 
 class EnglishIntroController: UIViewController {
+    
+    var device: MBLMetaWear? = nil
     
     override func viewDidLoad() {
         loadMapBackground(root: self.view)

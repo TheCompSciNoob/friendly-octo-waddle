@@ -30,7 +30,7 @@ func chinese_mall() -> [PromptAndResponse] {
         .p("你想试穿点什么吗?", "line6.wav")
         .cr("那个红色的裤子看着不错。你觉得它适合我吗", "line7a.wav")
         .wr("我不是很喜欢蓝色的长袖体恤因为他们让我看起来病怏怏的", "line7b.wav")
-        .wr("绿色是我最喜欢的颜色", "line7c")
+        .wr("绿色是我最喜欢的颜色", "line7c.wav")
         
         .createNew()
         .p("我觉得它是合适的 你应该去试试", "line8.wav")
