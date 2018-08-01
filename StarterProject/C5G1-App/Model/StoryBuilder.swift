@@ -28,7 +28,7 @@ class StoryBuilder {
     }
     
     func p(_ prompt: String, _ audioPath: String, _ x: Float, _ y: Float, _ z: Float) -> StoryBuilder {
-        storyLine.append(PromptAndResponse(prompt: AudioInfo(text: prompt, audioPath: audioPath, x: x, y: y, z: z), correctResponse: AudioInfo(text: "", audioPath: "", x: x, y: y, z: z), wrongResponses: []))
+        storyLine[index].prompt = AudioInfo(text: prompt, audioPath: audioPath, x: x, y: y, z: z)
         return self
     }
     

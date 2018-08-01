@@ -18,6 +18,10 @@ class HomePageController: UIViewController, ScanTableViewControllerDelegate {
     
     private var device: MBLMetaWear? = nil
     
+    override func viewDidLoad() {
+        loadMapBackground(root: self.view)
+    }
+    
     override func viewWillAppear(_ animated: Bool) {
         if device != nil && device?.state ==
             .connected{
@@ -34,6 +38,10 @@ class HomePageController: UIViewController, ScanTableViewControllerDelegate {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let scanTableViewController = segue.destination as? ScanTableViewController {
             scanTableViewController.delegate = self
+        } else if let chineseIntroController = segue.destination as? ChineseIntroController {
+            chineseIntroController.device = self.device
+        } else if let englishIntroController = segue.destination as? EnglishIntroController {
+            
         }
     }
     

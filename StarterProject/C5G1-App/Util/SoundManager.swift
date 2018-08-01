@@ -49,6 +49,8 @@ struct SoundManager {
             let index = players.count
             if let fileName = optionalFileName {
                 //get file name and extension
+                //print(fileName)
+                print(fileName.index(of: "."))
                 let res = fileName[...fileName.index(before: fileName.index(of: ".")!)]
                 let ext = fileName[fileName.index(after: fileName.index(of: ".")!)...]
                 print("\(res), \(ext)")

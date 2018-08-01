@@ -42,6 +42,7 @@ struct StoryManager {
         for wrongResponse in current.wrongResponses {
             fileNames.append(wrongResponse?.audioPath)
         }
+        print(fileNames)
         self.soundManager = SoundManager(fileNames: fileNames, options: nil)
         if let prompt = current.prompt {
             self.soundManager?.updatePosition(index: 0, position: AVAudio3DPoint(x: prompt.x, y: prompt.y, z: prompt.z))
