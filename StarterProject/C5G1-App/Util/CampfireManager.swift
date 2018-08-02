@@ -3,7 +3,7 @@
 //  iOS
 //
 //  Created by Huma Khan on 7/31/18.
-//  Copyright © 2018 MBIENTLAB, INC. All rights reserved.
+//  Copyright © 2018 Cluster 5. All rights reserved.
 //
 
 import Foundation
