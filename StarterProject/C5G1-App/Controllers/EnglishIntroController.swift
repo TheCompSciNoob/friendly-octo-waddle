@@ -8,12 +8,14 @@
 
 import UIKit
 import MetaWear
+import AVFoundation
 
 class EnglishIntroController: UIViewController {
     
     var device: MBLMetaWear? = nil
     var soundManager: SoundManager!
     var parthTimer: Timer!
+    var timeElapsed = 0
     
     override func viewDidLoad() {
         loadMapBackground(root: self.view)
@@ -51,6 +53,10 @@ class EnglishIntroController: UIViewController {
     }
     
     @objc func moveSounds() {
-        
+        timeElapsed += 1
+        let x = soundManager.players()[0].x
+        let y = soundManager.players()[0].y
+        let z = soundManager.players()[0].z
+        soundManager.updatePosition(index: 0, position: AVAudio3DPoint(5 * cos(timeElapsed), y: y, z: 5 * sin(timeElapsed)))
     }
 }
