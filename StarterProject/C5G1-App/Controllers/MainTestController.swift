@@ -6,7 +6,6 @@
 //  Copyright © 2018 MBIENTLAB, INC. All rights reserved.
 //
 
-import Foundation
 import UIKit
 import MetaWear
 

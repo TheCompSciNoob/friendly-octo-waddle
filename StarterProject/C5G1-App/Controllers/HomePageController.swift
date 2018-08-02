@@ -6,7 +6,6 @@
 //  Copyright © 2018 MBIENTLAB, INC. All rights reserved.
 //
 
-import Foundation
 import UIKit
 import MetaWear
 
@@ -41,7 +40,7 @@ class HomePageController: UIViewController, ScanTableViewControllerDelegate {
         } else if let chineseIntroController = segue.destination as? ChineseIntroController {
             chineseIntroController.device = self.device
         } else if let englishIntroController = segue.destination as? EnglishIntroController {
-            
+            englishIntroController.device = self.device
         }
     }
     
