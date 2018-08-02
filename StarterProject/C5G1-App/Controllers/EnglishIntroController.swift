@@ -12,6 +12,7 @@ import MetaWear
 class EnglishIntroController: UIViewController {
     
     var device: MBLMetaWear? = nil
+    var soundManager: SoundManager!
     
     override func viewDidLoad() {
         loadMapBackground(root: self.view)
