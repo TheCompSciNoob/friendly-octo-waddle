@@ -6,8 +6,6 @@
 //  Copyright © 2018 MBIENTLAB, INC. All rights reserved.
 //
 
-import Foundation
-
 func chineseMall1() -> [PromptAndResponse] {
     return StoryBuilder()
         
