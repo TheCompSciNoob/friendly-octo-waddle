@@ -109,68 +109,6 @@
             </objects>
             <point key="canvasLocation" x="405" y="1208"/>
         </scene>
-        <!--Main Test Controller-->
-        <scene sceneID="m0B-Yf-myo">
-            <objects>
-                <viewController id="wfd-uH-OpO" customClass="MainTestController" customModule="StarterProject" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="TAi-dO-mLk"/>
-                        <viewControllerLayoutGuide type="bottom" id="W1i-CY-03T"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="Dtk-tf-F2m">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="8ak-Gc-c2X">
-                                <rect key="frame" x="50" y="301" width="309" height="116"/>
-                                <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="IpM-fY-pC4">
-                                        <rect key="frame" x="0.0" y="0.0" width="309" height="116"/>
-                                        <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="wBX-2j-yhF">
-                                                <rect key="frame" x="0.0" y="0.0" width="309" height="116"/>
-                                            </stackView>
-                                        </subviews>
-                                    </stackView>
-                                </subviews>
-                            </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mm8-rt-a9H">
-                                <rect key="frame" x="16" y="221" width="343" height="72"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
-                                <state key="normal" title="Devices"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1gI-XS-f4j">
-                                <rect key="frame" x="16" y="295" width="343" height="72"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
-                                <state key="normal" title="Cocktail Effect"/>
-                                <connections>
-                                    <action selector="startManager:" destination="wfd-uH-OpO" eventType="touchUpInside" id="OUM-9X-7KY"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="Mm8-rt-a9H" firstAttribute="trailing" secondItem="Dtk-tf-F2m" secondAttribute="trailingMargin" id="1gw-nH-wM6"/>
-                            <constraint firstItem="W1i-CY-03T" firstAttribute="top" secondItem="8ak-Gc-c2X" secondAttribute="bottom" constant="250" id="JCK-Qy-TWw"/>
-                            <constraint firstItem="1gI-XS-f4j" firstAttribute="top" secondItem="Mm8-rt-a9H" secondAttribute="bottom" constant="2" id="JVA-sn-SD6"/>
-                            <constraint firstItem="Mm8-rt-a9H" firstAttribute="top" secondItem="TAi-dO-mLk" secondAttribute="bottom" constant="201" id="eFg-jV-YHa"/>
-                            <constraint firstItem="8ak-Gc-c2X" firstAttribute="top" secondItem="Mm8-rt-a9H" secondAttribute="bottom" constant="8" symbolic="YES" id="ear-iV-n3H"/>
-                            <constraint firstItem="Mm8-rt-a9H" firstAttribute="trailing" secondItem="1gI-XS-f4j" secondAttribute="trailing" id="fyX-tk-n5m"/>
-                            <constraint firstItem="1gI-XS-f4j" firstAttribute="trailing" secondItem="8ak-Gc-c2X" secondAttribute="trailing" id="lem-3J-5jH"/>
-                            <constraint firstItem="8ak-Gc-c2X" firstAttribute="leading" secondItem="Dtk-tf-F2m" secondAttribute="leadingMargin" constant="34" id="pBQ-Sf-rAW"/>
-                            <constraint firstItem="Mm8-rt-a9H" firstAttribute="leading" secondItem="1gI-XS-f4j" secondAttribute="leading" id="tCS-Y4-fpn"/>
-                            <constraint firstItem="Mm8-rt-a9H" firstAttribute="leading" secondItem="Dtk-tf-F2m" secondAttribute="leadingMargin" id="v9b-Z4-E6M"/>
-                        </constraints>
-                    </view>
-                    <navigationItem key="navigationItem" id="vI0-bF-Ipg"/>
-                    <connections>
-                        <outlet property="cocktailButton" destination="1gI-XS-f4j" id="s3A-b4-G0D"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="uqd-pZ-d7X" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-633" y="1208"/>
-        </scene>
         <!--Home Page Controller-->
         <scene sceneID="8Cr-TD-eTt">
             <objects>
