@@ -14,7 +14,8 @@ class StoryManager {
     private let promptsAndResponses: [PromptAndResponse]
     private let device: MBLMetaWear
     private var prIndex = -1 //which conversation the user is on
-    private var soundManager: SoundManager! //reassigned for each conversation
+    private var conversation: SoundManager! //reassigned for each conversation
+    private var ambient: SoundManager!
     
     //current conversation
     private var correctAnswerIndex = -1 //where the right answer is
@@ -22,6 +23,14 @@ class StoryManager {
     init(promptsAndResponses: [PromptAndResponse], device: MBLMetaWear) {
         self.promptsAndResponses = promptsAndResponses
         self.device = device
+        self.ambient = SoundManager(fileNames: ["ambiencefoodcourt.wav"], options: .loops)
+        self.initAmbientSounds()
+    }
+    
+    func initAmbientSounds() {
+        for index in 0..<ambient.fileNames.count {
+            ambient.changeVolume(index: index, vol: 0.5)
+        }
     }
     
     func checkAnswer(answerIndex: Int) -> Bool {
@@ -46,16 +55,16 @@ class StoryManager {
         }
         fileNames.insert(currentPR.correctResponse?.audioPath ?? nil, at: self.correctAnswerIndex + 1)
         print(fileNames)
-        self.soundManager = SoundManager(fileNames: fileNames, options: nil)
+        self.conversation = SoundManager(fileNames: fileNames, options: nil)
         if let prompt = currentPR.prompt {
-            self.soundManager?.updatePosition(index: 0, position: AVAudio3DPoint(x: prompt.x, y: prompt.y, z: prompt.z))
+            self.conversation?.updatePosition(index: 0, position: AVAudio3DPoint(x: prompt.x, y: prompt.y, z: prompt.z))
         }
         if let correct = currentPR.correctResponse {
-            self.soundManager.updatePosition(index: self.correctAnswerIndex, position: AVAudio3DPoint(x: correct.x, y: correct.y, z: correct.z))
+            self.conversation.updatePosition(index: self.correctAnswerIndex, position: AVAudio3DPoint(x: correct.x, y: correct.y, z: correct.z))
         }
         for wrongIndex in 0..<currentPR.wrongResponses.count {
             if let wrong = currentPR.wrongResponses[wrongIndex] {
-                self.soundManager.updatePosition(index: wrongIndex + (wrongIndex >= self.correctAnswerIndex ? 1 : 0), position: AVAudio3DPoint(x: wrong.x, y: wrong.y, z: wrong.z))
+                self.conversation.updatePosition(index: wrongIndex + (wrongIndex >= self.correctAnswerIndex ? 1 : 0), position: AVAudio3DPoint(x: wrong.x, y: wrong.y, z: wrong.z))
             }
         }
         
@@ -63,11 +72,23 @@ class StoryManager {
     }
     
     func playCurrentPrompt() {
-        self.soundManager.play(index: 0)
+        self.conversation.play(index: 0)
     }
     
     func playCurrentAnswer(_ index: Int) {
-        self.soundManager.play(index: index + 1)
+        self.conversation.play(index: index + 1)
+    }
+    
+    func playAmbientSounds() {
+        for index in 0..<ambient.fileNames.count {
+            ambient.play(index: index)
+        }
+    }
+    
+    func pauseAmbientSounds() {
+        for index in 0..<ambient.fileNames.count {
+            ambient.pause(index: index)
+        }
     }
     
     func hasNext() -> Bool {
@@ -78,7 +99,7 @@ class StoryManager {
         device.sensorFusion?.eulerAngle.startNotificationsAsync { (obj, error) in
             
             print("h: \(String(describing: obj?.h)), p: \(String(describing: obj?.p)), r: \(String(describing: obj?.r))")
-            self.soundManager?.updateAngularOrientation(degreesYaw: abs(Float(360 - (obj?.y)!)), degreesPitch: Float((obj?.p)!), degreesRoll: Float((obj?.r)!))
+            self.conversation?.updateAngularOrientation(degreesYaw: abs(Float(360 - (obj?.y)!)), degreesPitch: Float((obj?.p)!), degreesRoll: Float((obj?.r)!))
             }.success { result in
                 print("Successfully subscribed")
             }.failure { error in

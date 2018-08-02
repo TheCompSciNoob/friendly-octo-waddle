@@ -18,18 +18,27 @@ protocol CocktailDelegate {
 
 class CocktailEffectManager {
     private let device: MBLMetaWear
-    private let soundManager: SoundManager
+    private let targets: SoundManager
+    private let ambient: SoundManager
     var cocktailDelegate: CocktailDelegate? = nil
     private let sector: Double //angle between each consecutive sound
     private var currentAngle = -1.0
     private let defaultDistance = 30.0
     private let closestDistance = 2.0
     
-    init(fileNames: [String], device: MBLMetaWear) {
+    init(ambient: [String], targets: [String], device: MBLMetaWear) {
         self.device = device
-        self.soundManager = SoundManager(fileNames: fileNames, options: .loops)
-        self.sector = 360.0 / Double((soundManager.fileNames.count))
+        self.targets = SoundManager(fileNames: targets, options: .loops)
+        self.ambient = SoundManager(fileNames: ambient, options: .loops)
+        self.sector = 360.0 / Double((targets.count))
         self.placeSoundsDefault()
+        self.initAmbientSounds()
+    }
+    
+    func initAmbientSounds() {
+        for index in 0..<ambient.fileNames.count {
+            ambient.changeVolume(index: index, vol: 0.5)
+        }
     }
     
     func subscribeToDeviceUpdates() {
@@ -43,13 +52,13 @@ class CocktailEffectManager {
     }
     
     func getFocusedSoundIndex(angle: Double) -> Int {
-        let sectorSize = 360 / (soundManager.fileNames.count)
+        let sectorSize = 360 / (targets.fileNames.count)
         return Int(angle) / sectorSize
     }
     
     //place all sounds at default locations
     func placeSoundsDefault() {
-        for index in 0..<(soundManager.fileNames.count) {
+        for index in 0..<(targets.fileNames.count) {
             placeSound(index: index, distance: self.defaultDistance)
         }
     }
@@ -57,7 +66,7 @@ class CocktailEffectManager {
     //place individual sound at one location
     private func placeSound(index: Int, distance: Double) {
         let angle = sector * (Double(index) + 0.5)
-        soundManager.updatePosition(index: index, position: AVAudio3DPoint(x: Float(distance * cos(angle * Double.pi / 180)), y: Float(distance * sin(angle * Double.pi / 180)), z: 0.0))
+        targets.updatePosition(index: index, position: AVAudio3DPoint(x: Float(distance * cos(angle * Double.pi / 180)), y: Float(distance * sin(angle * Double.pi / 180)), z: 0.0))
     }
     
     func updateAllDistances(newAngle: Double) {
@@ -77,14 +86,22 @@ class CocktailEffectManager {
     }
     
     func start() {
-        for index in 0..<soundManager.fileNames.count {
-            soundManager.play(index: index)
+        for index in 0..<targets.fileNames.count {
+            targets.play(index: index)
+        }
+        
+        for index in 0..<ambient.fileNames.count {
+            ambient.play(index: index)
         }
     }
     
     func pause() {
-        for index in 0..<soundManager.fileNames.count {
-            soundManager.pause(index: index)
+        for index in 0..<targets.fileNames.count {
+            targets.pause(index: index)
+        }
+        
+        for index in 0..<ambient.fileNames.count {
+            ambient.pause(index: index)
         }
     }
 }
