@@ -14,8 +14,9 @@ class ChineseAnswersController: UITableViewController {
     @IBOutlet weak var promptText: UILabel!
     @IBOutlet weak var proceedButton: UIButton!
     
-    private var storyManager: StoryManager!
     var device: MBLMetaWear? = nil
+    var storyLine: [PromptAndResponse] = []
+    private var storyManager: StoryManager!
     private var answers: [String] = []
     private var hasChosenAnswers: [Bool] = []
     private var answerSelected: IndexPath? = nil
@@ -27,9 +28,16 @@ class ChineseAnswersController: UITableViewController {
         self.answersTableView.backgroundView = background
         
         //StoryManager as data source
-        self.storyManager = StoryManager(promptsAndResponses: Stories.CHINESE_MALL_1, device: device!)
-        self.storyManager.subscribeToDeviceUpdates()
+        self.storyManager = StoryManager(promptsAndResponses: self.storyLine, device: device!)
         self.loadNext()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.storyManager.subscribeToDeviceUpdates()
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        self.storyManager.unscubscribeToDeviceUpdates()
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

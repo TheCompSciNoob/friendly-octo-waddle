@@ -118,6 +118,10 @@ class SoundManager {
         players[index]?.volume = vol
     }
     
+    func pause(index: Int) {
+        players[index]?.pause()
+    }
+    
     func stop(index: Int) {
         players[index]?.stop()
         players[index]?.scheduleBuffer(buffers[index], completionHandler: nil)
