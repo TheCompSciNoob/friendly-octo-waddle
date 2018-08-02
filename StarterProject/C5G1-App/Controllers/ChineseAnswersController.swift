@@ -42,12 +42,15 @@ class ChineseAnswersController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         //return the number of answers possible
-        if (!self.storyManager.hasNext()) {
-            self.proceedButton.setTitle("Done", for: .normal)
-        } else if (answers.count == 0) {
-            self.proceedButton.setTitle("Next", for: .normal)
-        } else {
-            self.proceedButton.setTitle("Submit", for: .normal)
+        UIView.performWithoutAnimation {
+            if (!self.storyManager.hasNext()) {
+                self.proceedButton.setTitle("Done", for: .normal)
+            } else if (answers.count == 0) {
+                self.proceedButton.setTitle("Next", for: .normal)
+            } else {
+                self.proceedButton.setTitle("Submit", for: .normal)
+            }
+            self.proceedButton.layoutIfNeeded()
         }
         return answers.count
     }
@@ -80,18 +83,40 @@ class ChineseAnswersController: UITableViewController {
     }
     
     @IBAction func tryProceed(_ sender: UIButton) {
-        if (!storyManager.hasNext()) {
-            self.navigationController?.popViewController(animated: true)
-        } else if (answers.count == 0) {
-            self.loadNext()
-        } else if let chosenRow = self.answerSelected?.row{
-            if (self.storyManager.checkAnswer(answerIndex: chosenRow)) {
+        //if there are no answers, go next
+        //if there are
+        
+        if (answers.count == 0) {
+            if storyManager.hasNext() {
                 self.loadNext()
+            } else {
+                self.navigationController?.popViewController(animated: true)
+            }
+        } else if let chosenRow = self.answerSelected?.row {
+            if self.storyManager.checkAnswer(answerIndex: chosenRow) {
+                if storyManager.hasNext() {
+                    self.loadNext()
+                } else {
+                    self.navigationController?.popViewController(animated: true)
+                }
             } else {
                 self.hasChosenAnswers[chosenRow] = true
                 self.answersTableView.reloadData()
             }
         }
+        
+        /*if !storyManager.hasNext() {
+            self.navigationController?.popViewController(animated: true)
+        } else if answers.count == 0 {
+            self.loadNext()
+        } else if let chosenRow = self.answerSelected?.row {
+            if self.storyManager.checkAnswer(answerIndex: chosenRow) {
+                self.loadNext()
+            } else {
+                self.hasChosenAnswers[chosenRow] = true
+                self.answersTableView.reloadData()
+            }
+        }*/
         self.answerSelected = nil
     }
     
