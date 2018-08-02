@@ -43,19 +43,19 @@ func chineseMall1() -> [PromptAndResponse] {
         .p("太好了, 我们现在去付钱吧。", "line11.wav", 5, 0, 0)
         
         .createNew()
-        .p("您好, 谢谢您光临本店。您感觉还不错嘛?", "line12.wav", 0, 5, 0)
+        .p("您好, 谢谢您光临本店。您感觉还不错嘛?", "line12.wav", 0, 0, 5)
         .cr("挺好的, 没碰到什么问题。", "line13a.wav")
         .wr("我觉得我想再买些裤子。", "line13b.wav")
         .wr("我害怕在商场购物。我们能回家吗?", "line13c.wav")
         
         .createNew()
-        .p("太好了, 您是付现金还是刷卡?", "line14.wav", 0, 5, 0)
+        .p("太好了, 您是付现金还是刷卡?", "line14.wav", 0, 0, 5)
         .cr("我刷卡。", "line15a.wav")
         .wr("我会干苦力来还钱。", "line15b.wav")
         .wr("我觉得我不需要为我买的衣服付钱。", "line15c.wav")
         
         .createNew()
-        .p("好的, 总共180元。都好了, 祝您度过愉快的一天。", "line16.wav", 0, 5, 0)
+        .p("好的, 总共180元。都好了, 祝您度过愉快的一天。", "line16.wav", 0, 0, 5)
         
         .build()
 }
@@ -85,34 +85,34 @@ func chineseMall2() -> [PromptAndResponse] {
         .p("好, 我们应该问问工作人员。你就可以选个新电脑了。打扰一下。", "line24.wav", 5, 0, 0)
         
         .createNew()
-        .p("您好, 有什么可以帮助你的?", "line25.wav", 0, 5, 0)
+        .p("您好, 有什么可以帮助你的?", "line25.wav", 0, 0, 5)
         .cr("我想买个新电脑。", "line26a.wav")
         .wr("我想领养一条狗。", "line26b.wav")
         .wr("我想买个新电视。", "line26c.wav")
         
         .createNew()
-        .p("好的, 您想要个多大的电脑?", "line27.wav", 0, 5, 0)
+        .p("好的, 您想要个多大的电脑?", "line27.wav", 0, 0, 5)
         .cr("我想要最大的型号。", "line28a.wav")
         .wr("我想要它比我的手机小。", "line28b.wav")
         .wr("我想要它比我的电视大。", "line28c.wav")
         
         .createNew()
-        .p("你希望他有什么功能?", "line29.wav", 0, 5, 0)
+        .p("你希望他有什么功能?", "line29.wav", 0, 0, 5)
         .cr("希望它电池持续的久, 是触屏的, 还有个好的键盘。", "line30a.wav")
         .wr("一个好的颜色, 摸起来软软的, 和亮亮的屏幕。", "line30b.wav")
         .wr("长腿, 角, 和很多毛。", "line30c.wav")
         
         .createNew()
-        .p("好的, 我觉得这款很适合您。 您可以去结账了。", "line31.wav", 0, 5, 0)
+        .p("好的, 我觉得这款很适合您。 您可以去结账了。", "line31.wav", 0, 0, 5)
         
         .createNew()
-        .p("您好, 请问您是现金还是刷卡?", "line32.wav", 0, 5, 0)
+        .p("您好, 请问您是现金还是刷卡?", "line32.wav", 0, 0, 5)
         .cr("我付现金。", "line33a.wav")
         .wr("我付价钱。", "line33b.wav")
         .wr("我不会为了电脑付钱的。", "line33c.wav")
         
         .createNew()
-        .p("好， 一共6770元。", "line34.wav", 0, 5, 0)
+        .p("好， 一共6770元。", "line34.wav", 0, 0, 5)
         
         .createNew()
         .p("你需要多少个100元和10元的纸币去副6670元呢?", "line35.wav", 5, 0, 0)
@@ -121,7 +121,7 @@ func chineseMall2() -> [PromptAndResponse] {
         .wr("124个100元纸币和5个10元纸币。", "line36c.wav")
         
         .createNew()
-        .p("谢谢您光临本店!", "line37.wav", 0, 5, 0)
+        .p("谢谢您光临本店!", "line37.wav", 0, 0, 5)
         .cr("谢谢您,再见!", "line38a.wav")
         .wr("不用了,谢谢你。", "line38b.wav")
         .wr("请给我好吗。", "line38c.wav")
