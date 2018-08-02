@@ -6,13 +6,20 @@
 //  Copyright © 2018 MBIENTLAB, INC. All rights reserved.
 //
 
-import Foundation
 import MetaWear
 import AVFoundation
+
+protocol CocktailDelegate {
+    
+    func onFocusedIndexUpdated(index: Int)
+    
+    func onAngleUpdated(newAngle: Double)
+}
 
 class CocktailEffectManager {
     private let device: MBLMetaWear
     private let soundManager: SoundManager
+    var cocktailDelegate: CocktailDelegate? = nil
     private let sector: Double //angle between each consecutive sound
     private var currentAngle = -1.0
     private let defaultDistance = 30.0
@@ -22,13 +29,17 @@ class CocktailEffectManager {
         self.device = device
         self.soundManager = SoundManager(fileNames: fileNames, options: .loops)
         self.sector = 360.0 / Double((soundManager.fileNames.count))
+        self.placeSoundsDefault()
     }
     
     func subscribeToDeviceUpdates() {
         device.sensorFusion?.eulerAngle.startNotificationsAsync { (obj, error) in
-            print((obj?.h)!)
-            self.updateAllDistances(newAngle: (obj?.h)!)
+            self.updateAllDistances(newAngle: 360.0 - (obj?.h)!)
         }
+    }
+    
+    func unsubscribeToDeviceUpdates() {
+        device.sensorFusion?.eulerAngle.stopNotificationsAsync()
     }
     
     func getFocusedSoundIndex(angle: Double) -> Int {
@@ -45,25 +56,35 @@ class CocktailEffectManager {
     
     //place individual sound at one location
     private func placeSound(index: Int, distance: Double) {
-        soundManager.updatePosition(index: index, position: AVAudio3DPoint(x: Float(distance * cos(sector * Double(index) * Double.pi / 180)), y: Float(distance * sin(sector * Double(index) * Double.pi / 180)), z: 0.0))
+        let angle = sector * (Double(index) + 0.5)
+        soundManager.updatePosition(index: index, position: AVAudio3DPoint(x: Float(distance * cos(angle * Double.pi / 180)), y: Float(distance * sin(angle * Double.pi / 180)), z: 0.0))
     }
     
     func updateAllDistances(newAngle: Double) {
-        currentAngle = newAngle
-        let focusedIndex = getFocusedSoundIndex(angle: currentAngle)
-        if focusedIndex != getFocusedSoundIndex(angle: newAngle) {
+        let oldIndex = getFocusedSoundIndex(angle: currentAngle)
+        let newIndex = getFocusedSoundIndex(angle: newAngle)
+        self.currentAngle = newAngle
+        self.cocktailDelegate?.onAngleUpdated(newAngle: self.currentAngle)
+        if oldIndex != newIndex {
+            self.cocktailDelegate?.onFocusedIndexUpdated(index: newIndex)
             placeSoundsDefault()
         }
         
         //fades in/out focused sound based on angle
-        let offsetAngle = abs(sector * (Double(focusedIndex) + 0.5) - currentAngle)
+        let offsetAngle = abs(sector * (Double(newIndex) + 0.5) - currentAngle)
         let resultDistance = (defaultDistance - closestDistance) * (2 * offsetAngle / sector) + 2.0
-        placeSound(index: focusedIndex, distance: resultDistance)
+        placeSound(index: newIndex, distance: resultDistance)
     }
     
     func start() {
         for index in 0..<soundManager.fileNames.count {
             soundManager.play(index: index)
+        }
+    }
+    
+    func pause() {
+        for index in 0..<soundManager.fileNames.count {
+            soundManager.pause(index: index)
         }
     }
 }

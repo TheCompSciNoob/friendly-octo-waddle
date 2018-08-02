@@ -6,8 +6,6 @@
 //  Copyright © 2018 MBIENTLAB, INC. All rights reserved.
 //
 
-import Foundation
-
 struct AudioInfo: Codable {
     var text: String
     var audioPath: String
