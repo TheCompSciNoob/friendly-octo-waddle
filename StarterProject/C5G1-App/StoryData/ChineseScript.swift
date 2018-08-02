@@ -55,7 +55,7 @@ func chineseMall1() -> [PromptAndResponse] {
         .wr("我觉得我不需要为我买的衣服付钱。", "line15c.wav")
         
         .createNew()
-        .p("好的, 总共180元。都好了, 祝您度过愉快的一天。", "line16.wav") //TODO: merge line 16 and 17
+        .p("好的, 总共180元。都好了, 祝您度过愉快的一天。", "line16.wav")
         
         .build()
 }
@@ -81,8 +81,8 @@ func chineseMall2() -> [PromptAndResponse] {
         .wr("它坏了, 因为我的狗吃了它。", "line23b.wav")
         .wr("它还挺好的, 所以我不需要一个新电脑。", "line23c.wav")
         
-        //.createNew()
-        //.p("好, 我们应该问问工作人员。你就可以选个新电脑了。打扰一下。", "line24.wav")
+        .createNew()
+        .p("好, 我们应该问问工作人员。你就可以选个新电脑了。打扰一下。", "line24.wav")
         
         .createNew()
         .p("您好, 有什么可以帮助你的?", "line25.wav")
