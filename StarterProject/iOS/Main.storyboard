@@ -412,7 +412,7 @@
                                 <constraint firstItem="C8L-zh-tKM" firstAttribute="centerY" secondItem="KyR-hu-Unn" secondAttribute="centerY" id="w8o-D6-Lfq"/>
                             </constraints>
                         </view>
-                        <button key="tableFooterView" opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="4Pe-Fm-Djj">
+                        <button key="tableFooterView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="4Pe-Fm-Djj">
                             <rect key="frame" x="0.0" y="411.5" width="375" height="71"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <color key="backgroundColor" red="0.0078431372550000003" green="0.0" blue="0.1019607843" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -421,7 +421,7 @@
                                 <color key="titleColor" red="0.99607843139999996" green="0.92549019610000005" blue="0.58039215690000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </state>
                             <connections>
-                                <action selector="onSubmitClicked:" destination="k2w-ng-Vqg" eventType="touchUpInside" id="vbI-ha-341"/>
+                                <action selector="tryProceed:" destination="k2w-ng-Vqg" eventType="touchUpInside" id="658-Fc-xko"/>
                             </connections>
                         </button>
                         <prototypes>
@@ -482,8 +482,8 @@
                     <navigationItem key="navigationItem" title="Shopping Mall" id="kDP-Xf-k1L"/>
                     <connections>
                         <outlet property="answersTableView" destination="GHB-p8-NVn" id="ilI-JM-Wxy"/>
+                        <outlet property="proceedButton" destination="4Pe-Fm-Djj" id="tG3-dd-8sE"/>
                         <outlet property="promptText" destination="Jw1-dw-8wv" id="iE3-82-xtp"/>
-                        <outlet property="submitButton" destination="4Pe-Fm-Djj" id="N3a-uN-Oyo"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h9x-Yt-Sxz" userLabel="First Responder" sceneMemberID="firstResponder"/>

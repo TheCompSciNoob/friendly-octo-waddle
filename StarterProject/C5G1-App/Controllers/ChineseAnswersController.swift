@@ -11,18 +11,14 @@ import MetaWear
 
 class ChineseAnswersController: UITableViewController {
     @IBOutlet var answersTableView: UITableView!
-    @IBOutlet weak var submitButton: UIButton!
     @IBOutlet weak var promptText: UILabel!
+    @IBOutlet weak var proceedButton: UIButton!
     
     private var storyManager: StoryManager!
     var device: MBLMetaWear? = nil
     private var answers: [String] = []
     private var hasChosenAnswers: [Bool] = []
-    private var answerSelected: IndexPath? = nil {
-        didSet {
-            submitButton.isEnabled = answerSelected != nil
-        }
-    }
+    private var answerSelected: IndexPath? = nil
     
     override func viewDidLoad() {
         //background
@@ -32,11 +28,19 @@ class ChineseAnswersController: UITableViewController {
         
         //StoryManager as data source
         self.storyManager = StoryManager(promptsAndResponses: Stories.CHINESE_MALL_1, device: device!)
-        loadNext()
+        self.storyManager.subscribeToDeviceUpdates()
+        self.loadNext()
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         //return the number of answers possible
+        if (!self.storyManager.hasNext()) {
+            self.proceedButton.setTitle("Done", for: .normal)
+        } else if (answers.count == 0) {
+            self.proceedButton.setTitle("Next", for: .normal)
+        } else {
+            self.proceedButton.setTitle("Submit", for: .normal)
+        }
         return answers.count
     }
     
@@ -45,9 +49,7 @@ class ChineseAnswersController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ChineseAnswerCell", for: indexPath) as! ChineseAnswerCell
         cell.responseTitle.text = "Response \(indexPath.row + 1)"
         cell.responseText.text = answers[indexPath.row]
-        if (self.hasChosenAnswers[indexPath.row]) {
-            cell.contentView.backgroundColor = .red
-        }
+        cell.contentView.backgroundColor = self.hasChosenAnswers[indexPath.row] ? UIColor(red: 0.95686, green: 0.78039, blue: 0.76471, alpha: 1.0) : UIColor(red: 0.99608, green: 0.92549, blue: 0.58039, alpha: 1.0)
         
         return cell
     }
@@ -65,21 +67,26 @@ class ChineseAnswersController: UITableViewController {
             self.answers = answers
             self.hasChosenAnswers = Array(repeating: false, count: answers.count)
             self.answersTableView.reloadData()
+            self.storyManager.playCurrentPrompt()
         }
     }
     
-    @IBAction func onSubmitClicked(_ sender: UIButton) {
-        if (storyManager.checkAnswer(answerIndex: (self.answerSelected?.row)!)) {
-            loadNext()
-        } else {
-            //TODO: color the view red
-            //TODO: reload data
-            print("Incorrect answer selected: \(self.answerSelected?.row)")
-            self.hasChosenAnswers[(self.answerSelected?.row)!] = true
-            self.answersTableView.reloadData()
+    @IBAction func tryProceed(_ sender: UIButton) {
+        if (!storyManager.hasNext()) {
+            self.navigationController?.popViewController(animated: true)
+        } else if (answers.count == 0) {
+            self.loadNext()
+        } else if let chosenRow = self.answerSelected?.row{
+            if (self.storyManager.checkAnswer(answerIndex: chosenRow)) {
+                self.loadNext()
+            } else {
+                self.hasChosenAnswers[chosenRow] = true
+                self.answersTableView.reloadData()
+            }
         }
         self.answerSelected = nil
     }
+    
     @IBAction func onPromptReplayClicked(_ sender: UIButton) {
         self.storyManager.playCurrentPrompt()
     }
