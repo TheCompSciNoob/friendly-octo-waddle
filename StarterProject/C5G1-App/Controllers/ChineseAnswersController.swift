@@ -34,10 +34,12 @@ class ChineseAnswersController: UITableViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         self.storyManager.subscribeToDeviceUpdates()
+        self.storyManager.playAmbientSounds()
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         self.storyManager.unscubscribeToDeviceUpdates()
+        self.storyManager.pauseAmbientSounds()
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

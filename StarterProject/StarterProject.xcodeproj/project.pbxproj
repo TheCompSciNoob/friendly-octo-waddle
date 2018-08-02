@@ -100,6 +100,7 @@
 		972EC1352110D6A900FDE319 /* StoryTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 972EC1342110D6A900FDE319 /* StoryTableView.swift */; };
 		972EC1372110E08100FDE319 /* ChineseAnswersController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 972EC1362110E08100FDE319 /* ChineseAnswersController.swift */; };
 		972EC13B211195A100FDE319 /* MapBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 972EC13A211195A100FDE319 /* MapBackground.swift */; };
+		97A4F5192113A956001E4804 /* ambiencefoodcourt.wav in Resources */ = {isa = PBXBuildFile; fileRef = 97A4F5182113A956001E4804 /* ambiencefoodcourt.wav */; };
 		97CAC229210AFB3F00675F48 /* StoryManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97CAC228210AFB3F00675F48 /* StoryManager.swift */; };
 		97CAC22B210AFB4D00675F48 /* PromptAndResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97CAC22A210AFB4D00675F48 /* PromptAndResponse.swift */; };
 		97CAC22F210B057D00675F48 /* HomePageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97CAC22E210B057D00675F48 /* HomePageController.swift */; };
@@ -217,6 +218,7 @@
 		972EC1342110D6A900FDE319 /* StoryTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryTableView.swift; sourceTree = "<group>"; };
 		972EC1362110E08100FDE319 /* ChineseAnswersController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChineseAnswersController.swift; sourceTree = "<group>"; };
 		972EC13A211195A100FDE319 /* MapBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapBackground.swift; sourceTree = "<group>"; };
+		97A4F5182113A956001E4804 /* ambiencefoodcourt.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = ambiencefoodcourt.wav; sourceTree = "<group>"; };
 		97CAC228210AFB3F00675F48 /* StoryManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryManager.swift; sourceTree = "<group>"; };
 		97CAC22A210AFB4D00675F48 /* PromptAndResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromptAndResponse.swift; sourceTree = "<group>"; };
 		97CAC22E210B057D00675F48 /* HomePageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageController.swift; sourceTree = "<group>"; };
@@ -371,6 +373,7 @@
 		97EF9597210AF55B00C6B3CB /* Sounds */ = {
 			isa = PBXGroup;
 			children = (
+				97A4F5182113A956001E4804 /* ambiencefoodcourt.wav */,
 				972EC0A0210FFE2800FDE319 /* line1.wav */,
 				972EC0A4210FFE2800FDE319 /* line2a.wav */,
 				972EC0E0210FFE3300FDE319 /* line2b.wav */,
@@ -615,6 +618,7 @@
 				972EC0F3210FFE3300FDE319 /* line19a.wav in Resources */,
 				972EC106210FFE3300FDE319 /* line13b.wav in Resources */,
 				972EC100210FFE3300FDE319 /* line16.wav in Resources */,
+				97A4F5192113A956001E4804 /* ambiencefoodcourt.wav in Resources */,
 				972EC117210FFE3300FDE319 /* line30b.wav in Resources */,
 				402973791DB8260000EC8C32 /* Main.storyboard in Resources */,
 				972EC10A210FFE3300FDE319 /* line23b.wav in Resources */,
