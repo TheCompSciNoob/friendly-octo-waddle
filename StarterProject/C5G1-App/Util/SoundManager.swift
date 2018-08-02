@@ -9,11 +9,11 @@
 import Foundation
 import AVFoundation
 
-struct SoundManager {
+class SoundManager {
     var fileNames: [String?]
     private var options: AVAudioPlayerNodeBufferOptions?
     private var file = AVAudioFile()
-    private var buffer = AVAudioPCMBuffer()
+    private var buffers: [AVAudioPCMBuffer] = []
     private let engine = AVAudioEngine()
     private var players: [AVAudioPlayerNode?] = []
     private let mixer3d = AVAudioEnvironmentNode()
@@ -38,7 +38,7 @@ struct SoundManager {
         }
     }
     
-    private mutating func loadFilesIntoBuffer() {
+    private func loadFilesIntoBuffer() {
         //settings for engine
         engine.attach(mixer3d)
         mixer3d.renderingAlgorithm = .sphericalHead
@@ -59,9 +59,9 @@ struct SoundManager {
                 do {
                     let url = Bundle.main.url(forResource: String(res), withExtension: String(ext))!
                     file = try AVAudioFile(forReading: url)
-                    buffer = AVAudioPCMBuffer(pcmFormat: file.processingFormat, frameCapacity: AVAudioFrameCount(file.length))
-                    try file.read(into: buffer)
-                    print("File loaded, buffer frame length: \(buffer.frameLength)")
+                    buffers.append(AVAudioPCMBuffer(pcmFormat: file.processingFormat, frameCapacity: AVAudioFrameCount(file.length)))
+                    try file.read(into: buffers[index])
+                    print("File loaded, buffer frame length: \(buffers[index].frameLength)")
                 } catch {
                     print("File failed to load.")
                 }
@@ -71,11 +71,10 @@ struct SoundManager {
                 engine.connect(players[index]!, to: mixer3d, format: file.processingFormat)
                 players[index]?.renderingAlgorithm = AVAudio3DMixingRenderingAlgorithm(rawValue: 1)!
                 if let optionsUnwrapped = options {
-                    players[index]?.scheduleBuffer(buffer, at: nil, options: optionsUnwrapped, completionHandler: nil)
+                    players[index]?.scheduleBuffer(buffers[index], at: nil, options: optionsUnwrapped, completionHandler: nil)
                 } else {
-                    players[index]?.scheduleBuffer(buffer, completionHandler: nil)
+                    players[index]?.scheduleBuffer(buffers[index], completionHandler: nil)
                 }
-                print("Player at index \(index) ready.")
             } else {
                 players.append(nil)
             }
@@ -94,15 +93,18 @@ struct SoundManager {
     }
     
     //if true, the audio exists and can be played; false otherwise
-    func play(index: Int) -> Bool {
+    @discardableResult func play(index: Int) -> Bool {
         if let player = players[index] {
+            if player.isPlaying {
+                options == nil ? player.scheduleBuffer(buffers[index], completionHandler: nil) : player.scheduleBuffer(buffers[index], at: nil, options: self.options!, completionHandler: nil)
+            }
             player.play()
             return true
         }
         return false
     }
     
-    func play(index: Int, volume: Float) -> Bool {
+    @discardableResult func play(index: Int, volume: Float) -> Bool {
         players[index]?.volume = volume
         return self.play(index: index)
     }
@@ -117,7 +119,7 @@ struct SoundManager {
     
     func stop(index: Int) {
         players[index]?.stop()
-        players[index]?.scheduleBuffer(buffer, completionHandler: nil)
+        players[index]?.scheduleBuffer(buffers[index], completionHandler: nil)
     }
     
     func updatePosition(index: Int, position: AVAudio3DPoint) {

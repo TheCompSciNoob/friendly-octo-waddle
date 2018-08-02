@@ -21,7 +21,7 @@ func chineseMall1() -> [PromptAndResponse] {
         .p("好的！我们可以先去逛卖衣服的店， 然后去苹果店。你想买什么样的衣服呢？", "line3.wav")
         .cr("我想买些裤子，一件卫衣，还有一些袜子", "line4a.wav")
         .wr("我想买一个水瓶，一个书包，和一zhi牙刷", "line4b.wav")
-        .wr("我想买点颜料，纸和铅笔", "line4b.wav")
+        .wr("我想买点颜料，纸和铅笔", "line4c.wav")
         
         .createNew()
         .p("听起来不错！ 店在这边，跟我走吧.", "line5.wav")

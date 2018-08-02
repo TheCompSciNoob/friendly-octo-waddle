@@ -45,7 +45,8 @@ class CocktailEffectManager {
     
     //place individual sound at one location
     private func placeSound(index: Int, distance: Double) {
-        soundManager.updatePosition(index: index, position: AVAudio3DPoint(x: Float(distance * cos(sector * Double(index) * Double.pi / 180)), y: Float(distance * sin(sector * Double(index) * Double.pi / 180)), z: 0.0))
+        let angle = sector * (Double(index) + 0.5)
+        soundManager.updatePosition(index: index, position: AVAudio3DPoint(x: Float(distance * cos(angle * Double.pi / 180)), y: Float(distance * sin(angle * Double.pi / 180)), z: 0.0))
     }
     
     func updateAllDistances(newAngle: Double) {

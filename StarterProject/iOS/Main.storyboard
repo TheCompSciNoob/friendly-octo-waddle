@@ -396,6 +396,9 @@
                                         <constraint firstAttribute="width" constant="204" id="8VV-cd-Qpd"/>
                                     </constraints>
                                     <state key="normal" image="replay_yellow"/>
+                                    <connections>
+                                        <action selector="onPromptReplayClicked:" destination="k2w-ng-Vqg" eventType="touchUpInside" id="bSL-yp-aA9"/>
+                                    </connections>
                                 </button>
                             </subviews>
                             <color key="backgroundColor" red="0.0078431372549019607" green="0.0" blue="0.10196078431372549" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -409,7 +412,7 @@
                                 <constraint firstItem="C8L-zh-tKM" firstAttribute="centerY" secondItem="KyR-hu-Unn" secondAttribute="centerY" id="w8o-D6-Lfq"/>
                             </constraints>
                         </view>
-                        <button key="tableFooterView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="4Pe-Fm-Djj">
+                        <button key="tableFooterView" opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="4Pe-Fm-Djj">
                             <rect key="frame" x="0.0" y="411.5" width="375" height="71"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <color key="backgroundColor" red="0.0078431372550000003" green="0.0" blue="0.1019607843" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -422,11 +425,11 @@
                             </connections>
                         </button>
                         <prototypes>
-                            <tableViewCell opaque="NO" contentMode="scaleToFill" selectionStyle="blue" accessoryType="checkmark" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ChineseAnswerCell" rowHeight="126" id="mdy-Ug-12x" customClass="ChineseAnswerCell" customModule="StarterProject" customModuleProvider="target">
+                            <tableViewCell opaque="NO" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ChineseAnswerCell" rowHeight="126" id="mdy-Ug-12x" customClass="ChineseAnswerCell" customModule="StarterProject" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="275.5" width="375" height="126"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="mdy-Ug-12x" id="f8a-cD-rZi">
-                                    <rect key="frame" x="0.0" y="0.0" width="335" height="125.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="125.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="-1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Text in Chinese + Translation in English" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Wv-6h-1ts" userLabel="responseText">
@@ -479,7 +482,7 @@
                     <navigationItem key="navigationItem" title="Shopping Mall" id="kDP-Xf-k1L"/>
                     <connections>
                         <outlet property="answersTableView" destination="GHB-p8-NVn" id="ilI-JM-Wxy"/>
-                        <outlet property="prompt" destination="Jw1-dw-8wv" id="i2S-x2-yJH"/>
+                        <outlet property="promptText" destination="Jw1-dw-8wv" id="iE3-82-xtp"/>
                         <outlet property="submitButton" destination="4Pe-Fm-Djj" id="N3a-uN-Oyo"/>
                     </connections>
                 </tableViewController>

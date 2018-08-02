@@ -104,7 +104,6 @@
 		972EC13B211195A100FDE319 /* MapBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 972EC13A211195A100FDE319 /* MapBackground.swift */; };
 		97CAC229210AFB3F00675F48 /* StoryManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97CAC228210AFB3F00675F48 /* StoryManager.swift */; };
 		97CAC22B210AFB4D00675F48 /* PromptAndResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97CAC22A210AFB4D00675F48 /* PromptAndResponse.swift */; };
-		97CAC22D210AFB7B00675F48 /* DataUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97CAC22C210AFB7B00675F48 /* DataUtil.swift */; };
 		97CAC22F210B057D00675F48 /* HomePageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97CAC22E210B057D00675F48 /* HomePageController.swift */; };
 		97CAC231210B059600675F48 /* ChineseIntroController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97CAC230210B059600675F48 /* ChineseIntroController.swift */; };
 		97CAC233210B05A900675F48 /* EnglishIntroController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97CAC232210B05A900675F48 /* EnglishIntroController.swift */; };
@@ -224,7 +223,6 @@
 		972EC13A211195A100FDE319 /* MapBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapBackground.swift; sourceTree = "<group>"; };
 		97CAC228210AFB3F00675F48 /* StoryManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryManager.swift; sourceTree = "<group>"; };
 		97CAC22A210AFB4D00675F48 /* PromptAndResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromptAndResponse.swift; sourceTree = "<group>"; };
-		97CAC22C210AFB7B00675F48 /* DataUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataUtil.swift; sourceTree = "<group>"; };
 		97CAC22E210B057D00675F48 /* HomePageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageController.swift; sourceTree = "<group>"; };
 		97CAC230210B059600675F48 /* ChineseIntroController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChineseIntroController.swift; sourceTree = "<group>"; };
 		97CAC232210B05A900675F48 /* EnglishIntroController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnglishIntroController.swift; sourceTree = "<group>"; };
@@ -479,7 +477,6 @@
 				97CAC228210AFB3F00675F48 /* StoryManager.swift */,
 				97EF959B210AF6B700C6B3CB /* SoundManager.swift */,
 				B5DB346D2110CCC10008C683 /* CampfireManager.swift */,
-				97CAC22C210AFB7B00675F48 /* DataUtil.swift */,
 				97CAC236210B963300675F48 /* CocktailEffectManager.swift */,
 				972EC13A211195A100FDE319 /* MapBackground.swift */,
 			);
@@ -873,7 +870,6 @@
 				97CAC229210AFB3F00675F48 /* StoryManager.swift in Sources */,
 				972EC12E211038AC00FDE319 /* PaddedLabel.swift in Sources */,
 				97CAC22B210AFB4D00675F48 /* PromptAndResponse.swift in Sources */,
-				97CAC22D210AFB7B00675F48 /* DataUtil.swift in Sources */,
 				97EF959C210AF6B700C6B3CB /* SoundManager.swift in Sources */,
 				972EC1352110D6A900FDE319 /* StoryTableView.swift in Sources */,
 			);
