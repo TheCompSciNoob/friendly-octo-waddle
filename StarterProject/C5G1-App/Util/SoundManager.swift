@@ -81,6 +81,10 @@ class SoundManager {
         print("All players ready.")
     }
     
+    func players() -> [AVAudioPlayerNode?] {
+        return players
+    }
+    
     //sets all player locations to 0, 0, 0
     func initPositions() {
         mixer3d.listenerPosition.x = 0

@@ -23,7 +23,7 @@ class ChineseIntroController: UIViewController, CocktailDelegate {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        self.cocktailEffectManager = CocktailEffectManager(fileNames: infos.map { $0.audioDescription }, device: self.device!)
+        self.cocktailEffectManager = CocktailEffectManager(ambient: ["ambiencefoodcourt.wav"], targets: infos.map { $0.audioDescription }, device: self.device!)
         self.cocktailEffectManager.cocktailDelegate = self
         self.cocktailEffectManager.subscribeToDeviceUpdates()
         self.cocktailEffectManager.start()
