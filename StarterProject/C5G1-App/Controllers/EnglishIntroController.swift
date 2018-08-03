@@ -38,11 +38,14 @@ class EnglishIntroController: UIViewController {
         //1: Huma
         //2: Emma
         //3: Chi
-        //4: Parth's footsteps
-        //5: campfire
-        //6: crickets
+        //4: lol 1
+        //5: lol 2
+        //6: lol 3
+        //7: Parth's footsteps
+        //8: campfire
+        //9: crickets
         DispatchQueue.global(qos: .background).async {
-            let sm = SoundManager(fileNames: ["parthlinescombined.wav", "Huma's audio.wav", "Emma's audio.wav", "Chi's audio.wav", "249921__launemax__walking-slow-on-stones.wav", "433783__cagancelik__campfire.flac", "129678__freethinkeranon__crickets.mp3"])
+            let sm = SoundManager(fileNames: ["PARTH FINAL AUDIO.wav", "Huma's audio.wav", "EMMA AUDIO FINAL.wav", "CHI FINAL AUDIO.wav", "Ourlaughingaudio1.wav", "OurLaughing2.wav", "ourlaughing3.wav", "249921__launemax__walking-slow-on-stones.wav", "433783__cagancelik__campfire.flac", "129678__freethinkeranon__crickets.mp3"])
             DispatchQueue.main.async {
                 self.preloadedManager = sm
             }

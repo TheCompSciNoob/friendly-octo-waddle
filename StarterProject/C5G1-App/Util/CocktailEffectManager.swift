@@ -44,6 +44,8 @@ class CocktailEffectManager {
     func subscribeToDeviceUpdates() {
         device.sensorFusion?.eulerAngle.startNotificationsAsync { (obj, error) in
             self.updateAllDistances(newAngle: 360.0 - (obj?.h)!)
+            self.targets.updateAngularOrientation(degreesYaw: abs(Float(360 - (obj?.y)!)), degreesPitch: Float((obj?.p)!), degreesRoll: Float((obj?.r)!))
+            self.ambient.updateAngularOrientation(degreesYaw: abs(Float(360 - (obj?.y)!)), degreesPitch: Float((obj?.p)!), degreesRoll: Float((obj?.r)!))
         }
     }
     
@@ -81,13 +83,14 @@ class CocktailEffectManager {
         
         //fades in/out focused sound based on angle
         let offsetAngle = abs(sector * (Double(newIndex) + 0.5) - currentAngle)
-        let resultDistance = (defaultDistance - closestDistance) * (2 * offsetAngle / sector) + 2.0
+        let resultDistance = (defaultDistance - closestDistance) * (2 * offsetAngle / sector) + closestDistance
+        print("resultDistance: \(resultDistance)")
         placeSound(index: newIndex, distance: resultDistance)
     }
     
     func start() {
         for index in 0..<targets.fileNames.count {
-            targets.play(index: index)
+            targets.play(index: index, options: .loops)
         }
         
         for index in 0..<ambient.fileNames.count {
