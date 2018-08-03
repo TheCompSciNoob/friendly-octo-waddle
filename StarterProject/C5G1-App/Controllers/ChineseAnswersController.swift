@@ -106,19 +106,6 @@ class ChineseAnswersController: UITableViewController {
                 self.answersTableView.reloadData()
             }
         }
-        
-        /*if !storyManager.hasNext() {
-            self.navigationController?.popViewController(animated: true)
-        } else if answers.count == 0 {
-            self.loadNext()
-        } else if let chosenRow = self.answerSelected?.row {
-            if self.storyManager.checkAnswer(answerIndex: chosenRow) {
-                self.loadNext()
-            } else {
-                self.hasChosenAnswers[chosenRow] = true
-                self.answersTableView.reloadData()
-            }
-        }*/
         self.answerSelected = nil
     }
     

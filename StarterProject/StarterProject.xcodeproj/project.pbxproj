@@ -111,7 +111,6 @@
 		97CAC233210B05A900675F48 /* EnglishIntroController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97CAC232210B05A900675F48 /* EnglishIntroController.swift */; };
 		97CAC235210B735E00675F48 /* AudioInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97CAC234210B735E00675F48 /* AudioInfo.swift */; };
 		97CAC237210B963300675F48 /* CocktailEffectManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97CAC236210B963300675F48 /* CocktailEffectManager.swift */; };
-		97EF9596210AF32700C6B3CB /* MainTestController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97EF9595210AF32700C6B3CB /* MainTestController.swift */; };
 		97EF959C210AF6B700C6B3CB /* SoundManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97EF959B210AF6B700C6B3CB /* SoundManager.swift */; };
 		97F258DD2114426900893E19 /* 249921__launemax__walking-slow-on-stones.wav in Resources */ = {isa = PBXBuildFile; fileRef = 97F258D42114426800893E19 /* 249921__launemax__walking-slow-on-stones.wav */; };
 		97F258DE2114426900893E19 /* 433783__cagancelik__campfire.flac in Resources */ = {isa = PBXBuildFile; fileRef = 97F258D52114426800893E19 /* 433783__cagancelik__campfire.flac */; };
@@ -248,7 +247,6 @@
 		97CAC232210B05A900675F48 /* EnglishIntroController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnglishIntroController.swift; sourceTree = "<group>"; };
 		97CAC234210B735E00675F48 /* AudioInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioInfo.swift; sourceTree = "<group>"; };
 		97CAC236210B963300675F48 /* CocktailEffectManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CocktailEffectManager.swift; sourceTree = "<group>"; };
-		97EF9595210AF32700C6B3CB /* MainTestController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTestController.swift; sourceTree = "<group>"; };
 		97EF959B210AF6B700C6B3CB /* SoundManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundManager.swift; sourceTree = "<group>"; };
 		97F258D42114426800893E19 /* 249921__launemax__walking-slow-on-stones.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "249921__launemax__walking-slow-on-stones.wav"; sourceTree = "<group>"; };
 		97F258D52114426800893E19 /* 433783__cagancelik__campfire.flac */ = {isa = PBXFileReference; lastKnownFileType = file; path = 433783__cagancelik__campfire.flac; sourceTree = "<group>"; };
@@ -506,7 +504,6 @@
 		97EF9598210AF56F00C6B3CB /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				97EF9595210AF32700C6B3CB /* MainTestController.swift */,
 				97CAC22E210B057D00675F48 /* HomePageController.swift */,
 				97CAC230210B059600675F48 /* ChineseIntroController.swift */,
 				97CAC232210B05A900675F48 /* EnglishIntroController.swift */,
@@ -945,7 +942,6 @@
 				972EC1372110E08100FDE319 /* ChineseAnswersController.swift in Sources */,
 				4029737E1DB839AF00EC8C32 /* ScanTableViewController.swift in Sources */,
 				402973841DB839EA00EC8C32 /* DeviceViewController.swift in Sources */,
-				97EF9596210AF32700C6B3CB /* MainTestController.swift in Sources */,
 				97CAC235210B735E00675F48 /* AudioInfo.swift in Sources */,
 				97CAC229210AFB3F00675F48 /* StoryManager.swift in Sources */,
 				972EC12E211038AC00FDE319 /* PaddedLabel.swift in Sources */,
