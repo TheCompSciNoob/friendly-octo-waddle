@@ -16,8 +16,8 @@ class EnglishIntroController: UIViewController {
     private var soundManager: SoundManager!
 
     //constants
-    private let maxDistance = 10.0
-    private let minDistance = 1.0
+    private let maxDistance = 3.0
+    private let minDistance = 0.5
 
     //controls Parth's movements
     private var countDownTimers: [CountDownTimer] = []
@@ -36,7 +36,7 @@ class EnglishIntroController: UIViewController {
         //5: campfire
         //6: crickets
         //self.soundManager = SoundManager(fileNames: ["parthlinescombined.wav", nil, nil, nil, "footsteps.wav", "campfire.flac", "crickets.mp3"])
-        self.soundManager = SoundManager(fileNames: ["parthlinescombined.wav", "footsteps.wav", "footsteps.wav", "footsteps.wav", "footsteps.wav", "footsteps.wav", "footsteps.wav"])
+        self.soundManager = SoundManager(fileNames: ["parthlinescombined.wav", "Huma's audio.wav", "Emma's audio.wav", "Chi's audio.wav", "249921__launemax__walking-slow-on-stones.wav", "433783__cagancelik__campfire.flac", "129678__freethinkeranon__crickets.mp3"])
         self.initPositions()
     }
     
@@ -67,8 +67,12 @@ class EnglishIntroController: UIViewController {
         }
 
         self.soundManager.play(index: 0) {
+            print("Completed")
             self.parthTimer.invalidate()
             self.soundManager.stopEngine()
+        }
+        for index in 1..<4 {
+            self.soundManager.play(index: index)
         }
         for index in 4..<soundManager.fileNames.count {
             self.soundManager.play(index: index, options: .loops)
@@ -89,15 +93,31 @@ class EnglishIntroController: UIViewController {
     }
     
     func initPositions() {
-        //voices
+        //listener
         soundManager.updateListenerPosition(x: 0, y: 0, z: 0)
+        //Parth
         soundManager.changeVolume(index: 0, vol: 1)
+        //Huma
+        soundManager.updatePosition(index: 1, position: AVAudio3DPoint(x: 3, y: 0, z: 0))
+        //Emma
+        soundManager.updatePosition(index: 2, position: AVAudio3DPoint(x: 0, y: 0, z: 0))
+        //Chi
+        soundManager.updatePosition(index: 3, position: AVAudio3DPoint(x: -3, y: 0, z: 0))
+        //footsteps
+        soundManager.changeVolume(index: 4, vol: 0.1)
+        //campfire
+        soundManager.updatePosition(index: 5, position: AVAudio3DPoint(x: 0, y: 0, z: 3))
+        soundManager.changeVolume(index: 5, vol: 0.5)
+        //crickets
+        soundManager.updatePosition(index: 6, position: AVAudio3DPoint(x: 0, y: 10, z: -10))
+        soundManager.changeVolume(index: 6, vol: 0.01)
     }
     
     @objc func moveParth() {
         degrees += 1
         let y = soundManager.players[0]?.position.y
         soundManager.updatePosition(index: 0, position: AVAudio3DPoint(x: Float(self.parthDistance * cos(degrees * Double.pi / 180.0)), y: y!, z: Float(self.parthDistance * sin(degrees * Double.pi / 180.0))))
+        soundManager.updatePosition(index: 4, position: AVAudio3DPoint(x: Float(self.parthDistance * cos(degrees * Double.pi / 180.0)), y: y! - 1.75, z: Float(self.parthDistance * sin(degrees * Double.pi / 180.0))))
     }
 }
 
