@@ -127,6 +127,7 @@
 		B557CD5221145B18001DBA45 /* EMMA AUDIO FINAL.wav in Resources */ = {isa = PBXBuildFile; fileRef = B557CD5121145B18001DBA45 /* EMMA AUDIO FINAL.wav */; };
 		B557CD5421145C64001DBA45 /* CHI FINAL AUDIO.wav in Resources */ = {isa = PBXBuildFile; fileRef = B557CD5321145C63001DBA45 /* CHI FINAL AUDIO.wav */; };
 		B557CD5621145D6B001DBA45 /* PARTH FINAL AUDIO.wav in Resources */ = {isa = PBXBuildFile; fileRef = B557CD5521145D6B001DBA45 /* PARTH FINAL AUDIO.wav */; };
+		B557CD5821145F10001DBA45 /* Ourlaughingaudio1.wav in Resources */ = {isa = PBXBuildFile; fileRef = B557CD5721145F10001DBA45 /* Ourlaughingaudio1.wav */; };
 		B5DB346E2110CCC10008C683 /* CampfireManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5DB346D2110CCC10008C683 /* CampfireManager.swift */; };
 		BC31A9FBED54BD932058B42E /* Pods_Starter_tvOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B810285FECA2430C1FAEF3F /* Pods_Starter_tvOS.framework */; };
 		E829A8A800A7AFC5A4C5DA7A /* Pods_Starter_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C3D37560DD979815A53DF1B /* Pods_Starter_iOS.framework */; };
@@ -260,6 +261,7 @@
 		B557CD5121145B18001DBA45 /* EMMA AUDIO FINAL.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "EMMA AUDIO FINAL.wav"; sourceTree = "<group>"; };
 		B557CD5321145C63001DBA45 /* CHI FINAL AUDIO.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "CHI FINAL AUDIO.wav"; sourceTree = "<group>"; };
 		B557CD5521145D6B001DBA45 /* PARTH FINAL AUDIO.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "PARTH FINAL AUDIO.wav"; sourceTree = "<group>"; };
+		B557CD5721145F10001DBA45 /* Ourlaughingaudio1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Ourlaughingaudio1.wav; sourceTree = "<group>"; };
 		B5DB346D2110CCC10008C683 /* CampfireManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CampfireManager.swift; sourceTree = "<group>"; };
 		BC9E019C266AD9823B5E877D /* Pods-Starter-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Starter-tvOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-Starter-tvOS/Pods-Starter-tvOS.release.xcconfig"; sourceTree = "<group>"; };
 		F3CC4717E50B1C51696459B4 /* Pods_Starter_macOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Starter_macOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -406,6 +408,7 @@
 		97EF9597210AF55B00C6B3CB /* Sounds */ = {
 			isa = PBXGroup;
 			children = (
+				B557CD5721145F10001DBA45 /* Ourlaughingaudio1.wav */,
 				B557CD5521145D6B001DBA45 /* PARTH FINAL AUDIO.wav */,
 				B557CD5321145C63001DBA45 /* CHI FINAL AUDIO.wav */,
 				B557CD5121145B18001DBA45 /* EMMA AUDIO FINAL.wav */,
@@ -737,6 +740,7 @@
 				97F258DD2114426900893E19 /* 249921__launemax__walking-slow-on-stones.wav in Resources */,
 				97F258E02114426900893E19 /* OurLaughterAudio2.wav in Resources */,
 				972EC119210FFE3300FDE319 /* line21b.wav in Resources */,
+				B557CD5821145F10001DBA45 /* Ourlaughingaudio1.wav in Resources */,
 				972EC0FC210FFE3300FDE319 /* line27.wav in Resources */,
 				972EC10E210FFE3300FDE319 /* line33c.wav in Resources */,
 				972EC0F7210FFE3300FDE319 /* line10b.wav in Resources */,
