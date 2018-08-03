@@ -122,6 +122,7 @@
 		97F258E32114426900893E19 /* OurLaughterAudio3.wav in Resources */ = {isa = PBXBuildFile; fileRef = 97F258DA2114426900893E19 /* OurLaughterAudio3.wav */; };
 		97F258E42114426900893E19 /* OurLaughterAudio1.wav in Resources */ = {isa = PBXBuildFile; fileRef = 97F258DB2114426900893E19 /* OurLaughterAudio1.wav */; };
 		97F258E52114426900893E19 /* Chi's audio.wav in Resources */ = {isa = PBXBuildFile; fileRef = 97F258DC2114426900893E19 /* Chi's audio.wav */; };
+		97F258E72114507400893E19 /* EnglishStoryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97F258E62114507400893E19 /* EnglishStoryController.swift */; };
 		A74CC4E904D4261827DB3639 /* Pods_Starter_macOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3CC4717E50B1C51696459B4 /* Pods_Starter_macOS.framework */; };
 		B5DB346E2110CCC10008C683 /* CampfireManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5DB346D2110CCC10008C683 /* CampfireManager.swift */; };
 		BC31A9FBED54BD932058B42E /* Pods_Starter_tvOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B810285FECA2430C1FAEF3F /* Pods_Starter_tvOS.framework */; };
@@ -252,6 +253,7 @@
 		97F258DA2114426900893E19 /* OurLaughterAudio3.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = OurLaughterAudio3.wav; sourceTree = "<group>"; };
 		97F258DB2114426900893E19 /* OurLaughterAudio1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = OurLaughterAudio1.wav; sourceTree = "<group>"; };
 		97F258DC2114426900893E19 /* Chi's audio.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "Chi's audio.wav"; sourceTree = "<group>"; };
+		97F258E62114507400893E19 /* EnglishStoryController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnglishStoryController.swift; sourceTree = "<group>"; };
 		B5DB346D2110CCC10008C683 /* CampfireManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CampfireManager.swift; sourceTree = "<group>"; };
 		BC9E019C266AD9823B5E877D /* Pods-Starter-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Starter-tvOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-Starter-tvOS/Pods-Starter-tvOS.release.xcconfig"; sourceTree = "<group>"; };
 		F3CC4717E50B1C51696459B4 /* Pods_Starter_macOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Starter_macOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -491,6 +493,7 @@
 				97CAC230210B059600675F48 /* ChineseIntroController.swift */,
 				97CAC232210B05A900675F48 /* EnglishIntroController.swift */,
 				972EC1362110E08100FDE319 /* ChineseAnswersController.swift */,
+				97F258E62114507400893E19 /* EnglishStoryController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -533,8 +536,6 @@
 		B5AAFF7A211429C500F0DC30 /* Recovered References */ = {
 			isa = PBXGroup;
 			children = (
-				972A648221142926002610C1 /* cocktail1.wav */,
-				972A648121142926002610C1 /* cocktail2.wav */,
 			);
 			name = "Recovered References";
 			sourceTree = "<group>";
@@ -665,7 +666,6 @@
 				972EC106210FFE3300FDE319 /* line13b.wav in Resources */,
 				972EC100210FFE3300FDE319 /* line16.wav in Resources */,
 				97A4F5192113A956001E4804 /* ambiencefoodcourt.wav in Resources */,
-				B5AAFF82211433CE00F0DC30 /* OurLaughterAudio1.wav in Resources */,
 				972EC117210FFE3300FDE319 /* line30b.wav in Resources */,
 				402973791DB8260000EC8C32 /* Main.storyboard in Resources */,
 				972EC10A210FFE3300FDE319 /* line23b.wav in Resources */,
@@ -683,7 +683,6 @@
 				972EC0E1210FFE3300FDE319 /* line38b.wav in Resources */,
 				972EC0F8210FFE3300FDE319 /* line30a.wav in Resources */,
 				972EC1292110088800FDE319 /* line38a.wav in Resources */,
-				B5AAFF84211433DB00F0DC30 /* OurLaughterAudio2.wav in Resources */,
 				972EC12A2110088800FDE319 /* line37.wav in Resources */,
 				972EC114210FFE3300FDE319 /* line30c.wav in Resources */,
 				972EC0FA210FFE3300FDE319 /* line25.wav in Resources */,
@@ -691,7 +690,6 @@
 				972EC118210FFE3300FDE319 /* line23c.wav in Resources */,
 				97F258DE2114426900893E19 /* 433783__cagancelik__campfire.flac in Resources */,
 				972EC112210FFE3300FDE319 /* line3.wav in Resources */,
-				B5AAFF7C2114339900F0DC30 /* Huma's audio.wav in Resources */,
 				972EC0E3210FFE3300FDE319 /* line4c.wav in Resources */,
 				972EC0F1210FFE3300FDE319 /* line19b.wav in Resources */,
 				972EC103210FFE3300FDE319 /* line19c.wav in Resources */,
@@ -734,14 +732,11 @@
 				972EC122210FFE3300FDE319 /* line2b.wav in Resources */,
 				972EC10F210FFE3300FDE319 /* line26b.wav in Resources */,
 				972EC0F2210FFE3300FDE319 /* line15a.wav in Resources */,
-				B5AAFF7E211433A900F0DC30 /* Emma's audio.wav in Resources */,
 				972A648021142482002610C1 /* parthlinescombined.wav in Resources */,
 				972EC0EE210FFE3300FDE319 /* line7a.wav in Resources */,
 				972EC107210FFE3300FDE319 /* line15b.wav in Resources */,
 				972EC0E6210FFE3300FDE319 /* line2a.wav in Resources */,
 				972EC110210FFE3300FDE319 /* line33b.wav in Resources */,
-				B5AAFF86211433E700F0DC30 /* OurLaughterAudio3.wav in Resources */,
-				B5AAFF80211433B800F0DC30 /* Chi's audio.wav in Resources */,
 				972EC108210FFE3300FDE319 /* line7c.wav in Resources */,
 				972EC0FD210FFE3300FDE319 /* line28b.wav in Resources */,
 			);
@@ -914,6 +909,7 @@
 				402973851DB839EA00EC8C32 /* MainTableViewController.swift in Sources */,
 				972EC1332110D61F00FDE319 /* TextureButton.swift in Sources */,
 				972EC1302110B96900FDE319 /* ChineseScript.swift in Sources */,
+				97F258E72114507400893E19 /* EnglishStoryController.swift in Sources */,
 				97CAC233210B05A900675F48 /* EnglishIntroController.swift in Sources */,
 				972EC13B211195A100FDE319 /* MapBackground.swift in Sources */,
 				97CAC237210B963300675F48 /* CocktailEffectManager.swift in Sources */,

@@ -288,14 +288,20 @@
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wE8-B3-SMR">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wE8-B3-SMR" customClass="TextureButton" customModule="StarterProject" customModuleProvider="target">
                                 <rect key="frame" x="133" y="419" width="109" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.99607843139999996" green="0.92549019610000005" blue="0.58039215690000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <bool key="isElement" value="NO"/>
+                                </accessibility>
                                 <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="23"/>
                                 <state key="normal" title="NEXT">
                                     <color key="titleColor" red="0.0078431372550000003" green="0.0" blue="0.1019607843" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <segue destination="WjI-pO-60o" kind="push" id="TFJ-Ag-UeW"/>
+                                </connections>
                             </button>
                         </subviews>
                         <constraints>
@@ -307,10 +313,43 @@
                         <viewLayoutGuide key="safeArea" id="vdV-rf-vfd"/>
                     </view>
                     <navigationItem key="navigationItem" id="nln-wb-da3"/>
+                    <connections>
+                        <outlet property="nextButton" destination="wE8-B3-SMR" id="Ns5-hP-BeX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fsd-Mi-wdV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="405" y="406"/>
+        </scene>
+        <!--English Story Controller-->
+        <scene sceneID="ta6-VP-vRt">
+            <objects>
+                <viewController id="WjI-pO-60o" customClass="EnglishStoryController" customModule="StarterProject" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="gad-jv-D9X"/>
+                        <viewControllerLayoutGuide type="bottom" id="CIJ-Wh-7il"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="3Ya-5o-ztm">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="replay_yellow" translatesAutoresizingMaskIntoConstraints="NO" id="J7D-9G-CDN">
+                                <rect key="frame" x="37" y="183" width="300" height="300"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="J7D-9G-CDN" firstAttribute="leading" secondItem="3Ya-5o-ztm" secondAttribute="leadingMargin" constant="21" id="5Vj-pa-ajB"/>
+                            <constraint firstItem="J7D-9G-CDN" firstAttribute="top" secondItem="gad-jv-D9X" secondAttribute="bottom" constant="119" id="Va9-KW-u3E"/>
+                            <constraint firstItem="J7D-9G-CDN" firstAttribute="centerX" secondItem="3Ya-5o-ztm" secondAttribute="centerX" id="bUB-FV-nXw"/>
+                            <constraint firstItem="J7D-9G-CDN" firstAttribute="centerY" secondItem="3Ya-5o-ztm" secondAttribute="centerY" id="xof-F1-2ZW"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="rwH-i6-jcc"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LSr-dr-w5S" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="930" y="406"/>
         </scene>
         <!--Shopping Mall-->
         <scene sceneID="Zl1-Uh-6Cv">
