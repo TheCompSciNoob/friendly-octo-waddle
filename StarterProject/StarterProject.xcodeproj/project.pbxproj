@@ -117,6 +117,12 @@
 		B5AAFF752114297A00F0DC30 /* 249921__launemax__walking-slow-on-stones.wav in Resources */ = {isa = PBXBuildFile; fileRef = B5AAFF742114297A00F0DC30 /* 249921__launemax__walking-slow-on-stones.wav */; };
 		B5AAFF772114298800F0DC30 /* 129678__freethinkeranon__crickets.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B5AAFF762114298800F0DC30 /* 129678__freethinkeranon__crickets.mp3 */; };
 		B5AAFF792114299900F0DC30 /* 433783__cagancelik__campfire.flac in Resources */ = {isa = PBXBuildFile; fileRef = B5AAFF782114299900F0DC30 /* 433783__cagancelik__campfire.flac */; };
+		B5AAFF7C2114339900F0DC30 /* Huma's audio.wav in Resources */ = {isa = PBXBuildFile; fileRef = B5AAFF7B2114339900F0DC30 /* Huma's audio.wav */; };
+		B5AAFF7E211433A900F0DC30 /* Emma's audio.wav in Resources */ = {isa = PBXBuildFile; fileRef = B5AAFF7D211433A900F0DC30 /* Emma's audio.wav */; };
+		B5AAFF80211433B800F0DC30 /* Chi's audio.wav in Resources */ = {isa = PBXBuildFile; fileRef = B5AAFF7F211433B800F0DC30 /* Chi's audio.wav */; };
+		B5AAFF82211433CE00F0DC30 /* OurLaughterAudio1.wav in Resources */ = {isa = PBXBuildFile; fileRef = B5AAFF81211433CE00F0DC30 /* OurLaughterAudio1.wav */; };
+		B5AAFF84211433DB00F0DC30 /* OurLaughterAudio2.wav in Resources */ = {isa = PBXBuildFile; fileRef = B5AAFF83211433DB00F0DC30 /* OurLaughterAudio2.wav */; };
+		B5AAFF86211433E700F0DC30 /* OurLaughterAudio3.wav in Resources */ = {isa = PBXBuildFile; fileRef = B5AAFF85211433E700F0DC30 /* OurLaughterAudio3.wav */; };
 		B5DB346E2110CCC10008C683 /* CampfireManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5DB346D2110CCC10008C683 /* CampfireManager.swift */; };
 		BC31A9FBED54BD932058B42E /* Pods_Starter_tvOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B810285FECA2430C1FAEF3F /* Pods_Starter_tvOS.framework */; };
 		E829A8A800A7AFC5A4C5DA7A /* Pods_Starter_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C3D37560DD979815A53DF1B /* Pods_Starter_iOS.framework */; };
@@ -240,6 +246,12 @@
 		B5AAFF742114297A00F0DC30 /* 249921__launemax__walking-slow-on-stones.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "249921__launemax__walking-slow-on-stones.wav"; sourceTree = "<group>"; };
 		B5AAFF762114298800F0DC30 /* 129678__freethinkeranon__crickets.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = 129678__freethinkeranon__crickets.mp3; path = ../../../../../Downloads/129678__freethinkeranon__crickets.mp3; sourceTree = "<group>"; };
 		B5AAFF782114299900F0DC30 /* 433783__cagancelik__campfire.flac */ = {isa = PBXFileReference; lastKnownFileType = file; name = 433783__cagancelik__campfire.flac; path = ../../../../../Downloads/433783__cagancelik__campfire.flac; sourceTree = "<group>"; };
+		B5AAFF7B2114339900F0DC30 /* Huma's audio.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "Huma's audio.wav"; sourceTree = "<group>"; };
+		B5AAFF7D211433A900F0DC30 /* Emma's audio.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "Emma's audio.wav"; sourceTree = "<group>"; };
+		B5AAFF7F211433B800F0DC30 /* Chi's audio.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "Chi's audio.wav"; sourceTree = "<group>"; };
+		B5AAFF81211433CE00F0DC30 /* OurLaughterAudio1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = OurLaughterAudio1.wav; sourceTree = "<group>"; };
+		B5AAFF83211433DB00F0DC30 /* OurLaughterAudio2.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = OurLaughterAudio2.wav; sourceTree = "<group>"; };
+		B5AAFF85211433E700F0DC30 /* OurLaughterAudio3.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = OurLaughterAudio3.wav; sourceTree = "<group>"; };
 		B5DB346D2110CCC10008C683 /* CampfireManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CampfireManager.swift; sourceTree = "<group>"; };
 		BC9E019C266AD9823B5E877D /* Pods-Starter-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Starter-tvOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-Starter-tvOS/Pods-Starter-tvOS.release.xcconfig"; sourceTree = "<group>"; };
 		F3CC4717E50B1C51696459B4 /* Pods_Starter_macOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Starter_macOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -294,6 +306,7 @@
 				4029732E1DB81F5B00EC8C32 /* Products */,
 				9F285135BBB620A7FA0A9B0D /* Pods */,
 				1A2EFF41F64FC47F9E047F00 /* Frameworks */,
+				B5AAFF7A211429C500F0DC30 /* Recovered References */,
 			);
 			sourceTree = "<group>";
 		};
@@ -385,6 +398,12 @@
 		97EF9597210AF55B00C6B3CB /* Sounds */ = {
 			isa = PBXGroup;
 			children = (
+				B5AAFF85211433E700F0DC30 /* OurLaughterAudio3.wav */,
+				B5AAFF83211433DB00F0DC30 /* OurLaughterAudio2.wav */,
+				B5AAFF81211433CE00F0DC30 /* OurLaughterAudio1.wav */,
+				B5AAFF7F211433B800F0DC30 /* Chi's audio.wav */,
+				B5AAFF7D211433A900F0DC30 /* Emma's audio.wav */,
+				B5AAFF7B2114339900F0DC30 /* Huma's audio.wav */,
 				B5AAFF782114299900F0DC30 /* 433783__cagancelik__campfire.flac */,
 				B5AAFF762114298800F0DC30 /* 129678__freethinkeranon__crickets.mp3 */,
 				B5AAFF742114297A00F0DC30 /* 249921__launemax__walking-slow-on-stones.wav */,
@@ -507,6 +526,15 @@
 				BC9E019C266AD9823B5E877D /* Pods-Starter-tvOS.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		B5AAFF7A211429C500F0DC30 /* Recovered References */ = {
+			isa = PBXGroup;
+			children = (
+				972A648221142926002610C1 /* cocktail1.wav */,
+				972A648121142926002610C1 /* cocktail2.wav */,
+			);
+			name = "Recovered References";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -638,6 +666,7 @@
 				972EC106210FFE3300FDE319 /* line13b.wav in Resources */,
 				972EC100210FFE3300FDE319 /* line16.wav in Resources */,
 				97A4F5192113A956001E4804 /* ambiencefoodcourt.wav in Resources */,
+				B5AAFF82211433CE00F0DC30 /* OurLaughterAudio1.wav in Resources */,
 				972EC117210FFE3300FDE319 /* line30b.wav in Resources */,
 				402973791DB8260000EC8C32 /* Main.storyboard in Resources */,
 				972EC10A210FFE3300FDE319 /* line23b.wav in Resources */,
@@ -654,12 +683,14 @@
 				972EC0F8210FFE3300FDE319 /* line30a.wav in Resources */,
 				B5AAFF792114299900F0DC30 /* 433783__cagancelik__campfire.flac in Resources */,
 				972EC1292110088800FDE319 /* line38a.wav in Resources */,
+				B5AAFF84211433DB00F0DC30 /* OurLaughterAudio2.wav in Resources */,
 				972EC12A2110088800FDE319 /* line37.wav in Resources */,
 				972EC114210FFE3300FDE319 /* line30c.wav in Resources */,
 				972EC0FA210FFE3300FDE319 /* line25.wav in Resources */,
 				972EC0F5210FFE3300FDE319 /* line24.wav in Resources */,
 				972EC118210FFE3300FDE319 /* line23c.wav in Resources */,
 				972EC112210FFE3300FDE319 /* line3.wav in Resources */,
+				B5AAFF7C2114339900F0DC30 /* Huma's audio.wav in Resources */,
 				972EC0E3210FFE3300FDE319 /* line4c.wav in Resources */,
 				972EC0F1210FFE3300FDE319 /* line19b.wav in Resources */,
 				972EC103210FFE3300FDE319 /* line19c.wav in Resources */,
@@ -695,11 +726,14 @@
 				972EC122210FFE3300FDE319 /* line2b.wav in Resources */,
 				972EC10F210FFE3300FDE319 /* line26b.wav in Resources */,
 				972EC0F2210FFE3300FDE319 /* line15a.wav in Resources */,
+				B5AAFF7E211433A900F0DC30 /* Emma's audio.wav in Resources */,
 				972A648021142482002610C1 /* parthlinescombined.wav in Resources */,
 				972EC0EE210FFE3300FDE319 /* line7a.wav in Resources */,
 				972EC107210FFE3300FDE319 /* line15b.wav in Resources */,
 				972EC0E6210FFE3300FDE319 /* line2a.wav in Resources */,
 				972EC110210FFE3300FDE319 /* line33b.wav in Resources */,
+				B5AAFF86211433E700F0DC30 /* OurLaughterAudio3.wav in Resources */,
+				B5AAFF80211433B800F0DC30 /* Chi's audio.wav in Resources */,
 				972EC108210FFE3300FDE319 /* line7c.wav in Resources */,
 				972EC0FD210FFE3300FDE319 /* line28b.wav in Resources */,
 			);
