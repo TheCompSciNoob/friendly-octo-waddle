@@ -13,7 +13,7 @@ class ChineseIntroController: UIViewController, CocktailDelegate {
     @IBOutlet weak var nextButton: UIButton!
     
     var device: MBLMetaWear? = nil
-    private let infos = [ChineseIntroInfo(textDescription: "Clothes Shopping", audioDescription: "line1.wav", storyLine: Stories.CHINESE_MALL_1), ChineseIntroInfo(textDescription: "Apple Store", audioDescription: "line18.wav", storyLine: Stories.CHINESE_MALL_2)]
+    private let infos = [ChineseIntroInfo(textDescription: "Clothes Shopping", audioDescription: "cocktail1.wav", storyLine: Stories.CHINESE_MALL_1), ChineseIntroInfo(textDescription: "Apple Store", audioDescription: "cocktail2.wav", storyLine: Stories.CHINESE_MALL_2)]
     private var cocktailEffectManager: CocktailEffectManager!
     private var angle: Double = 0.0
     private var index = 0

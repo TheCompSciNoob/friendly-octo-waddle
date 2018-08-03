@@ -109,6 +109,18 @@ class SoundManager {
         return self.play(index: index)
     }
     
+    @discardableResult func play(index: Int, completionHandler: @escaping () -> Void) -> Bool {
+        if let player = players[index] {
+            if player.isPlaying {
+                player.stop()
+                options == nil ? player.scheduleBuffer(buffers[index], completionHandler: nil) : player.scheduleBuffer(buffers[index], at: nil, options: self.options!, completionHandler: completionHandler)
+            }
+            player.play()
+            return true
+        }
+        return false
+    }
+    
     func stopEngine() {
         engine.stop()
     }

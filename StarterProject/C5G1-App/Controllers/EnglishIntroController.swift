@@ -20,6 +20,7 @@ class EnglishIntroController: UIViewController {
     private let minDistance = 1.0
 
     //controls Parth's movements
+    private var countDownTimers: [CountDownTimer] = []
     private var parthTimer: Timer!
     private var parthDistance = 0.0
     var degrees: Double = 0.0
@@ -39,20 +40,26 @@ class EnglishIntroController: UIViewController {
         self.parthTimer = Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(moveParth), userInfo: nil, repeats: true)
         self.parthDistance = self.maxDistance
         let zoomDuration = 5.0
-        CountDownTimer(secondsInFuture: 99.259, duration: zoomDuration, timeInterval: 0.1) { secondsRemaining in
+        countDownTimers.append(CountDownTimer(secondsInFuture: 99.259, duration: zoomDuration, timeInterval: 0.1) { secondsRemaining in
             self.parthDistance = (self.maxDistance - self.minDistance) * secondsRemaining / zoomDuration + self.minDistance
-        }
-        CountDownTimer(secondsInFuture: 112.575, duration: zoomDuration, timeInterval: 0.1) { secondsRemaining in
+        })
+        countDownTimers.append(CountDownTimer(secondsInFuture: 112.575, duration: zoomDuration, timeInterval: 0.1) { secondsRemaining in
             self.parthDistance = (self.maxDistance - self.minDistance) * (zoomDuration - secondsRemaining) / zoomDuration + self.minDistance
-        }
-        CountDownTimer(secondsInFuture: 156.0, duration: zoomDuration, timeInterval: 0.1) { secondsRemaining in
+        })
+        countDownTimers.append(CountDownTimer(secondsInFuture: 156.0, duration: zoomDuration, timeInterval: 0.1) { secondsRemaining in
             self.parthDistance = (self.maxDistance - self.minDistance) * secondsRemaining / zoomDuration + self.minDistance
-        }
-        CountDownTimer(secondsInFuture: 168.4, duration: zoomDuration, timeInterval: 0.1) { secondsRemaining in
+        })
+        countDownTimers.append(CountDownTimer(secondsInFuture: 168.4, duration: zoomDuration, timeInterval: 0.1) { secondsRemaining in
             self.parthDistance = (self.maxDistance - self.minDistance) * (zoomDuration - secondsRemaining) / zoomDuration + self.minDistance
+        })
+        for cdt in countDownTimers {
+            cdt.start()
         }
 
-        soundManager.play(index: 0)
+        //plays all sounds
+        self.soundManager.play(index: 0) {
+            self.parthTimer.invalidate()
+        }
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -66,9 +73,7 @@ class EnglishIntroController: UIViewController {
     }
     
     // 0: story (parth)
-    // 1: campfire
-    // 2: laugh track (lol)
-    // where are footsteps
+    // 1: footsteps
     
     func initPositions() {
         // change volume and positions of the sounds and person
@@ -99,6 +104,9 @@ class CountDownTimer {
         self.timeInterval = timeInterval
         self.onUpdate = onUpdate
         self.timer = Timer(fireAt: Date().addingTimeInterval(secondsInFuture), interval: self.timeInterval, target: self, selector: #selector(onTick), userInfo: nil, repeats: true)
+    }
+    
+    func start() {
         RunLoop.main.add(timer, forMode: .commonModes)
     }
 
