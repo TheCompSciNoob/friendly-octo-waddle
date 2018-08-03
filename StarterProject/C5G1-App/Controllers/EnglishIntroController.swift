@@ -13,13 +13,17 @@ import AVFoundation
 class EnglishIntroController: UIViewController {
     
     var device: MBLMetaWear? = nil
-    var soundManager: SoundManager!
-    var parthTimer: Timer!
-    var timeElapsed = 0
+    private var soundManager: SoundManager!
+    private var parthTimer: Timer!
+    private var closer1: Timer!
+    private var farther1: Timer!
+    private var closer2: Timer!
+    private var farther2: Timer!
+    var degrees: Double = 0.0
     
     override func viewDidLoad() {
         loadMapBackground(root: self.view)
-        soundManager = SoundManager(fileNames: [], options: nil)
+        soundManager = SoundManager(fileNames: ["parthlinescombined.wav"], options: nil)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -28,8 +32,16 @@ class EnglishIntroController: UIViewController {
             self.soundManager?.updateAngularOrientation(degreesYaw: abs(Float(360 - (obj?.y)!)), degreesPitch: Float((obj?.p)!), degreesRoll: Float((obj?.r)!))
         }
         
-        //init timers
-        parthTimer = Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(moveSounds), userInfo: nil, repeats: true)
+        //schedule for future events like Parth moving closer
+        parthTimer = Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(moveParth), userInfo: nil, repeats: true)
+        
+        //Timer.scheduledTimer(timeInterval: TimeInterval(99.259), repeats: false)
+        //Timer.scheduledTimer(timeInterval: TimeInterval(13.316), repeats: false)
+        //Timer.scheduledTimer(timeInterval: TimeInterval(43.425), repeats: false)
+        //Timer.scheduledTimer(timeInterval: TimeInterval(12.4), repeats: false)
+        
+        //test
+        soundManager.play(index: 0)
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -52,17 +64,10 @@ class EnglishIntroController: UIViewController {
         
     }
     
-    @objc func moveSounds() {
-        Degrees += 1
-        let x = soundManager.players()[0].x
-        let y = soundManager.players()[0].y
-        let z = soundManager.players()[0].z
-        soundManager.updatePosition(index: 0, position: AVAudio3DPoint(5 * cos(timeElapsed), y: y, z: 5 * sin(timeElapsed)))
-        soundManager.updatePosition(index: 1, position: AVAudio3DPoint(5 * cos(timeElapsed), y: y-1.75, z: 5 * sin(timeElapsed)))
+    @objc func moveParth() {
+        degrees += 1
+        let y = soundManager.players[0]?.position.y
+        soundManager.updatePosition(index: 0, position: AVAudio3DPoint(x: Float(5.0 * cos(degrees * Double.pi / 180.0)), y: y!, z: Float(5.0 * sin(degrees * Double.pi / 180.0))))
+        //soundManager.updatePosition(index: 1, position: AVAudio3DPoint(x: Float(5.0 * cos(degrees * Double.pi / 180.0)), y: y! - 1.75, z: Float(5.0 * sin(degrees * Double.pi / 180.0))))
     }
 }
-
-let date = Date().addingTimeInterval(5)
-let timer = Timer(fireAt: date, interval: 0, target: self, selector: #selector(runCode), userInfo: nil, repeats: false)
-RunLoop.main.add(timer, forMode: RunLoopMode.commonModes)
-

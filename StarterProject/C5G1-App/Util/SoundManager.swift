@@ -14,8 +14,8 @@ class SoundManager {
     private var file = AVAudioFile()
     private var buffers: [AVAudioPCMBuffer] = []
     private let engine = AVAudioEngine()
-    private var players: [AVAudioPlayerNode?] = []
     private let mixer3d = AVAudioEnvironmentNode()
+    var players: [AVAudioPlayerNode?] = []
     
     init(fileNames: [String?], options: AVAudioPlayerNodeBufferOptions?) {
         self.fileNames = fileNames
@@ -79,10 +79,6 @@ class SoundManager {
             }
         }
         print("All players ready.")
-    }
-    
-    func players() -> [AVAudioPlayerNode?] {
-        return players
     }
     
     //sets all player locations to 0, 0, 0
