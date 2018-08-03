@@ -67,7 +67,6 @@ class EnglishIntroController: UIViewController {
         }
 
         self.soundManager.play(index: 0) {
-            print("Completed")
             self.parthTimer.invalidate()
             self.soundManager.stopEngine()
         }

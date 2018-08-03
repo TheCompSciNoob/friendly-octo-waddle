@@ -112,7 +112,8 @@ class SoundManager {
             if player.isPlaying {
                 player.stop()
             }
-            options == nil ? player.scheduleBuffer(buffers[index], completionHandler: nil) : player.scheduleBuffer(buffers[index], at: nil, options: options!, completionHandler: completionHandler)
+            //options == nil ? player.scheduleBuffer(buffers[index], completionHandler: nil) : player.scheduleBuffer(buffers[index], at: nil, options: options!, completionHandler: completionHandler)
+            options == nil ? player.scheduleBuffer(buffers[index], completionHandler: completionHandler) : player.scheduleBuffer(buffers[index], at: nil, options: options!, completionHandler: completionHandler)
             player.play()
             return true
         }
