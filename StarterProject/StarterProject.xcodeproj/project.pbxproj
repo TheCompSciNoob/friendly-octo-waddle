@@ -306,6 +306,7 @@
 				4029732E1DB81F5B00EC8C32 /* Products */,
 				9F285135BBB620A7FA0A9B0D /* Pods */,
 				1A2EFF41F64FC47F9E047F00 /* Frameworks */,
+				B5AAFF7A211429C500F0DC30 /* Recovered References */,
 			);
 			sourceTree = "<group>";
 		};
@@ -529,6 +530,15 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		B5AAFF7A211429C500F0DC30 /* Recovered References */ = {
+			isa = PBXGroup;
+			children = (
+				972A648221142926002610C1 /* cocktail1.wav */,
+				972A648121142926002610C1 /* cocktail2.wav */,
+			);
+			name = "Recovered References";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -655,6 +665,7 @@
 				972EC106210FFE3300FDE319 /* line13b.wav in Resources */,
 				972EC100210FFE3300FDE319 /* line16.wav in Resources */,
 				97A4F5192113A956001E4804 /* ambiencefoodcourt.wav in Resources */,
+				B5AAFF82211433CE00F0DC30 /* OurLaughterAudio1.wav in Resources */,
 				972EC117210FFE3300FDE319 /* line30b.wav in Resources */,
 				402973791DB8260000EC8C32 /* Main.storyboard in Resources */,
 				972EC10A210FFE3300FDE319 /* line23b.wav in Resources */,
@@ -672,6 +683,7 @@
 				972EC0E1210FFE3300FDE319 /* line38b.wav in Resources */,
 				972EC0F8210FFE3300FDE319 /* line30a.wav in Resources */,
 				972EC1292110088800FDE319 /* line38a.wav in Resources */,
+				B5AAFF84211433DB00F0DC30 /* OurLaughterAudio2.wav in Resources */,
 				972EC12A2110088800FDE319 /* line37.wav in Resources */,
 				972EC114210FFE3300FDE319 /* line30c.wav in Resources */,
 				972EC0FA210FFE3300FDE319 /* line25.wav in Resources */,
@@ -679,6 +691,7 @@
 				972EC118210FFE3300FDE319 /* line23c.wav in Resources */,
 				97F258DE2114426900893E19 /* 433783__cagancelik__campfire.flac in Resources */,
 				972EC112210FFE3300FDE319 /* line3.wav in Resources */,
+				B5AAFF7C2114339900F0DC30 /* Huma's audio.wav in Resources */,
 				972EC0E3210FFE3300FDE319 /* line4c.wav in Resources */,
 				972EC0F1210FFE3300FDE319 /* line19b.wav in Resources */,
 				972EC103210FFE3300FDE319 /* line19c.wav in Resources */,
@@ -721,11 +734,14 @@
 				972EC122210FFE3300FDE319 /* line2b.wav in Resources */,
 				972EC10F210FFE3300FDE319 /* line26b.wav in Resources */,
 				972EC0F2210FFE3300FDE319 /* line15a.wav in Resources */,
+				B5AAFF7E211433A900F0DC30 /* Emma's audio.wav in Resources */,
 				972A648021142482002610C1 /* parthlinescombined.wav in Resources */,
 				972EC0EE210FFE3300FDE319 /* line7a.wav in Resources */,
 				972EC107210FFE3300FDE319 /* line15b.wav in Resources */,
 				972EC0E6210FFE3300FDE319 /* line2a.wav in Resources */,
 				972EC110210FFE3300FDE319 /* line33b.wav in Resources */,
+				B5AAFF86211433E700F0DC30 /* OurLaughterAudio3.wav in Resources */,
+				B5AAFF80211433B800F0DC30 /* Chi's audio.wav in Resources */,
 				972EC108210FFE3300FDE319 /* line7c.wav in Resources */,
 				972EC0FD210FFE3300FDE319 /* line28b.wav in Resources */,
 			);
