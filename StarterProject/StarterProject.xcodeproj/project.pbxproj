@@ -111,6 +111,8 @@
 		97EF9596210AF32700C6B3CB /* MainTestController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97EF9595210AF32700C6B3CB /* MainTestController.swift */; };
 		97EF959C210AF6B700C6B3CB /* SoundManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97EF959B210AF6B700C6B3CB /* SoundManager.swift */; };
 		A74CC4E904D4261827DB3639 /* Pods_Starter_macOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3CC4717E50B1C51696459B4 /* Pods_Starter_macOS.framework */; };
+		B5AAFF71211409B300F0DC30 /* 433783__cagancelik__campfire.flac in Resources */ = {isa = PBXBuildFile; fileRef = B5AAFF70211409B300F0DC30 /* 433783__cagancelik__campfire.flac */; };
+		B5AAFF73211409BE00F0DC30 /* 129678__freethinkeranon__crickets.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B5AAFF72211409BE00F0DC30 /* 129678__freethinkeranon__crickets.mp3 */; };
 		B5B5DFED2113F8A300FB68CE /* parthlinescombined.wav in Resources */ = {isa = PBXBuildFile; fileRef = B5B5DFEC2113F8A300FB68CE /* parthlinescombined.wav */; };
 		B5DB346E2110CCC10008C683 /* CampfireManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5DB346D2110CCC10008C683 /* CampfireManager.swift */; };
 		BC31A9FBED54BD932058B42E /* Pods_Starter_tvOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B810285FECA2430C1FAEF3F /* Pods_Starter_tvOS.framework */; };
@@ -229,6 +231,8 @@
 		97CAC236210B963300675F48 /* CocktailEffectManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CocktailEffectManager.swift; sourceTree = "<group>"; };
 		97EF9595210AF32700C6B3CB /* MainTestController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTestController.swift; sourceTree = "<group>"; };
 		97EF959B210AF6B700C6B3CB /* SoundManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundManager.swift; sourceTree = "<group>"; };
+		B5AAFF70211409B300F0DC30 /* 433783__cagancelik__campfire.flac */ = {isa = PBXFileReference; lastKnownFileType = file; path = 433783__cagancelik__campfire.flac; sourceTree = "<group>"; };
+		B5AAFF72211409BE00F0DC30 /* 129678__freethinkeranon__crickets.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 129678__freethinkeranon__crickets.mp3; sourceTree = "<group>"; };
 		B5B5DFEC2113F8A300FB68CE /* parthlinescombined.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = parthlinescombined.wav; path = "../../../../English Recordings Edited/parthlinescombined.wav"; sourceTree = "<group>"; };
 		B5DB346D2110CCC10008C683 /* CampfireManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CampfireManager.swift; sourceTree = "<group>"; };
 		BC9E019C266AD9823B5E877D /* Pods-Starter-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Starter-tvOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-Starter-tvOS/Pods-Starter-tvOS.release.xcconfig"; sourceTree = "<group>"; };
@@ -375,6 +379,8 @@
 		97EF9597210AF55B00C6B3CB /* Sounds */ = {
 			isa = PBXGroup;
 			children = (
+				B5AAFF72211409BE00F0DC30 /* 129678__freethinkeranon__crickets.mp3 */,
+				B5AAFF70211409B300F0DC30 /* 433783__cagancelik__campfire.flac */,
 				B5B5DFEC2113F8A300FB68CE /* parthlinescombined.wav */,
 				97A4F5182113A956001E4804 /* ambiencefoodcourt.wav */,
 				972EC0A0210FFE2800FDE319 /* line1.wav */,
@@ -631,10 +637,12 @@
 				972EC0E9210FFE3300FDE319 /* line4a.wav in Resources */,
 				972EC0F0210FFE3300FDE319 /* line9.wav in Resources */,
 				972EC102210FFE3300FDE319 /* line22.wav in Resources */,
+				B5AAFF73211409BE00F0DC30 /* 129678__freethinkeranon__crickets.mp3 in Resources */,
 				402973391DB81F5B00EC8C32 /* LaunchScreen.storyboard in Resources */,
 				972EC0EC210FFE3300FDE319 /* line4b.wav in Resources */,
 				972EC0E1210FFE3300FDE319 /* line38b.wav in Resources */,
 				972EC0F8210FFE3300FDE319 /* line30a.wav in Resources */,
+				B5AAFF71211409B300F0DC30 /* 433783__cagancelik__campfire.flac in Resources */,
 				972EC1292110088800FDE319 /* line38a.wav in Resources */,
 				972EC12A2110088800FDE319 /* line37.wav in Resources */,
 				972EC114210FFE3300FDE319 /* line30c.wav in Resources */,
