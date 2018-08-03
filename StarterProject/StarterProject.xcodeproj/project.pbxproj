@@ -126,6 +126,7 @@
 		A74CC4E904D4261827DB3639 /* Pods_Starter_macOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3CC4717E50B1C51696459B4 /* Pods_Starter_macOS.framework */; };
 		B557CD5221145B18001DBA45 /* EMMA AUDIO FINAL.wav in Resources */ = {isa = PBXBuildFile; fileRef = B557CD5121145B18001DBA45 /* EMMA AUDIO FINAL.wav */; };
 		B557CD5421145C64001DBA45 /* CHI FINAL AUDIO.wav in Resources */ = {isa = PBXBuildFile; fileRef = B557CD5321145C63001DBA45 /* CHI FINAL AUDIO.wav */; };
+		B557CD5621145D6B001DBA45 /* PARTH FINAL AUDIO.wav in Resources */ = {isa = PBXBuildFile; fileRef = B557CD5521145D6B001DBA45 /* PARTH FINAL AUDIO.wav */; };
 		B5DB346E2110CCC10008C683 /* CampfireManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5DB346D2110CCC10008C683 /* CampfireManager.swift */; };
 		BC31A9FBED54BD932058B42E /* Pods_Starter_tvOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B810285FECA2430C1FAEF3F /* Pods_Starter_tvOS.framework */; };
 		E829A8A800A7AFC5A4C5DA7A /* Pods_Starter_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C3D37560DD979815A53DF1B /* Pods_Starter_iOS.framework */; };
@@ -258,6 +259,7 @@
 		97F258E62114507400893E19 /* EnglishStoryController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnglishStoryController.swift; sourceTree = "<group>"; };
 		B557CD5121145B18001DBA45 /* EMMA AUDIO FINAL.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "EMMA AUDIO FINAL.wav"; sourceTree = "<group>"; };
 		B557CD5321145C63001DBA45 /* CHI FINAL AUDIO.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "CHI FINAL AUDIO.wav"; sourceTree = "<group>"; };
+		B557CD5521145D6B001DBA45 /* PARTH FINAL AUDIO.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "PARTH FINAL AUDIO.wav"; sourceTree = "<group>"; };
 		B5DB346D2110CCC10008C683 /* CampfireManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CampfireManager.swift; sourceTree = "<group>"; };
 		BC9E019C266AD9823B5E877D /* Pods-Starter-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Starter-tvOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-Starter-tvOS/Pods-Starter-tvOS.release.xcconfig"; sourceTree = "<group>"; };
 		F3CC4717E50B1C51696459B4 /* Pods_Starter_macOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Starter_macOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -404,6 +406,7 @@
 		97EF9597210AF55B00C6B3CB /* Sounds */ = {
 			isa = PBXGroup;
 			children = (
+				B557CD5521145D6B001DBA45 /* PARTH FINAL AUDIO.wav */,
 				B557CD5321145C63001DBA45 /* CHI FINAL AUDIO.wav */,
 				B557CD5121145B18001DBA45 /* EMMA AUDIO FINAL.wav */,
 				97F258D82114426800893E19 /* 129678__freethinkeranon__crickets.mp3 */,
@@ -713,6 +716,7 @@
 				972EC120210FFE3300FDE319 /* line26c.wav in Resources */,
 				972EC0E8210FFE3300FDE319 /* line14.wav in Resources */,
 				97F258E12114426900893E19 /* 129678__freethinkeranon__crickets.mp3 in Resources */,
+				B557CD5621145D6B001DBA45 /* PARTH FINAL AUDIO.wav in Resources */,
 				972EC0FF210FFE3300FDE319 /* line28a.wav in Resources */,
 				972EC10D210FFE3300FDE319 /* line35.wav in Resources */,
 				972EC11F210FFE3300FDE319 /* line36c.wav in Resources */,
