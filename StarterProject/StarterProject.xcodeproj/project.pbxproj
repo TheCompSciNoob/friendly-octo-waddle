@@ -113,6 +113,15 @@
 		97CAC237210B963300675F48 /* CocktailEffectManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97CAC236210B963300675F48 /* CocktailEffectManager.swift */; };
 		97EF9596210AF32700C6B3CB /* MainTestController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97EF9595210AF32700C6B3CB /* MainTestController.swift */; };
 		97EF959C210AF6B700C6B3CB /* SoundManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97EF959B210AF6B700C6B3CB /* SoundManager.swift */; };
+		97F258DD2114426900893E19 /* 249921__launemax__walking-slow-on-stones.wav in Resources */ = {isa = PBXBuildFile; fileRef = 97F258D42114426800893E19 /* 249921__launemax__walking-slow-on-stones.wav */; };
+		97F258DE2114426900893E19 /* 433783__cagancelik__campfire.flac in Resources */ = {isa = PBXBuildFile; fileRef = 97F258D52114426800893E19 /* 433783__cagancelik__campfire.flac */; };
+		97F258DF2114426900893E19 /* Huma's audio.wav in Resources */ = {isa = PBXBuildFile; fileRef = 97F258D62114426800893E19 /* Huma's audio.wav */; };
+		97F258E02114426900893E19 /* OurLaughterAudio2.wav in Resources */ = {isa = PBXBuildFile; fileRef = 97F258D72114426800893E19 /* OurLaughterAudio2.wav */; };
+		97F258E12114426900893E19 /* 129678__freethinkeranon__crickets.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 97F258D82114426800893E19 /* 129678__freethinkeranon__crickets.mp3 */; };
+		97F258E22114426900893E19 /* Emma's audio.wav in Resources */ = {isa = PBXBuildFile; fileRef = 97F258D92114426900893E19 /* Emma's audio.wav */; };
+		97F258E32114426900893E19 /* OurLaughterAudio3.wav in Resources */ = {isa = PBXBuildFile; fileRef = 97F258DA2114426900893E19 /* OurLaughterAudio3.wav */; };
+		97F258E42114426900893E19 /* OurLaughterAudio1.wav in Resources */ = {isa = PBXBuildFile; fileRef = 97F258DB2114426900893E19 /* OurLaughterAudio1.wav */; };
+		97F258E52114426900893E19 /* Chi's audio.wav in Resources */ = {isa = PBXBuildFile; fileRef = 97F258DC2114426900893E19 /* Chi's audio.wav */; };
 		A74CC4E904D4261827DB3639 /* Pods_Starter_macOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3CC4717E50B1C51696459B4 /* Pods_Starter_macOS.framework */; };
 		B5AAFF752114297A00F0DC30 /* footsteps.wav in Resources */ = {isa = PBXBuildFile; fileRef = B5AAFF742114297A00F0DC30 /* footsteps.wav */; };
 		B5AAFF772114298800F0DC30 /* crickets.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B5AAFF762114298800F0DC30 /* crickets.mp3 */; };
@@ -237,6 +246,15 @@
 		97CAC236210B963300675F48 /* CocktailEffectManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CocktailEffectManager.swift; sourceTree = "<group>"; };
 		97EF9595210AF32700C6B3CB /* MainTestController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTestController.swift; sourceTree = "<group>"; };
 		97EF959B210AF6B700C6B3CB /* SoundManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundManager.swift; sourceTree = "<group>"; };
+		97F258D42114426800893E19 /* 249921__launemax__walking-slow-on-stones.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "249921__launemax__walking-slow-on-stones.wav"; sourceTree = "<group>"; };
+		97F258D52114426800893E19 /* 433783__cagancelik__campfire.flac */ = {isa = PBXFileReference; lastKnownFileType = file; path = 433783__cagancelik__campfire.flac; sourceTree = "<group>"; };
+		97F258D62114426800893E19 /* Huma's audio.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "Huma's audio.wav"; sourceTree = "<group>"; };
+		97F258D72114426800893E19 /* OurLaughterAudio2.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = OurLaughterAudio2.wav; sourceTree = "<group>"; };
+		97F258D82114426800893E19 /* 129678__freethinkeranon__crickets.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 129678__freethinkeranon__crickets.mp3; sourceTree = "<group>"; };
+		97F258D92114426900893E19 /* Emma's audio.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "Emma's audio.wav"; sourceTree = "<group>"; };
+		97F258DA2114426900893E19 /* OurLaughterAudio3.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = OurLaughterAudio3.wav; sourceTree = "<group>"; };
+		97F258DB2114426900893E19 /* OurLaughterAudio1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = OurLaughterAudio1.wav; sourceTree = "<group>"; };
+		97F258DC2114426900893E19 /* Chi's audio.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "Chi's audio.wav"; sourceTree = "<group>"; };
 		B5AAFF742114297A00F0DC30 /* footsteps.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = footsteps.wav; sourceTree = "<group>"; };
 		B5AAFF762114298800F0DC30 /* crickets.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = crickets.mp3; sourceTree = "<group>"; };
 		B5AAFF782114299900F0DC30 /* campfire.flac */ = {isa = PBXFileReference; lastKnownFileType = file; path = campfire.flac; sourceTree = "<group>"; };
@@ -385,6 +403,15 @@
 		97EF9597210AF55B00C6B3CB /* Sounds */ = {
 			isa = PBXGroup;
 			children = (
+				97F258D82114426800893E19 /* 129678__freethinkeranon__crickets.mp3 */,
+				97F258D42114426800893E19 /* 249921__launemax__walking-slow-on-stones.wav */,
+				97F258D52114426800893E19 /* 433783__cagancelik__campfire.flac */,
+				97F258DC2114426900893E19 /* Chi's audio.wav */,
+				97F258D92114426900893E19 /* Emma's audio.wav */,
+				97F258D62114426800893E19 /* Huma's audio.wav */,
+				97F258DB2114426900893E19 /* OurLaughterAudio1.wav */,
+				97F258D72114426800893E19 /* OurLaughterAudio2.wav */,
+				97F258DA2114426900893E19 /* OurLaughterAudio3.wav */,
 				972A648721142FBB002610C1 /* cocktail1.wav */,
 				972A648621142FBB002610C1 /* cocktail2.wav */,
 				B5AAFF782114299900F0DC30 /* campfire.flac */,
@@ -641,8 +668,10 @@
 				972EC117210FFE3300FDE319 /* line30b.wav in Resources */,
 				402973791DB8260000EC8C32 /* Main.storyboard in Resources */,
 				972EC10A210FFE3300FDE319 /* line23b.wav in Resources */,
+				97F258E52114426900893E19 /* Chi's audio.wav in Resources */,
 				972EC0F4210FFE3300FDE319 /* line26a.wav in Resources */,
 				972EC116210FFE3300FDE319 /* line15c.wav in Resources */,
+				97F258E32114426900893E19 /* OurLaughterAudio3.wav in Resources */,
 				972EC0E2210FFE3300FDE319 /* line1.wav in Resources */,
 				972A648921142FBB002610C1 /* cocktail1.wav in Resources */,
 				972EC0E9210FFE3300FDE319 /* line4a.wav in Resources */,
@@ -660,6 +689,7 @@
 				972EC0FA210FFE3300FDE319 /* line25.wav in Resources */,
 				972EC0F5210FFE3300FDE319 /* line24.wav in Resources */,
 				972EC118210FFE3300FDE319 /* line23c.wav in Resources */,
+				97F258DE2114426900893E19 /* 433783__cagancelik__campfire.flac in Resources */,
 				972EC112210FFE3300FDE319 /* line3.wav in Resources */,
 				972EC0E3210FFE3300FDE319 /* line4c.wav in Resources */,
 				972EC0F1210FFE3300FDE319 /* line19b.wav in Resources */,
@@ -669,12 +699,14 @@
 				972EC115210FFE3300FDE319 /* line21c.wav in Resources */,
 				972EC104210FFE3300FDE319 /* line34.wav in Resources */,
 				972EC11C210FFE3300FDE319 /* line10a.wav in Resources */,
+				97F258E22114426900893E19 /* Emma's audio.wav in Resources */,
 				972EC0E7210FFE3300FDE319 /* line8.wav in Resources */,
 				972EC121210FFE3300FDE319 /* line33a.wav in Resources */,
 				972EC0F9210FFE3300FDE319 /* line32.wav in Resources */,
 				972EC11D210FFE3300FDE319 /* line36a.wav in Resources */,
 				972EC120210FFE3300FDE319 /* line26c.wav in Resources */,
 				972EC0E8210FFE3300FDE319 /* line14.wav in Resources */,
+				97F258E12114426900893E19 /* 129678__freethinkeranon__crickets.mp3 in Resources */,
 				972EC0FF210FFE3300FDE319 /* line28a.wav in Resources */,
 				972EC10D210FFE3300FDE319 /* line35.wav in Resources */,
 				972EC11F210FFE3300FDE319 /* line36c.wav in Resources */,
@@ -685,11 +717,15 @@
 				972EC0FB210FFE3300FDE319 /* line10c.wav in Resources */,
 				972A648821142FBB002610C1 /* cocktail2.wav in Resources */,
 				972EC101210FFE3300FDE319 /* line17.wav in Resources */,
+				97F258DF2114426900893E19 /* Huma's audio.wav in Resources */,
 				972EC113210FFE3300FDE319 /* line21a.wav in Resources */,
 				972EC0E4210FFE3300FDE319 /* line11.wav in Resources */,
 				972EC11B210FFE3300FDE319 /* line7b.wav in Resources */,
 				402973601DB81F5B00EC8C32 /* Assets.xcassets in Resources */,
+				97F258E42114426900893E19 /* OurLaughterAudio1.wav in Resources */,
 				972EC0EA210FFE3300FDE319 /* line18.wav in Resources */,
+				97F258DD2114426900893E19 /* 249921__launemax__walking-slow-on-stones.wav in Resources */,
+				97F258E02114426900893E19 /* OurLaughterAudio2.wav in Resources */,
 				972EC119210FFE3300FDE319 /* line21b.wav in Resources */,
 				972EC0FC210FFE3300FDE319 /* line27.wav in Resources */,
 				972EC10E210FFE3300FDE319 /* line33c.wav in Resources */,
