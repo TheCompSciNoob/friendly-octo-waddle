@@ -23,7 +23,7 @@ class StoryManager {
     init(promptsAndResponses: [PromptAndResponse], device: MBLMetaWear) {
         self.promptsAndResponses = promptsAndResponses
         self.device = device
-        self.ambient = SoundManager(fileNames: ["ambiencefoodcourt.wav"], options: .loops)
+        self.ambient = SoundManager(fileNames: ["ambiencefoodcourt.wav"])
         self.initAmbientSounds()
     }
     
@@ -55,7 +55,7 @@ class StoryManager {
         }
         fileNames.insert(currentPR.correctResponse?.audioPath ?? nil, at: self.correctAnswerIndex + 1)
         print(fileNames)
-        self.conversation = SoundManager(fileNames: fileNames, options: nil)
+        self.conversation = SoundManager(fileNames: fileNames)
         if let prompt = currentPR.prompt {
             self.conversation?.updatePosition(index: 0, position: AVAudio3DPoint(x: prompt.x, y: prompt.y, z: prompt.z))
         }
@@ -81,7 +81,7 @@ class StoryManager {
     
     func playAmbientSounds() {
         for index in 0..<ambient.fileNames.count {
-            ambient.play(index: index)
+            ambient.play(index: index, options: .loops)
         }
     }
     

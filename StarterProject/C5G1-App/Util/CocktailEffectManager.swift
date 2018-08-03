@@ -28,8 +28,8 @@ class CocktailEffectManager {
     
     init(ambient: [String], targets: [String], device: MBLMetaWear) {
         self.device = device
-        self.targets = SoundManager(fileNames: targets, options: .loops)
-        self.ambient = SoundManager(fileNames: ambient, options: .loops)
+        self.targets = SoundManager(fileNames: targets)
+        self.ambient = SoundManager(fileNames: ambient)
         self.sector = 360.0 / Double((targets.count))
         self.placeSoundsDefault()
         self.initAmbientSounds()
@@ -91,7 +91,7 @@ class CocktailEffectManager {
         }
         
         for index in 0..<ambient.fileNames.count {
-            ambient.play(index: index)
+            ambient.play(index: index, options: .loops)
         }
     }
     

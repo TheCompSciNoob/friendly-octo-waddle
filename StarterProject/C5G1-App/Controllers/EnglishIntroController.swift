@@ -27,7 +27,17 @@ class EnglishIntroController: UIViewController {
     
     override func viewDidLoad() {
         loadMapBackground(root: self.view)
-        soundManager = SoundManager(fileNames: ["parthlinescombined.wav"], options: nil)
+        
+        //0: story (parth)
+        //1: Huma
+        //2: Emma
+        //3: Chi
+        //4: Parth's footsteps
+        //5: campfire
+        //6: crickets
+        //self.soundManager = SoundManager(fileNames: ["parthlinescombined.wav", nil, nil, nil, "footsteps.wav", "campfire.flac", "crickets.mp3"])
+        self.soundManager = SoundManager(fileNames: ["parthlinescombined.wav", "footsteps.wav", "footsteps.wav", "footsteps.wav", "footsteps.wav", "footsteps.wav", "footsteps.wav"])
+        self.initPositions()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -56,9 +66,12 @@ class EnglishIntroController: UIViewController {
             cdt.start()
         }
 
-        //plays all sounds
         self.soundManager.play(index: 0) {
             self.parthTimer.invalidate()
+            self.soundManager.stopEngine()
+        }
+        for index in 4..<soundManager.fileNames.count {
+            self.soundManager.play(index: index, options: .loops)
         }
     }
     
@@ -70,23 +83,21 @@ class EnglishIntroController: UIViewController {
 
         //stop all timers
         parthTimer.invalidate()
+        for cdt in countDownTimers {
+            cdt.invalidate()
+        }
     }
     
-    // 0: story (parth)
-    // 1: footsteps
-    
     func initPositions() {
-        // change volume and positions of the sounds and person
-        soundManager.changeVolume(index: 0, vol: 1)
+        //voices
         soundManager.updateListenerPosition(x: 0, y: 0, z: 0)
-        
+        soundManager.changeVolume(index: 0, vol: 1)
     }
     
     @objc func moveParth() {
         degrees += 1
         let y = soundManager.players[0]?.position.y
         soundManager.updatePosition(index: 0, position: AVAudio3DPoint(x: Float(self.parthDistance * cos(degrees * Double.pi / 180.0)), y: y!, z: Float(self.parthDistance * sin(degrees * Double.pi / 180.0))))
-        //soundManager.updatePosition(index: 1, position: AVAudio3DPoint(x: Float(5.0 * cos(degrees * Double.pi / 180.0)), y: y! - 1.75, z: Float(5.0 * sin(degrees * Double.pi / 180.0))))
     }
 }
 
