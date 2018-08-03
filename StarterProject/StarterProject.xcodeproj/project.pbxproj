@@ -27,6 +27,8 @@
 		971A1E9C210D0CF3007CB8C9 /* StoryBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 971A1E9B210D0CF3007CB8C9 /* StoryBuilder.swift */; };
 		971A1E9E210D173F007CB8C9 /* Stories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 971A1E9D210D173E007CB8C9 /* Stories.swift */; };
 		972A648021142482002610C1 /* parthlinescombined.wav in Resources */ = {isa = PBXBuildFile; fileRef = 972A647F21142481002610C1 /* parthlinescombined.wav */; };
+		972A648321142927002610C1 /* cocktail2.wav in Resources */ = {isa = PBXBuildFile; fileRef = 972A648121142926002610C1 /* cocktail2.wav */; };
+		972A648421142927002610C1 /* cocktail1.wav in Resources */ = {isa = PBXBuildFile; fileRef = 972A648221142926002610C1 /* cocktail1.wav */; };
 		972EC0E1210FFE3300FDE319 /* line38b.wav in Resources */ = {isa = PBXBuildFile; fileRef = 972EC09F210FFE2800FDE319 /* line38b.wav */; };
 		972EC0E2210FFE3300FDE319 /* line1.wav in Resources */ = {isa = PBXBuildFile; fileRef = 972EC0A0210FFE2800FDE319 /* line1.wav */; };
 		972EC0E3210FFE3300FDE319 /* line4c.wav in Resources */ = {isa = PBXBuildFile; fileRef = 972EC0A1210FFE2800FDE319 /* line4c.wav */; };
@@ -149,6 +151,8 @@
 		971A1E9B210D0CF3007CB8C9 /* StoryBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryBuilder.swift; sourceTree = "<group>"; };
 		971A1E9D210D173E007CB8C9 /* Stories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stories.swift; sourceTree = "<group>"; };
 		972A647F21142481002610C1 /* parthlinescombined.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = parthlinescombined.wav; sourceTree = "<group>"; };
+		972A648121142926002610C1 /* cocktail2.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = cocktail2.wav; sourceTree = "<group>"; };
+		972A648221142926002610C1 /* cocktail1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = cocktail1.wav; sourceTree = "<group>"; };
 		972EC09F210FFE2800FDE319 /* line38b.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = line38b.wav; sourceTree = "<group>"; };
 		972EC0A0210FFE2800FDE319 /* line1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = line1.wav; sourceTree = "<group>"; };
 		972EC0A1210FFE2800FDE319 /* line4c.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = line4c.wav; sourceTree = "<group>"; };
@@ -625,8 +629,10 @@
 				972EC10B210FFE3300FDE319 /* line20.wav in Resources */,
 				972EC0EB210FFE3300FDE319 /* line38c.wav in Resources */,
 				972EC0FE210FFE3300FDE319 /* line2c.wav in Resources */,
+				972A648421142927002610C1 /* cocktail1.wav in Resources */,
 				972EC105210FFE3300FDE319 /* line5.wav in Resources */,
 				972EC0EF210FFE3300FDE319 /* line6.wav in Resources */,
+				972A648321142927002610C1 /* cocktail2.wav in Resources */,
 				972EC0F3210FFE3300FDE319 /* line19a.wav in Resources */,
 				B5AAFF752114297A00F0DC30 /* 249921__launemax__walking-slow-on-stones.wav in Resources */,
 				972EC106210FFE3300FDE319 /* line13b.wav in Resources */,
