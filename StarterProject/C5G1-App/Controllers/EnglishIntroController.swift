@@ -29,7 +29,7 @@ class EnglishIntroController: UIViewController {
         }
         
         //init timers
-        parthTimer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(moveSounds), userInfo: nil, repeats: true)
+        parthTimer = Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(moveSounds), userInfo: nil, repeats: true)
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -53,10 +53,16 @@ class EnglishIntroController: UIViewController {
     }
     
     @objc func moveSounds() {
-        timeElapsed += 1
+        Degrees += 1
         let x = soundManager.players()[0].x
         let y = soundManager.players()[0].y
         let z = soundManager.players()[0].z
         soundManager.updatePosition(index: 0, position: AVAudio3DPoint(5 * cos(timeElapsed), y: y, z: 5 * sin(timeElapsed)))
+        soundManager.updatePosition(index: 1, position: AVAudio3DPoint(5 * cos(timeElapsed), y: y-1.75, z: 5 * sin(timeElapsed)))
     }
 }
+
+let date = Date().addingTimeInterval(5)
+let timer = Timer(fireAt: date, interval: 0, target: self, selector: #selector(runCode), userInfo: nil, repeats: false)
+RunLoop.main.add(timer, forMode: RunLoopMode.commonModes)
+
