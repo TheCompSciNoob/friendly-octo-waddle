@@ -112,6 +112,9 @@
 		97EF9596210AF32700C6B3CB /* MainTestController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97EF9595210AF32700C6B3CB /* MainTestController.swift */; };
 		97EF959C210AF6B700C6B3CB /* SoundManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97EF959B210AF6B700C6B3CB /* SoundManager.swift */; };
 		A74CC4E904D4261827DB3639 /* Pods_Starter_macOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3CC4717E50B1C51696459B4 /* Pods_Starter_macOS.framework */; };
+		B5AAFF752114297A00F0DC30 /* 249921__launemax__walking-slow-on-stones.wav in Resources */ = {isa = PBXBuildFile; fileRef = B5AAFF742114297A00F0DC30 /* 249921__launemax__walking-slow-on-stones.wav */; };
+		B5AAFF772114298800F0DC30 /* 129678__freethinkeranon__crickets.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B5AAFF762114298800F0DC30 /* 129678__freethinkeranon__crickets.mp3 */; };
+		B5AAFF792114299900F0DC30 /* 433783__cagancelik__campfire.flac in Resources */ = {isa = PBXBuildFile; fileRef = B5AAFF782114299900F0DC30 /* 433783__cagancelik__campfire.flac */; };
 		B5DB346E2110CCC10008C683 /* CampfireManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5DB346D2110CCC10008C683 /* CampfireManager.swift */; };
 		BC31A9FBED54BD932058B42E /* Pods_Starter_tvOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B810285FECA2430C1FAEF3F /* Pods_Starter_tvOS.framework */; };
 		E829A8A800A7AFC5A4C5DA7A /* Pods_Starter_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C3D37560DD979815A53DF1B /* Pods_Starter_iOS.framework */; };
@@ -230,6 +233,9 @@
 		97CAC236210B963300675F48 /* CocktailEffectManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CocktailEffectManager.swift; sourceTree = "<group>"; };
 		97EF9595210AF32700C6B3CB /* MainTestController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTestController.swift; sourceTree = "<group>"; };
 		97EF959B210AF6B700C6B3CB /* SoundManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundManager.swift; sourceTree = "<group>"; };
+		B5AAFF742114297A00F0DC30 /* 249921__launemax__walking-slow-on-stones.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "249921__launemax__walking-slow-on-stones.wav"; sourceTree = "<group>"; };
+		B5AAFF762114298800F0DC30 /* 129678__freethinkeranon__crickets.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = 129678__freethinkeranon__crickets.mp3; path = ../../../../../Downloads/129678__freethinkeranon__crickets.mp3; sourceTree = "<group>"; };
+		B5AAFF782114299900F0DC30 /* 433783__cagancelik__campfire.flac */ = {isa = PBXFileReference; lastKnownFileType = file; name = 433783__cagancelik__campfire.flac; path = ../../../../../Downloads/433783__cagancelik__campfire.flac; sourceTree = "<group>"; };
 		B5DB346D2110CCC10008C683 /* CampfireManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CampfireManager.swift; sourceTree = "<group>"; };
 		BC9E019C266AD9823B5E877D /* Pods-Starter-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Starter-tvOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-Starter-tvOS/Pods-Starter-tvOS.release.xcconfig"; sourceTree = "<group>"; };
 		F3CC4717E50B1C51696459B4 /* Pods_Starter_macOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Starter_macOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -375,6 +381,9 @@
 		97EF9597210AF55B00C6B3CB /* Sounds */ = {
 			isa = PBXGroup;
 			children = (
+				B5AAFF782114299900F0DC30 /* 433783__cagancelik__campfire.flac */,
+				B5AAFF762114298800F0DC30 /* 129678__freethinkeranon__crickets.mp3 */,
+				B5AAFF742114297A00F0DC30 /* 249921__launemax__walking-slow-on-stones.wav */,
 				972A647F21142481002610C1 /* parthlinescombined.wav */,
 				97A4F5182113A956001E4804 /* ambiencefoodcourt.wav */,
 				972EC0A0210FFE2800FDE319 /* line1.wav */,
@@ -619,6 +628,7 @@
 				972EC105210FFE3300FDE319 /* line5.wav in Resources */,
 				972EC0EF210FFE3300FDE319 /* line6.wav in Resources */,
 				972EC0F3210FFE3300FDE319 /* line19a.wav in Resources */,
+				B5AAFF752114297A00F0DC30 /* 249921__launemax__walking-slow-on-stones.wav in Resources */,
 				972EC106210FFE3300FDE319 /* line13b.wav in Resources */,
 				972EC100210FFE3300FDE319 /* line16.wav in Resources */,
 				97A4F5192113A956001E4804 /* ambiencefoodcourt.wav in Resources */,
@@ -630,11 +640,13 @@
 				972EC0E2210FFE3300FDE319 /* line1.wav in Resources */,
 				972EC0E9210FFE3300FDE319 /* line4a.wav in Resources */,
 				972EC0F0210FFE3300FDE319 /* line9.wav in Resources */,
+				B5AAFF772114298800F0DC30 /* 129678__freethinkeranon__crickets.mp3 in Resources */,
 				972EC102210FFE3300FDE319 /* line22.wav in Resources */,
 				402973391DB81F5B00EC8C32 /* LaunchScreen.storyboard in Resources */,
 				972EC0EC210FFE3300FDE319 /* line4b.wav in Resources */,
 				972EC0E1210FFE3300FDE319 /* line38b.wav in Resources */,
 				972EC0F8210FFE3300FDE319 /* line30a.wav in Resources */,
+				B5AAFF792114299900F0DC30 /* 433783__cagancelik__campfire.flac in Resources */,
 				972EC1292110088800FDE319 /* line38a.wav in Resources */,
 				972EC12A2110088800FDE319 /* line37.wav in Resources */,
 				972EC114210FFE3300FDE319 /* line30c.wav in Resources */,
