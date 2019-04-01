@@ -130,7 +130,7 @@ class CountDownTimer {
     }
     
     func start() {
-        RunLoop.main.add(timer, forMode: .commonModes)
+        RunLoop.main.add(timer, forMode: .common)
     }
     
     func invalidate() {
