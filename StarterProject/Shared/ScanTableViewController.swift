@@ -65,6 +65,8 @@ class ScanTableViewController: UITableViewController {
             case .discovery:
                 connected.textColor = UIColor(red: 0.8, green: 0.8, blue: 0, alpha: 1.0)
                 connected.text = "Discovery"
+            @unknown default:
+                fatalError()
             }
             
             let name = cell.viewWithTag(4) as! UILabel

@@ -41,7 +41,7 @@ class StoryManager {
         //insert correct answer into wrong array
         prIndex+=1
         let currentPR = promptsAndResponses[prIndex]
-        var answers = currentPR.wrongResponses.flatMap { $0?.text }
+        var answers = currentPR.wrongResponses.compactMap { $0?.text }
         self.correctAnswerIndex = Int(drand48() * Double(currentPR.wrongResponses.count + 1))
         print("correct index: " + String(correctAnswerIndex))
         if let correct = currentPR.correctResponse?.text {

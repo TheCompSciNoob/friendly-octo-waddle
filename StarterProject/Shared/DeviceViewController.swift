@@ -48,6 +48,8 @@ class DeviceViewController: UIViewController {
                 self.deviceStatus.text = "Disconnecting";
             case .discovery:
                 self.deviceStatus.text = "Discovery";
+            @unknown default:
+                fatalError()
             }
         }
     }
