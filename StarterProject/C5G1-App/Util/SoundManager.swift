@@ -47,8 +47,8 @@ class SoundManager {
             if let fileName = optionalFileName {
                 //get file name and extension
                 //print(fileName)
-                let res = fileName[...fileName.index(before: fileName.index(of: ".")!)]
-                let ext = fileName[fileName.index(after: fileName.index(of: ".")!)...]
+                let res = fileName[...fileName.index(before: fileName.firstIndex(of: ".")!)]
+                let ext = fileName[fileName.index(after: fileName.firstIndex(of: ".")!)...]
                 print("\(res), \(ext)")
                 
                 //creating path and file from file name
