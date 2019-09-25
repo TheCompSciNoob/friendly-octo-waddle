@@ -1,5 +1,5 @@
 # Lingua
-![Lingua Logo](/Images/AppLogo-1.png)
+![Lingua Logo](/Images/AppLogo-1.png =250x250)
 
 Lingua is an iOS app that creates an immersive 3D language learning experience through sound spatialization.
 
