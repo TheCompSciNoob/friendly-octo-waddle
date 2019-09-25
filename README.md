@@ -4,8 +4,7 @@
     <img src="Images/AppLogo-1.png" width="30%"/>
 </h1>
 
-Lingua is an iOS app that creates an immersive 3D language learning experience through sound spatialization.
-
+Lingua is an iOS app that creates an immersive 3D language learning experience through sound spatialization.\
 This application is created in the UC Irvine COSMOS program of summer 2018 (Cluster 5: Sound for Virtual Reality).
 
 # Overview
