@@ -1,7 +1,7 @@
 # Lingua
 
 <h1 align="center">
-    <img src="Images/AppLogo-1.png" width="50%"/>
+    <img src="Images/AppLogo-1.png" width="30%"/>
 </h1>
 
 Lingua is an iOS app that creates an immersive 3D language learning experience through sound spatialization.
