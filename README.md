@@ -46,7 +46,7 @@ cd StarterProject
 pod install
 ```
 Open the project with XCode, and deploy it to your device.\
-Open the app, go to "Configure Sensors", and connect to your MetaWear sensor. Now you can explore different features of the app.
+In the app, go to "Configure Sensors", and connect to your MetaWear sensor. Now you're all set!
 
 # Built with
 
