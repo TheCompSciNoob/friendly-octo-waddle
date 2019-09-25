@@ -1,7 +1,7 @@
 # Lingua
 
 <h1 align="center">
-    <img src="Images/AppLogo-1.png" width="30%"/>
+    <img src="Images/logo.png" width="30%"/>
 </h1>
 
 Lingua is an iOS app that creates an immersive 3D language learning experience through sound spatialization.\
@@ -13,6 +13,33 @@ Bilingualism has become a crucial skill for both economic and cultural interacti
 
 # Introduction to Sound Spatialization
 
-![Sound Spatialization](/Images/introduction.png)
+<img src="Images/introduction.png"/>
 
 This application creates an immersive setting through spherical sound spatialization through headphones. It processes sound to give the user an illusion of being in a realistic 3D environment.
+
+Sound spatialization makes use of Interaural Time Difference (ITD) which is the delay in time that a sound takes to reach both ears. A centered sound will reach both ears at the same time where a sound that is positioned to our left side will reach the left ear sooner than it reaches the right ear. This delay is part of the information the brain uses to tell us that the sound is positioned to our left.
+
+# Usage
+
+## Required Equipment
+* iOS device (e.g. iPhone, iPad)
+* MetaWearC Board: https://mbientlab.com/store/metawearc/
+
+## Installation
+
+Clone the source:
+```sh
+git clone https://github.com/kyroschow/Lingua.git
+```
+
+Install pods (requires CocoaPods)
+```sh
+cd MetaWear
+pod install
+```
+```sh
+cd StarterProject
+pod install
+```
+Open the project with XCode, and deploy it to your device!
+
